@@ -1,5 +1,5 @@
 {
-  "@context": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/context.jsonld",
+  "@context": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/context.jsonld",
   "id": "f1",
   "type": "Feature",
   "geometry": {

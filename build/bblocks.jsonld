@@ -1,7 +1,7 @@
 {
   "@context": [
     {
-      "@base": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined"
+      "@base": "https://ogcincubator.github.io/chek-profiles-bblocks"
     },
     {
       "bblocks": "https://www.opengis.net/def/bblocks/",
@@ -106,19 +106,19 @@
   "name": "Building Blocks - My OGC Building Blocks repository",
   "abstract": "This is an example text for the abstract. It should be short and to the point.\nA \"Tell me more\" link will appear if there is an additional description with a longer explanation.\n",
   "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2024-11-18T09:10:17.337289",
+  "modified": "2024-12-03T13:25:41.944294",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"92755a131115293631118b409fa11027d18f8fa3",
-      "shortCommitId": "\"92755a",
-      "date": "2024-11-18T09:07:58+00:00\""
+      "commitId": "\"4f836104f60184d3a6e2f2272208584d6cae081d",
+      "shortCommitId": "\"4f8361",
+      "date": "2024-11-28T20:01:31+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/chek-profiles-bblocks",
   "gitHubRepository": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/",
-  "baseURL": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/",
-  "viewerURL": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/",
-  "validationReport": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/tests/report.html",
+  "baseURL": "https://ogcincubator.github.io/chek-profiles-bblocks/",
+  "viewerURL": "https://ogcincubator.github.io/chek-profiles-bblocks/",
+  "validationReport": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/report.html",
   "imports": [
     "https://opengeospatial.github.io/bblocks/register.json"
   ],
@@ -138,7 +138,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-register",
       "version": "0.1",
-      "dateOfLastChange": "2024-11-18",
+      "dateOfLastChange": "2023-04-05",
       "link": "https://github.com/opengeospatial/bblock-template",
       "sources": [
         {
@@ -153,31 +153,34 @@
       ],
       "shaclRules": {
         "ogc.bbr.template.mySchema": [
-          "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/rules.shacl"
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/rules.shacl"
         ]
       },
-      "ldContext": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/context.jsonld",
+      "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/context.jsonld",
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.json"
       },
-      "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/schema.yaml",
-      "sourceLdContext": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/context.jsonld",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/",
+      "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/schema.yaml",
+      "sourceLdContext": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/",
+      "rdfData": [
+        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
+      ],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/build/tests/bbr/template/mySchema/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/generateddocs/markdown/bbr/template/mySchema/index.md"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/bbr/template/mySchema/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/generateddocs/json-full/bbr/template/mySchema/index.json"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/bbr/template/mySchema/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/bblock/ogc.bbr.template.mySchema"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.bbr.template.mySchema"
         }
       },
       "@type": [
@@ -195,7 +198,7 @@
       "itemClass": "schema",
       "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2024-11-18",
+      "dateOfLastChange": "2023-05-19",
       "sources": [
         {
           "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
@@ -205,8 +208,8 @@
       "maturity": "development",
       "scope": "unstable",
       "dependsOn": [
-        "ogc.geo.features.feature",
-        "ogc.bbr.template.mySchema"
+        "ogc.bbr.template.mySchema",
+        "ogc.geo.features.feature"
       ],
       "tags": [
         "feature",
@@ -216,30 +219,33 @@
       "highlighted": true,
       "shaclRules": {
         "ogc.bbr.template.mySchema": [
-          "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/rules.shacl"
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/rules.shacl"
         ]
       },
       "schema": {
-        "application/yaml": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/schema.yaml",
-        "application/json": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/schema.json"
+        "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/schema.json"
       },
-      "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/myFeature/schema.yaml",
-      "ldContext": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/context.jsonld",
-      "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/myFeature/",
+      "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/myFeature/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/myFeature/",
+      "rdfData": [
+        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
+      ],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/build/tests/bbr/template/myFeature/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/generateddocs/markdown/bbr/template/myFeature/index.md"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/bbr/template/myFeature/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/generateddocs/json-full/bbr/template/myFeature/index.json"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/bbr/template/myFeature/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/bblock/ogc.bbr.template.myFeature"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.bbr.template.myFeature"
         }
       },
       "@type": [

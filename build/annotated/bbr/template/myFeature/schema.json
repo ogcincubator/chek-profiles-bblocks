@@ -10,7 +10,7 @@
         {
           "properties": {
             "properties": {
-              "$ref": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/schema.json"
+              "$ref": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.json"
             }
           }
         }

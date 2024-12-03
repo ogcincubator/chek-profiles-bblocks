@@ -7,30 +7,30 @@
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/ogc.bbr.template.myFeature> a skos:Concept,
+<https://ogcincubator.github.io/ogc.bbr.template.myFeature> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "Custom Feature" ;
     dct:abstract "This examples shows a simple customisation for OGC API Feature schemas" ;
     dct:created "2023-05-19T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/generateddocs/markdown/bbr/template/myFeature/index.md" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/bbr/template/myFeature/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/bbr/template/myFeature/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/bblock/ogc.bbr.template.myFeature" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/generateddocs/json-full/bbr/template/myFeature/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.bbr.template.myFeature" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2024-11-18"^^xsd:date ;
+    dct:modified "2023-05-19"^^xsd:date ;
     dct:source <https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7> ;
-    skos:inScheme <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/> ;
+    skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     dcat:keyword "examples",
         "feature" ;
-    bblocks:dependsOn <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/ogc.bbr.template.mySchema>,
-        <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/ogc.geo.features.feature> ;
-    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/context.jsonld> ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/schema.json>,
-        <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/schema.yaml> ;
-    bblocks:hasShaclRule <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/rules.shacl> ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.bbr.template.mySchema>,
+        <https://ogcincubator.github.io/ogc.geo.features.feature> ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/context.jsonld> ;
+    bblocks:hasSchema <https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/schema.json>,
+        <https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/schema.yaml> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/rules.shacl> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
@@ -38,32 +38,32 @@
 
 <https://example.com/sources/1> rdfs:label "Sample source document" .
 
-<https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/ogc.bbr.template.mySchema> a skos:Concept,
+<https://ogcincubator.github.io/ogc.bbr.template.mySchema> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
     rdfs:label "My Schema" ;
     dct:abstract "An example schema defining the set of properties of any type of object." ;
     dct:created "2023-04-05T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/generateddocs/markdown/bbr/template/mySchema/index.md" ],
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.bbr.template.mySchema" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/bbr/template/mySchema/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/generateddocs/json-full/bbr/template/mySchema/index.json" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/bblock/ogc.bbr.template.mySchema" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/bbr/template/mySchema/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2024-11-18"^^xsd:date ;
+    dct:modified "2023-04-05"^^xsd:date ;
     dct:source <https://example.com/sources/1> ;
-    skos:inScheme <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/> ;
+    skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     dcat:keyword "templates" ;
-    bblocks:hasJsonLdContext <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/context.jsonld> ;
-    bblocks:hasSchema <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/schema.json>,
-        <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/schema.yaml> ;
-    bblocks:hasShaclRule <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/rules.shacl> ;
-    bblocks:hasSourceJsonLdContext <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/context.jsonld> ;
+    bblocks:hasJsonLdContext <https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/context.jsonld> ;
+    bblocks:hasSchema <https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.json>,
+        <https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.yaml> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/rules.shacl> ;
+    bblocks:hasSourceJsonLdContext <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/context.jsonld> ;
     bblocks:scope <http://www.opengis.net/def/bblocks/scope/unstable> ;
     bblocks:status <http://www.opengis.net/def/status/under-development> .
 
-<https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/> a skos:ConceptScheme,
+<https://ogcincubator.github.io/chek-profiles-bblocks/> a skos:ConceptScheme,
         dcat:Catalog ;
     rdfs:label "Building Blocks - My OGC Building Blocks repository" ;
     dct:abstract """This is an example text for the abstract. It should be short and to the point.
@@ -73,19 +73,19 @@ A "Tell me more" link will appear if there is an additional description with a l
 including [links](https://google.es).
 """ ;
     skos:prefLabel "Building Blocks - My OGC Building Blocks repository" ;
-    bblocks:hasValidationReport <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/tests/report.html> ;
+    bblocks:hasValidationReport <https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/report.html> ;
     bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-11-18T09:10:18.720732"^^xsd:dateTime ;
-    prov:startedAtTime "2024-11-18T09:10:18.653114"^^xsd:dateTime ;
+    prov:endedAtTime "2024-12-03T13:25:42.956737"^^xsd:dateTime ;
+    prov:startedAtTime "2024-12-03T13:25:42.889652"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
             dct:format "application/yaml" ;
             rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
         [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:f1b1d67e0cb9505cd08f41cc2f124f24d425bef8" ;
-            rdfs:seeAlso <https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/register.json> ] ;
+            dct:hasVersion "git:da07866261ceaecd55be06b5d1e2d8d454314672" ;
+            rdfs:seeAlso <https://ogcincubator.github.io/chek-profiles-bblocks/build/register.json> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;

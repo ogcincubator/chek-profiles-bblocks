@@ -2,7 +2,7 @@
   "title": "Validation report for ogc.bbr.template.mySchema - My Schema",
   "bblockName": "My Schema",
   "bblockId": "ogc.bbr.template.mySchema",
-  "generated": "2024-11-18T09:10:18.490749+00:00",
+  "generated": "2024-12-03T13:25:42.621945+00:00",
   "result": true,
   "items": [
     {
@@ -10,7 +10,7 @@
         "type": "TEST_RESOURCE",
         "requireFail": true,
         "filename": "_sources/mySchema/tests/rules-fail.json",
-        "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/tests/rules-fail.json",
+        "url": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/tests/rules-fail.json",
         "language": "json"
       },
       "result": true,
@@ -83,12 +83,12 @@
               "focusNodes": {
                 "<https://www.ogc.org/rules/template/#testValues>": {
                   "nodes": [
-                    "_:Nb22f05d49b34456388f2d6aaa965ea8a"
+                    "_:Nf24c9a523c014d15b319461281e9047f"
                   ]
                 }
               },
               "isError": false,
-              "message": "Focus nodes for _sources/mySchema/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nb22f05d49b34456388f2d6aaa965ea8a\n"
+              "message": "Focus nodes for _sources/mySchema/rules.shacl:\n - Shape <https://www.ogc.org/rules/template/#testValues>: _:Nf24c9a523c014d15b319461281e9047f\n"
             }
           ]
         }
@@ -99,7 +99,7 @@
         "type": "EXAMPLE",
         "requireFail": false,
         "filename": "build/tests/bbr/template/mySchema/example_1_1.json",
-        "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/tests/bbr/template/mySchema/example_1_1.json",
+        "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/bbr/template/mySchema/example_1_1.json",
         "exampleIndex": 1,
         "snippetIndex": 1,
         "language": "application/json"

@@ -77,7 +77,7 @@ properties:
     {
       "mynamespace": "http://example.com/mythings/"
     },
-    "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/context.jsonld",
+    "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/context.jsonld",
     {
       "mynamespace": "http://example.org/ns1/"
     }
@@ -134,7 +134,7 @@ $defs:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
     - properties:
         properties:
-          $ref: https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/schema.yaml
+          $ref: https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.yaml
 anyOf:
 - $ref: '#/$defs/MyFeature'
 
@@ -142,8 +142,8 @@ anyOf:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/schema.yaml)
+* YAML version: [schema.yaml](https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/schema.json)
+* JSON version: [schema.json](https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/schema.yaml)
 
 
 # JSON-LD Context
@@ -213,7 +213,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/context.jsonld)
+[context.jsonld](https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/context.jsonld)
 
 ## Sources
 

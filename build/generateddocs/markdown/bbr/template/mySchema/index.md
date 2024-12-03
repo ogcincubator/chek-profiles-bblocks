@@ -40,7 +40,7 @@ In **Markdown** format.
     {
       "mynamespace": "http://example.com/mythings/"
     },
-    "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/context.jsonld"
+    "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/context.jsonld"
   ],
   "a": "mynamespace:aThing",
   "b": 23,
@@ -104,8 +104,8 @@ required:
 
 Links to the schema:
 
-* YAML version: [schema.yaml](https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/schema.json)
-* JSON version: [schema.json](https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/schema.yaml)
+* YAML version: [schema.yaml](https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.json)
+* JSON version: [schema.json](https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.yaml)
 
 
 # JSON-LD Context
@@ -122,7 +122,7 @@ Links to the schema:
 ```
 
 You can find the full JSON-LD context here:
-[context.jsonld](https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/context.jsonld)
+[context.jsonld](https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/context.jsonld)
 
 ## Sources
 

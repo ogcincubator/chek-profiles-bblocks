@@ -3,7 +3,7 @@
     {
       "mynamespace": "http://example.com/mythings/"
     },
-    "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/myFeature/context.jsonld",
+    "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/context.jsonld",
     {
       "mynamespace": "http://example.org/ns1/"
     }

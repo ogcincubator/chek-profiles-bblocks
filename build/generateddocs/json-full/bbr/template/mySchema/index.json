@@ -10,7 +10,7 @@
   "itemClass": "schema",
   "register": "ogc-building-block-register",
   "version": "0.1",
-  "dateOfLastChange": "2024-11-18",
+  "dateOfLastChange": "2023-04-05",
   "link": "https://github.com/opengeospatial/bblock-template",
   "sources": [
     {
@@ -25,17 +25,20 @@
   ],
   "shaclRules": {
     "ogc.bbr.template.mySchema": [
-      "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/rules.shacl"
+      "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/rules.shacl"
     ]
   },
-  "ldContext": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/context.jsonld",
+  "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/context.jsonld",
   "schema": {
-    "application/yaml": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/schema.yaml",
-    "application/json": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/schema.json"
+    "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.json"
   },
-  "sourceSchema": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/schema.yaml",
-  "sourceLdContext": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/context.jsonld",
-  "sourceFiles": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/_sources/mySchema/",
+  "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/",
+  "rdfData": [
+    "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
+  ],
   "validationPassed": true,
   "testOutputs": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/build/tests/bbr/template/mySchema/",
   "description": "## My Schema\n\nDefines a set of properties that may be used in **any** JSON schema.\n\n> Note these properties may be used in the \"properties\" sub-component of a GeoJSON object, as a simple object\n\nThe numeric properties \"b\" and \"c\" have an example SHACL rule that if c is present, then c > b",
@@ -51,17 +54,17 @@
           "language": "json",
           "ref": "example.json",
           "code": "{\n  \"a\": \"mynamespace:aThing\",\n  \"b\": 23,\n  \"c\": 1\n}\n\n",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/tests/bbr/template/mySchema/example_1_1.json"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/bbr/template/mySchema/example_1_1.json"
         },
         {
           "language": "jsonld",
-          "code": "{\n  \"@context\": [\n    {\n      \"mynamespace\": \"http://example.com/mythings/\"\n    },\n    \"https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/context.jsonld\"\n  ],\n  \"a\": \"mynamespace:aThing\",\n  \"b\": 23,\n  \"c\": 1\n}",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/tests/bbr/template/mySchema/example_1_1.jsonld"
+          "code": "{\n  \"@context\": [\n    {\n      \"mynamespace\": \"http://example.com/mythings/\"\n    },\n    \"https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/context.jsonld\"\n  ],\n  \"a\": \"mynamespace:aThing\",\n  \"b\": 23,\n  \"c\": 1\n}",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/bbr/template/mySchema/example_1_1.jsonld"
         },
         {
           "language": "ttl",
           "code": "@prefix mynamespace: <http://example.com/mythings/> .\n@prefix ns1: <https://example.org/my-bb-model/> .\n@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .\n\n[] a mynamespace:aThing ;\n    ns1:b 23 ;\n    ns1:c 1 .\n\n",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/tests/bbr/template/mySchema/example_1_1.ttl"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/bbr/template/mySchema/example_1_1.ttl"
         }
       ]
     },
@@ -72,17 +75,17 @@
         {
           "language": "shell",
           "code": "echo 'Hello, world!'",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/tests/bbr/template/mySchema/example_2_1.shell"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/bbr/template/mySchema/example_2_1.shell"
         },
         {
           "language": "python",
           "code": "print('Hello, world!')",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/tests/bbr/template/mySchema/example_2_2.python"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/bbr/template/mySchema/example_2_2.python"
         },
         {
           "language": "javascript",
           "code": "console.log('Hello, world!')",
-          "url": "https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/tests/bbr/template/mySchema/example_2_3.javascript"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/bbr/template/mySchema/example_2_3.javascript"
         }
       ]
     }

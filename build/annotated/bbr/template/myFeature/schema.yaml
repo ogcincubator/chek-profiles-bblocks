@@ -6,6 +6,6 @@ $defs:
     - $ref: https://opengeospatial.github.io/bblocks/annotated-schemas/geo/features/feature/schema.yaml
     - properties:
         properties:
-          $ref: https://raw.githubusercontent.com/ogcincubator/chek-profiles-bblocks/undefined/build/annotated/bbr/template/mySchema/schema.yaml
+          $ref: https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.yaml
 anyOf:
 - $ref: '#/$defs/MyFeature'
