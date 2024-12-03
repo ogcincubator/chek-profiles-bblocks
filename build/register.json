@@ -1,8 +1,8 @@
 {
-  "name": "My OGC Building Blocks repository",
-  "abstract": "This is an example text for the abstract. It should be short and to the point.\nA \"Tell me more\" link will appear if there is an additional description with a longer explanation.\n",
+  "name": "CHEK Project profiles",
+  "abstract": "Profiles for the CHEK project as Building Blocks.\n",
   "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2024-12-03T13:25:41.944294",
+  "modified": "2024-12-03T13:29:02.347447",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"4f836104f60184d3a6e2f2272208584d6cae081d",
@@ -20,118 +20,148 @@
   ],
   "bblocks": [
     {
-      "itemIdentifier": "ogc.bbr.template.mySchema",
-      "$schema": "metaschema.yaml",
-      "name": "My Schema",
-      "abstract": "An example schema defining the set of properties of any type of object.",
-      "status": "under-development",
-      "dateTimeAddition": "2023-04-05T00:00:00Z",
+      "itemIdentifier": "ogc.checkdbp.profiles.common.dummy",
+      "name": "Dummy profile",
+      "abstract": "Empty profile without rules",
+      "status": "stable",
+      "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
-      "register": "ogc-building-block-register",
-      "version": "0.1",
-      "dateOfLastChange": "2023-04-05",
-      "link": "https://github.com/opengeospatial/bblock-template",
-      "sources": [
-        {
-          "title": "Sample source document",
-          "link": "https://example.com/sources/1"
-        }
-      ],
-      "maturity": "mature",
-      "scope": "unstable",
-      "tags": [
-        "templates"
-      ],
+      "version": "1.0",
+      "dateOfLastChange": "2024-12-03",
       "shaclRules": {
-        "ogc.bbr.template.mySchema": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/rules.shacl"
+        "ogc.checkdbp.profiles.common.dummy": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/dummy/rules.shacl"
         ]
       },
-      "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/context.jsonld",
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/mySchema/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/schema.yaml",
-      "sourceLdContext": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/",
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/dummy/",
       "rdfData": [
-        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
+        "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/dummy/data.ttl"
       ],
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/build/tests/bbr/template/mySchema/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/bbr/template/mySchema/index.md"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/dummy/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/bbr/template/mySchema/index.json"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/dummy/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.bbr.template.mySchema"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.common.dummy"
         }
       }
     },
     {
-      "itemIdentifier": "ogc.bbr.template.myFeature",
-      "name": "Custom Feature",
-      "abstract": "This examples shows a simple customisation for OGC API Feature schemas",
-      "status": "under-development",
-      "dateTimeAddition": "2023-05-19T00:00:00Z",
+      "itemIdentifier": "ogc.checkdbp.profiles.common.green-public-spaces-present",
+      "name": "Green public spaces present",
+      "abstract": "Profile that requires that green public spaces are present in a dataset",
+      "status": "stable",
+      "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
-      "register": "ogc-building-block-examples",
       "version": "1.0",
-      "dateOfLastChange": "2023-05-19",
-      "sources": [
-        {
-          "title": "OGC API - Features, Part 1, 7.16.2: Feature Response",
-          "link": "https://docs.ogc.org/is/17-069r3/17-069r3.html#_response_7"
-        }
-      ],
-      "maturity": "development",
-      "scope": "unstable",
-      "dependsOn": [
-        "ogc.bbr.template.mySchema",
-        "ogc.geo.features.feature"
-      ],
-      "tags": [
-        "feature",
-        "examples"
-      ],
-      "group": "Examples",
-      "highlighted": true,
+      "dateOfLastChange": "2024-12-03",
       "shaclRules": {
-        "ogc.bbr.template.mySchema": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/mySchema/rules.shacl"
+        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
         ]
       },
-      "schema": {
-        "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/schema.yaml",
-        "application/json": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/schema.json"
-      },
-      "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/myFeature/schema.yaml",
-      "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/bbr/template/myFeature/context.jsonld",
-      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/myFeature/",
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/",
       "rdfData": [
-        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
+        "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/data.ttl"
       ],
       "validationPassed": true,
-      "testOutputs": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/build/tests/bbr/template/myFeature/",
       "documentation": {
         "markdown": {
           "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/bbr/template/myFeature/index.md"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/green-public-spaces-present/index.md"
         },
         "json-full": {
           "mediatype": "application/json",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/bbr/template/myFeature/index.json"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/green-public-spaces-present/index.json"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.bbr.template.myFeature"
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.common.green-public-spaces-present"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.checkdbp.profiles.common.roads-present",
+      "name": "Roads present",
+      "abstract": "Profile that requires that roads are present in a dataset",
+      "status": "stable",
+      "dateTimeAddition": "2024-11-10T00:00:00Z",
+      "itemClass": "schema",
+      "version": "1.0",
+      "dateOfLastChange": "2024-12-03",
+      "shaclRules": {
+        "ogc.checkdbp.profiles.common.roads-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ]
+      },
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/",
+      "rdfData": [
+        "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/data.ttl"
+      ],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/roads-present/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/roads-present/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.common.roads-present"
+        }
+      }
+    },
+    {
+      "itemIdentifier": "ogc.checkdbp.profiles.italy.ascoli-piceno",
+      "name": "Ascoli Piceno profile",
+      "abstract": "Profile for the Ascoli Piceno municipality",
+      "status": "stable",
+      "dateTimeAddition": "2024-11-10T00:00:00Z",
+      "itemClass": "schema",
+      "version": "1.0",
+      "dateOfLastChange": "2024-12-03",
+      "dependsOn": [
+        "ogc.checkdbp.profiles.common.roads-present",
+        "ogc.checkdbp.profiles.common.green-public-spaces-present"
+      ],
+      "shaclRules": {
+        "ogc.checkdbp.profiles.italy.ascoli-piceno": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.roads-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
+        ]
+      },
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/",
+      "rdfData": [
+        "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/data.ttl"
+      ],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/italy/ascoli-piceno/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/italy/ascoli-piceno/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.italy.ascoli-piceno"
         }
       }
     }
