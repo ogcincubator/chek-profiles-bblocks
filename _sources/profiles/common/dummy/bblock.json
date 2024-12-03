@@ -1,0 +1,9 @@
+{
+  "name": "Dummy profile",
+  "abstract": "Empty profile without rules",
+  "status": "stable",
+  "dateTimeAddition": "2024-11-10T00:00:00Z",
+  "itemClass": "schema",
+  "version": "1.0",
+  "dateOfLastChange": "2024-11-18"
+}

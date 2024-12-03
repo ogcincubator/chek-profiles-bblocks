@@ -1,0 +1,30 @@
+@prefix chek: <urn:chek:vocab/> .
+@prefix chekp: <urn:chek:profiles/> .
+@prefix ap: <urn:chek:profiles/ascoli-piceno/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sd: <https://w3id.org/okn/o/sd#> .
+@prefix hydra: <http://www.w3.org/ns/hydra/core#> .
+
+chekp:ascoli-piceno a prof:Profile, chekp:Profile ;
+  dct:title "Ascoli Piceno profile for CHEK" ;
+  dct:description "General profile for the city of Ascoli Piceno" ;
+  dct:hasVersion "0.1" ;
+  prof:isProfileOf chekp:chek, chekp:roads-present, chekp:green-public-spaces-present ;
+  prof:hasToken "chek-ascoli-piceno" ;
+  prof:hasResource [
+    a prof:ResourceDescriptior ;
+    prof:hasRole role:validation ;
+    dct:format <https://w3id.org/mediatype/text/turtle> ;
+    dct:conformsTo <https://www.w3.org/TR/shacl/> ;
+    prof:hasArtifact <./shapes/ascoli-piceno.shacl> ;
+  ] ;
+  sd:hasParameter [
+    dct:identifier "buildingOfInterest" ;
+    dct:description "Identifier for the building of interest" ;
+    sd:hasDataType "string" ;
+    hydra:required true ;
+  ] ;
+.

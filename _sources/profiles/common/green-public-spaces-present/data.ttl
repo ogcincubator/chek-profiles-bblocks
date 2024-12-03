@@ -1,0 +1,24 @@
+@prefix chek: <urn:chek:vocab/> .
+@prefix chekp: <urn:chek:profiles/> .
+@prefix ap: <urn:chek:profiles/ascoli-piceno/> .
+@prefix prof: <http://www.w3.org/ns/dx/prof/> .
+@prefix dct:  <http://purl.org/dc/terms/> .
+@prefix role: <http://www.w3.org/ns/dx/prof/role/> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix sd: <https://w3id.org/okn/o/sd#> .
+@prefix hydra: <http://www.w3.org/ns/hydra/core#> .
+
+chekp:green-public-spaces-present a prof:Profile, chekp:Profile ;
+  dct:title "Green public spaces present" ;
+  dct:description "This profile checks that green public spaces are present in at least one dataset" ;
+  dct:hasVersion "0.1" ;
+  prof:isProfileOf chekp:chek ;
+  prof:hasToken "chek-green-public-spaces-present" ;
+  prof:hasResource [
+    a prof:ResourceDescriptior ;
+    prof:hasRole role:validation ;
+    dct:format <https://w3id.org/mediatype/text/turtle> ;
+    dct:conformsTo <https://www.w3.org/TR/shacl/> ;
+    prof:hasArtifact <./shapes/green-public-spaces-present.shacl> ;
+  ] ;
+.
