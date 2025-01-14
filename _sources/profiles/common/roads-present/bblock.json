@@ -1,9 +1,10 @@
 {
-  "name": "Roads present",
-  "abstract": "Profile that requires that roads are present in a dataset",
+  "name": "Buildings present",
+  "abstract": "Profile that requires that buildings are present in a dataset",
   "status": "stable",
-  "dateTimeAddition": "2024-11-10T00:00:00Z",
+  "dateTimeAddition": "2024-12-12T00:00:00Z",
   "itemClass": "schema",
   "version": "1.0",
-  "dateOfLastChange": "2024-11-18"
+  "dateOfLastChange": "2025-01-07",
+  "tags": ["chek-validation-profile"]
 }

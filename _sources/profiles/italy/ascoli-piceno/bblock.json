@@ -8,6 +8,8 @@
   "dateOfLastChange": "2024-11-18",
   "dependsOn": [
     "ogc.checkdbp.profiles.common.roads-present",
-    "ogc.checkdbp.profiles.common.green-public-spaces-present"
-  ]
+    "ogc.checkdbp.profiles.common.green-public-spaces-present",
+    "ogc.checkdbp.profiles.common.buildings-present"
+  ],
+  "tags": ["chek-validation-profile"]
 }
