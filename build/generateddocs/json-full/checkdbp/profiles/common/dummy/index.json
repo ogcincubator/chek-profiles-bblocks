@@ -8,7 +8,10 @@
   "dateTimeAddition": "2024-11-10T00:00:00Z",
   "itemClass": "schema",
   "version": "1.0",
-  "dateOfLastChange": "2024-12-03",
+  "dateOfLastChange": "2025-01-14",
+  "tags": [
+    "chek-validation-profile"
+  ],
   "shaclRules": {
     "ogc.checkdbp.profiles.common.dummy": [
       "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/dummy/rules.shacl"

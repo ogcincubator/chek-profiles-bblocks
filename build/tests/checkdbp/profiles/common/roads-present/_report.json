@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.checkdbp.profiles.common.roads-present - Roads present",
-  "bblockName": "Roads present",
+  "title": "Validation report for ogc.checkdbp.profiles.common.roads-present - Buildings present",
+  "bblockName": "Buildings present",
   "bblockId": "ogc.checkdbp.profiles.common.roads-present",
-  "generated": "2024-12-03T13:29:02.592963+00:00",
+  "generated": "2025-01-14T11:05:18.027164+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},

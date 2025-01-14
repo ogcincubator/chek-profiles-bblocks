@@ -106,7 +106,7 @@
   "name": "Building Blocks - CHEK Project profiles",
   "abstract": "Profiles for the CHEK project as Building Blocks.\n",
   "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2024-12-03T13:29:02.347447",
+  "modified": "2025-01-14T11:05:17.729930",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"4f836104f60184d3a6e2f2272208584d6cae081d",
@@ -129,6 +129,48 @@
   "skos:prefLabel": "Building Blocks - CHEK Project profiles",
   "hasConcepts": [
     {
+      "itemIdentifier": "ogc.checkdbp.profiles.common.buildings-present",
+      "name": "Roads present",
+      "abstract": "Profile that requires that roads are present in a dataset",
+      "status": "stable",
+      "dateTimeAddition": "2024-11-10T00:00:00Z",
+      "itemClass": "schema",
+      "version": "1.0",
+      "dateOfLastChange": "2025-01-14",
+      "tags": [
+        "chek-validation-profile"
+      ],
+      "shaclRules": {
+        "ogc.checkdbp.profiles.common.buildings-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
+        ]
+      },
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/",
+      "rdfData": [
+        "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/data.ttl"
+      ],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/buildings-present/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/buildings-present/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.common.buildings-present"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.checkdbp.profiles.common.dummy",
       "name": "Dummy profile",
       "abstract": "Empty profile without rules",
@@ -136,7 +178,10 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2024-12-03",
+      "dateOfLastChange": "2025-01-14",
+      "tags": [
+        "chek-validation-profile"
+      ],
       "shaclRules": {
         "ogc.checkdbp.profiles.common.dummy": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/dummy/rules.shacl"
@@ -175,7 +220,10 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2024-12-03",
+      "dateOfLastChange": "2025-01-14",
+      "tags": [
+        "chek-validation-profile"
+      ],
       "shaclRules": {
         "ogc.checkdbp.profiles.common.green-public-spaces-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
@@ -208,13 +256,16 @@
     },
     {
       "itemIdentifier": "ogc.checkdbp.profiles.common.roads-present",
-      "name": "Roads present",
-      "abstract": "Profile that requires that roads are present in a dataset",
+      "name": "Buildings present",
+      "abstract": "Profile that requires that buildings are present in a dataset",
       "status": "stable",
-      "dateTimeAddition": "2024-11-10T00:00:00Z",
+      "dateTimeAddition": "2024-12-12T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2024-12-03",
+      "dateOfLastChange": "2025-01-14",
+      "tags": [
+        "chek-validation-profile"
+      ],
       "shaclRules": {
         "ogc.checkdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
@@ -246,6 +297,58 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.checkdbp.profiles.czechia.prague",
+      "name": "Lisbon profile",
+      "abstract": "Profile for the Lisbon municipality",
+      "status": "stable",
+      "dateTimeAddition": "2024-12-20T00:00:00Z",
+      "itemClass": "schema",
+      "version": "1.0",
+      "dateOfLastChange": "2025-01-14",
+      "dependsOn": [
+        "ogc.checkdbp.profiles.common.green-public-spaces-present",
+        "ogc.checkdbp.profiles.common.roads-present"
+      ],
+      "tags": [
+        "chek-validation-profile"
+      ],
+      "shaclRules": {
+        "ogc.checkdbp.profiles.czechia.prague": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/czechia/prague/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.roads-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ]
+      },
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/czechia/prague/",
+      "rdfData": [
+        "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/czechia/prague/data.ttl"
+      ],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/czechia/prague/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/czechia/prague/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.czechia.prague"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.checkdbp.profiles.italy.ascoli-piceno",
       "name": "Ascoli Piceno profile",
       "abstract": "Profile for the Ascoli Piceno municipality",
@@ -253,20 +356,27 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2024-12-03",
+      "dateOfLastChange": "2025-01-14",
       "dependsOn": [
-        "ogc.checkdbp.profiles.common.roads-present",
-        "ogc.checkdbp.profiles.common.green-public-spaces-present"
+        "ogc.checkdbp.profiles.common.buildings-present",
+        "ogc.checkdbp.profiles.common.green-public-spaces-present",
+        "ogc.checkdbp.profiles.common.roads-present"
+      ],
+      "tags": [
+        "chek-validation-profile"
       ],
       "shaclRules": {
         "ogc.checkdbp.profiles.italy.ascoli-piceno": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/rules.shacl"
         ],
-        "ogc.checkdbp.profiles.common.roads-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        "ogc.checkdbp.profiles.common.buildings-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
         ],
         "ogc.checkdbp.profiles.common.green-public-spaces-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.roads-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
         ]
       },
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/",
@@ -286,6 +396,110 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.italy.ascoli-piceno"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.checkdbp.profiles.portugal.gaia",
+      "name": "Lisbon profile",
+      "abstract": "Profile for the Lisbon municipality",
+      "status": "stable",
+      "dateTimeAddition": "2024-12-20T00:00:00Z",
+      "itemClass": "schema",
+      "version": "1.0",
+      "dateOfLastChange": "2025-01-14",
+      "dependsOn": [
+        "ogc.checkdbp.profiles.common.green-public-spaces-present",
+        "ogc.checkdbp.profiles.common.roads-present"
+      ],
+      "tags": [
+        "chek-validation-profile"
+      ],
+      "shaclRules": {
+        "ogc.checkdbp.profiles.portugal.gaia": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.roads-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ]
+      },
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/",
+      "rdfData": [
+        "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/data.ttl"
+      ],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/portugal/gaia/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/portugal/gaia/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.portugal.gaia"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.checkdbp.profiles.portugal.lisbon",
+      "name": "Lisbon profile",
+      "abstract": "Profile for the Lisbon municipality",
+      "status": "stable",
+      "dateTimeAddition": "2024-12-20T00:00:00Z",
+      "itemClass": "schema",
+      "version": "1.0",
+      "dateOfLastChange": "2025-01-14",
+      "dependsOn": [
+        "ogc.checkdbp.profiles.common.green-public-spaces-present",
+        "ogc.checkdbp.profiles.common.roads-present"
+      ],
+      "tags": [
+        "chek-validation-profile"
+      ],
+      "shaclRules": {
+        "ogc.checkdbp.profiles.portugal.lisbon": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/lisbon/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.roads-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ]
+      },
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/lisbon/",
+      "rdfData": [
+        "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/lisbon/data.ttl"
+      ],
+      "validationPassed": true,
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/portugal/lisbon/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/portugal/lisbon/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.portugal.lisbon"
         }
       },
       "@type": [

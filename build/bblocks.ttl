@@ -13,16 +13,40 @@
     rdfs:label "Dummy profile" ;
     dct:abstract "Empty profile without rules" ;
     dct:created "2024-11-10T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/dummy/index.md" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.common.dummy" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/dummy/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/dummy/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/dummy/index.json" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2024-12-03"^^xsd:date ;
+    dct:modified "2025-01-14"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
+    dcat:keyword "chek-validation-profile" ;
     bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/dummy/rules.shacl> ;
+    bblocks:status <http://www.opengis.net/def/status/stable> .
+
+<https://ogcincubator.github.io/ogc.checkdbp.profiles.czechia.prague> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "Lisbon profile" ;
+    dct:abstract "Profile for the Lisbon municipality" ;
+    dct:created "2024-12-20T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/czechia/prague/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/czechia/prague/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.czechia.prague" ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2025-01-14"^^xsd:date ;
+    skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
+    dcat:keyword "chek-validation-profile" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.checkdbp.profiles.common.green-public-spaces-present>,
+        <https://ogcincubator.github.io/ogc.checkdbp.profiles.common.roads-present> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl>,
+        <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl>,
+        <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/czechia/prague/rules.shacl> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
 <https://ogcincubator.github.io/ogc.checkdbp.profiles.italy.ascoli-piceno> a skos:Concept,
@@ -31,20 +55,88 @@
     rdfs:label "Ascoli Piceno profile" ;
     dct:abstract "Profile for the Ascoli Piceno municipality" ;
     dct:created "2024-11-10T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/italy/ascoli-piceno/index.md" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/italy/ascoli-piceno/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/italy/ascoli-piceno/index.md" ],
         [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.italy.ascoli-piceno" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2024-12-03"^^xsd:date ;
+    dct:modified "2025-01-14"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
+    dcat:keyword "chek-validation-profile" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.checkdbp.profiles.common.buildings-present>,
+        <https://ogcincubator.github.io/ogc.checkdbp.profiles.common.green-public-spaces-present>,
+        <https://ogcincubator.github.io/ogc.checkdbp.profiles.common.roads-present> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl>,
+        <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl>,
+        <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl>,
+        <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/rules.shacl> ;
+    bblocks:status <http://www.opengis.net/def/status/stable> .
+
+<https://ogcincubator.github.io/ogc.checkdbp.profiles.portugal.gaia> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "Lisbon profile" ;
+    dct:abstract "Profile for the Lisbon municipality" ;
+    dct:created "2024-12-20T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/portugal/gaia/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.portugal.gaia" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/portugal/gaia/index.md" ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2025-01-14"^^xsd:date ;
+    skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
+    dcat:keyword "chek-validation-profile" ;
     bblocks:dependsOn <https://ogcincubator.github.io/ogc.checkdbp.profiles.common.green-public-spaces-present>,
         <https://ogcincubator.github.io/ogc.checkdbp.profiles.common.roads-present> ;
     bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl>,
         <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl>,
-        <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/rules.shacl> ;
+        <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/rules.shacl> ;
+    bblocks:status <http://www.opengis.net/def/status/stable> .
+
+<https://ogcincubator.github.io/ogc.checkdbp.profiles.portugal.lisbon> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "Lisbon profile" ;
+    dct:abstract "Profile for the Lisbon municipality" ;
+    dct:created "2024-12-20T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/portugal/lisbon/index.md" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/portugal/lisbon/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.portugal.lisbon" ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2025-01-14"^^xsd:date ;
+    skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
+    dcat:keyword "chek-validation-profile" ;
+    bblocks:dependsOn <https://ogcincubator.github.io/ogc.checkdbp.profiles.common.green-public-spaces-present>,
+        <https://ogcincubator.github.io/ogc.checkdbp.profiles.common.roads-present> ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl>,
+        <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl>,
+        <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/lisbon/rules.shacl> ;
+    bblocks:status <http://www.opengis.net/def/status/stable> .
+
+<https://ogcincubator.github.io/ogc.checkdbp.profiles.common.buildings-present> a skos:Concept,
+        dcat:Dataset,
+        bblocks:Schema ;
+    rdfs:label "Roads present" ;
+    dct:abstract "Profile that requires that roads are present in a dataset" ;
+    dct:created "2024-11-10T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/buildings-present/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.common.buildings-present" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/buildings-present/index.json" ] ;
+    dct:hasVersion "1.0" ;
+    dct:modified "2025-01-14"^^xsd:date ;
+    skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
+    dcat:keyword "chek-validation-profile" ;
+    bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
 <https://ogcincubator.github.io/ogc.checkdbp.profiles.common.green-public-spaces-present> a skos:Concept,
@@ -53,33 +145,35 @@
     rdfs:label "Green public spaces present" ;
     dct:abstract "Profile that requires that green public spaces are present in a dataset" ;
     dct:created "2024-11-10T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.common.green-public-spaces-present" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/green-public-spaces-present/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/green-public-spaces-present/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/green-public-spaces-present/index.json" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.common.green-public-spaces-present" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2024-12-03"^^xsd:date ;
+    dct:modified "2025-01-14"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
+    dcat:keyword "chek-validation-profile" ;
     bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
 <https://ogcincubator.github.io/ogc.checkdbp.profiles.common.roads-present> a skos:Concept,
         dcat:Dataset,
         bblocks:Schema ;
-    rdfs:label "Roads present" ;
-    dct:abstract "Profile that requires that roads are present in a dataset" ;
-    dct:created "2024-11-10T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    rdfs:label "Buildings present" ;
+    dct:abstract "Profile that requires that buildings are present in a dataset" ;
+    dct:created "2024-12-12T00:00:00+00:00"^^xsd:dateTime ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.common.roads-present" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/roads-present/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/roads-present/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.common.roads-present" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/roads-present/index.md" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2024-12-03"^^xsd:date ;
+    dct:modified "2025-01-14"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
+    dcat:keyword "chek-validation-profile" ;
     bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl> ;
     bblocks:status <http://www.opengis.net/def/status/stable> .
 
@@ -96,15 +190,15 @@ including [links](https://google.es).
     bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2024-12-03T13:29:02.738167"^^xsd:dateTime ;
-    prov:startedAtTime "2024-12-03T13:29:02.622815"^^xsd:dateTime ;
+    prov:endedAtTime "2025-01-14T11:05:18.204052"^^xsd:dateTime ;
+    prov:startedAtTime "2025-01-14T11:05:18.099500"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:38030dd04a7f44392548b2cf4428d7a91ecf2dba" ;
-            rdfs:seeAlso <https://ogcincubator.github.io/chek-profiles-bblocks/build/register.json> ] ;
+            dct:hasVersion "git:89f193edd3e9655a60d5744cd65b5d53a3a5f736" ;
+            rdfs:seeAlso <https://ogcincubator.github.io/chek-profiles-bblocks/build/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
