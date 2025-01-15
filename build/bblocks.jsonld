@@ -106,7 +106,7 @@
   "name": "Building Blocks - CHEK Project profiles",
   "abstract": "Profiles for the CHEK project as Building Blocks.\n",
   "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2025-01-15T08:18:09.797239",
+  "modified": "2025-01-15T08:26:57.890175",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"4f836104f60184d3a6e2f2272208584d6cae081d",
@@ -359,8 +359,8 @@
       "dateOfLastChange": "2025-01-15",
       "dependsOn": [
         "ogc.checkdbp.profiles.common.green-public-spaces-present",
-        "ogc.checkdbp.profiles.common.buildings-present",
-        "ogc.checkdbp.profiles.common.roads-present"
+        "ogc.checkdbp.profiles.common.roads-present",
+        "ogc.checkdbp.profiles.common.buildings-present"
       ],
       "tags": [
         "chek-validation-profile"
@@ -372,11 +372,11 @@
         "ogc.checkdbp.profiles.common.green-public-spaces-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
         ],
-        "ogc.checkdbp.profiles.common.buildings-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
-        ],
         "ogc.checkdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.buildings-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
         ]
       },
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/",
