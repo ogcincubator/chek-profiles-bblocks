@@ -106,7 +106,7 @@
   "name": "Building Blocks - CHEK Project profiles",
   "abstract": "Profiles for the CHEK project as Building Blocks.\n",
   "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2025-01-14T11:05:17.729930",
+  "modified": "2025-01-15T08:18:09.797239",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"4f836104f60184d3a6e2f2272208584d6cae081d",
@@ -136,7 +136,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-14",
+      "dateOfLastChange": "2025-01-15",
       "tags": [
         "chek-validation-profile"
       ],
@@ -151,13 +151,13 @@
       ],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/buildings-present/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/buildings-present/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/buildings-present/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -178,7 +178,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-14",
+      "dateOfLastChange": "2025-01-15",
       "tags": [
         "chek-validation-profile"
       ],
@@ -193,13 +193,13 @@
       ],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/dummy/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/dummy/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/dummy/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -220,7 +220,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-14",
+      "dateOfLastChange": "2025-01-15",
       "tags": [
         "chek-validation-profile"
       ],
@@ -235,13 +235,13 @@
       ],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/green-public-spaces-present/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/green-public-spaces-present/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/green-public-spaces-present/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -262,7 +262,7 @@
       "dateTimeAddition": "2024-12-12T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-14",
+      "dateOfLastChange": "2025-01-15",
       "tags": [
         "chek-validation-profile"
       ],
@@ -277,13 +277,13 @@
       ],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/roads-present/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/common/roads-present/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/common/roads-present/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -304,7 +304,7 @@
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-14",
+      "dateOfLastChange": "2025-01-15",
       "dependsOn": [
         "ogc.checkdbp.profiles.common.green-public-spaces-present",
         "ogc.checkdbp.profiles.common.roads-present"
@@ -329,13 +329,13 @@
       ],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/czechia/prague/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/czechia/prague/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/czechia/prague/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -356,10 +356,10 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-14",
+      "dateOfLastChange": "2025-01-15",
       "dependsOn": [
-        "ogc.checkdbp.profiles.common.buildings-present",
         "ogc.checkdbp.profiles.common.green-public-spaces-present",
+        "ogc.checkdbp.profiles.common.buildings-present",
         "ogc.checkdbp.profiles.common.roads-present"
       ],
       "tags": [
@@ -369,11 +369,11 @@
         "ogc.checkdbp.profiles.italy.ascoli-piceno": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/rules.shacl"
         ],
-        "ogc.checkdbp.profiles.common.buildings-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
-        ],
         "ogc.checkdbp.profiles.common.green-public-spaces-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.buildings-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
         ],
         "ogc.checkdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
@@ -385,13 +385,13 @@
       ],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/italy/ascoli-piceno/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/italy/ascoli-piceno/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/italy/ascoli-piceno/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -412,7 +412,7 @@
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-14",
+      "dateOfLastChange": "2025-01-15",
       "dependsOn": [
         "ogc.checkdbp.profiles.common.green-public-spaces-present",
         "ogc.checkdbp.profiles.common.roads-present"
@@ -437,13 +437,13 @@
       ],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/portugal/gaia/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/portugal/gaia/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/portugal/gaia/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",
@@ -464,7 +464,7 @@
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-14",
+      "dateOfLastChange": "2025-01-15",
       "dependsOn": [
         "ogc.checkdbp.profiles.common.green-public-spaces-present",
         "ogc.checkdbp.profiles.common.roads-present"
@@ -489,13 +489,13 @@
       ],
       "validationPassed": true,
       "documentation": {
-        "markdown": {
-          "mediatype": "text/markdown",
-          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/portugal/lisbon/index.md"
-        },
         "json-full": {
           "mediatype": "application/json",
           "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/checkdbp/profiles/portugal/lisbon/index.json"
+        },
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/checkdbp/profiles/portugal/lisbon/index.md"
         },
         "bblocks-viewer": {
           "mediatype": "text/html",

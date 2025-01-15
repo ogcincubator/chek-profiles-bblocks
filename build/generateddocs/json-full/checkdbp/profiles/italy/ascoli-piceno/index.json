@@ -8,10 +8,10 @@
   "dateTimeAddition": "2024-11-10T00:00:00Z",
   "itemClass": "schema",
   "version": "1.0",
-  "dateOfLastChange": "2025-01-14",
+  "dateOfLastChange": "2025-01-15",
   "dependsOn": [
-    "ogc.checkdbp.profiles.common.buildings-present",
     "ogc.checkdbp.profiles.common.green-public-spaces-present",
+    "ogc.checkdbp.profiles.common.buildings-present",
     "ogc.checkdbp.profiles.common.roads-present"
   ],
   "tags": [
@@ -21,11 +21,11 @@
     "ogc.checkdbp.profiles.italy.ascoli-piceno": [
       "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/rules.shacl"
     ],
-    "ogc.checkdbp.profiles.common.buildings-present": [
-      "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
-    ],
     "ogc.checkdbp.profiles.common.green-public-spaces-present": [
       "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
+    ],
+    "ogc.checkdbp.profiles.common.buildings-present": [
+      "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
     ],
     "ogc.checkdbp.profiles.common.roads-present": [
       "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
