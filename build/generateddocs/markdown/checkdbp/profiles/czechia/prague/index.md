@@ -1,5 +1,5 @@
 
-# Prague profile (Schema)
+# Prague profile (Model)
 
 `ogc.checkdbp.profiles.czechia.prague` *v1.0*
 

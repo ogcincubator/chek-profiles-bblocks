@@ -6,12 +6,12 @@
   "abstract": "Profile for the Vila Nova de Gaia (PT) municipality",
   "status": "stable",
   "dateTimeAddition": "2024-12-20T00:00:00Z",
-  "itemClass": "schema",
+  "itemClass": "model",
   "version": "1.0",
   "dateOfLastChange": "2025-01-21",
   "dependsOn": [
-    "ogc.checkdbp.profiles.common.green-public-spaces-present",
-    "ogc.checkdbp.profiles.common.roads-present"
+    "ogc.checkdbp.profiles.common.roads-present",
+    "ogc.checkdbp.profiles.common.green-public-spaces-present"
   ],
   "tags": [
     "chek-validation-profile"
@@ -20,11 +20,11 @@
     "ogc.checkdbp.profiles.portugal.gaia": [
       "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/rules.shacl"
     ],
-    "ogc.checkdbp.profiles.common.green-public-spaces-present": [
-      "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
-    ],
     "ogc.checkdbp.profiles.common.roads-present": [
       "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+    ],
+    "ogc.checkdbp.profiles.common.green-public-spaces-present": [
+      "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
     ]
   },
   "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/",

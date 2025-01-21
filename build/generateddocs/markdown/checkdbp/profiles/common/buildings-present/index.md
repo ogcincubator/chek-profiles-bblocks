@@ -1,5 +1,5 @@
 
-# Buildings present (Schema)
+# Buildings present (Model)
 
 `ogc.checkdbp.profiles.common.buildings-present` *v1.0*
 

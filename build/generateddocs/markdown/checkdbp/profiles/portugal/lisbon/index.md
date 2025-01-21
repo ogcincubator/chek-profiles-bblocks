@@ -1,5 +1,5 @@
 
-# Lisbon profile (Schema)
+# Lisbon profile (Model)
 
 `ogc.checkdbp.profiles.portugal.lisbon` *v1.0*
 

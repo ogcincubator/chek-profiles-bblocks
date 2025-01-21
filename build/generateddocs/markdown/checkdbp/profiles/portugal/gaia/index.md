@@ -1,5 +1,5 @@
 
-# Vila Nova de Gaia profile (Schema)
+# Vila Nova de Gaia profile (Model)
 
 `ogc.checkdbp.profiles.portugal.gaia` *v1.0*
 

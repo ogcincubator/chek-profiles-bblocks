@@ -1,5 +1,5 @@
 
-# Green public spaces present (Schema)
+# Green public spaces present (Model)
 
 `ogc.checkdbp.profiles.common.green-public-spaces-present` *v1.0*
 

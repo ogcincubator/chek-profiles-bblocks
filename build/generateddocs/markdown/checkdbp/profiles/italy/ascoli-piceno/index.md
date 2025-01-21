@@ -1,5 +1,5 @@
 
-# Ascoli Piceno profile (Schema)
+# Ascoli Piceno profile (Model)
 
 `ogc.checkdbp.profiles.italy.ascoli-piceno` *v1.0*
 

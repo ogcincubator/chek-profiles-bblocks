@@ -1,5 +1,5 @@
 
-# Roads present (Schema)
+# Roads present (Model)
 
 `ogc.checkdbp.profiles.common.roads-present` *v1.0*
 

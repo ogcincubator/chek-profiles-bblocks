@@ -106,7 +106,7 @@
   "name": "Building Blocks - CHEK Project profiles",
   "abstract": "Profiles for the CHEK project as Building Blocks.\n",
   "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2025-01-21T08:41:41.781942",
+  "modified": "2025-01-21T09:34:49.914466",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"4f836104f60184d3a6e2f2272208584d6cae081d",
@@ -134,7 +134,7 @@
       "abstract": "Profile that requires that buildings are present in a dataset",
       "status": "stable",
       "dateTimeAddition": "2024-12-12T00:00:00Z",
-      "itemClass": "schema",
+      "itemClass": "model",
       "version": "1.0",
       "dateOfLastChange": "2025-01-21",
       "tags": [
@@ -165,7 +165,7 @@
         }
       },
       "@type": [
-        "bblocks:Schema",
+        "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset"
       ]
@@ -176,7 +176,7 @@
       "abstract": "Empty profile without rules",
       "status": "stable",
       "dateTimeAddition": "2024-11-10T00:00:00Z",
-      "itemClass": "schema",
+      "itemClass": "model",
       "version": "1.0",
       "dateOfLastChange": "2025-01-21",
       "tags": [
@@ -207,7 +207,7 @@
         }
       },
       "@type": [
-        "bblocks:Schema",
+        "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset"
       ]
@@ -218,7 +218,7 @@
       "abstract": "Profile that requires that green public spaces are present in a dataset",
       "status": "stable",
       "dateTimeAddition": "2024-11-10T00:00:00Z",
-      "itemClass": "schema",
+      "itemClass": "model",
       "version": "1.0",
       "dateOfLastChange": "2025-01-21",
       "tags": [
@@ -249,7 +249,7 @@
         }
       },
       "@type": [
-        "bblocks:Schema",
+        "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset"
       ]
@@ -260,7 +260,7 @@
       "abstract": "Profile that requires that roads are present in a dataset",
       "status": "stable",
       "dateTimeAddition": "2024-11-10T00:00:00Z",
-      "itemClass": "schema",
+      "itemClass": "model",
       "version": "1.0",
       "dateOfLastChange": "2025-01-21",
       "tags": [
@@ -291,7 +291,7 @@
         }
       },
       "@type": [
-        "bblocks:Schema",
+        "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset"
       ]
@@ -302,12 +302,12 @@
       "abstract": "Profile for the Prague (CZ) municipality",
       "status": "stable",
       "dateTimeAddition": "2024-12-20T00:00:00Z",
-      "itemClass": "schema",
+      "itemClass": "model",
       "version": "1.0",
       "dateOfLastChange": "2025-01-21",
       "dependsOn": [
-        "ogc.checkdbp.profiles.common.green-public-spaces-present",
-        "ogc.checkdbp.profiles.common.roads-present"
+        "ogc.checkdbp.profiles.common.roads-present",
+        "ogc.checkdbp.profiles.common.green-public-spaces-present"
       ],
       "tags": [
         "chek-validation-profile"
@@ -316,11 +316,11 @@
         "ogc.checkdbp.profiles.czechia.prague": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/czechia/prague/rules.shacl"
         ],
-        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
-        ],
         "ogc.checkdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
         ]
       },
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/czechia/prague/",
@@ -343,7 +343,7 @@
         }
       },
       "@type": [
-        "bblocks:Schema",
+        "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset"
       ]
@@ -354,12 +354,12 @@
       "abstract": "Profile for the Ascoli Piceno (IT) municipality",
       "status": "stable",
       "dateTimeAddition": "2024-11-10T00:00:00Z",
-      "itemClass": "schema",
+      "itemClass": "model",
       "version": "1.0",
       "dateOfLastChange": "2025-01-21",
       "dependsOn": [
-        "ogc.checkdbp.profiles.common.green-public-spaces-present",
         "ogc.checkdbp.profiles.common.roads-present",
+        "ogc.checkdbp.profiles.common.green-public-spaces-present",
         "ogc.checkdbp.profiles.common.buildings-present"
       ],
       "tags": [
@@ -369,11 +369,11 @@
         "ogc.checkdbp.profiles.italy.ascoli-piceno": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/rules.shacl"
         ],
-        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
-        ],
         "ogc.checkdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
         ],
         "ogc.checkdbp.profiles.common.buildings-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
@@ -399,7 +399,7 @@
         }
       },
       "@type": [
-        "bblocks:Schema",
+        "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset"
       ]
@@ -410,12 +410,12 @@
       "abstract": "Profile for the Vila Nova de Gaia (PT) municipality",
       "status": "stable",
       "dateTimeAddition": "2024-12-20T00:00:00Z",
-      "itemClass": "schema",
+      "itemClass": "model",
       "version": "1.0",
       "dateOfLastChange": "2025-01-21",
       "dependsOn": [
-        "ogc.checkdbp.profiles.common.green-public-spaces-present",
-        "ogc.checkdbp.profiles.common.roads-present"
+        "ogc.checkdbp.profiles.common.roads-present",
+        "ogc.checkdbp.profiles.common.green-public-spaces-present"
       ],
       "tags": [
         "chek-validation-profile"
@@ -424,11 +424,11 @@
         "ogc.checkdbp.profiles.portugal.gaia": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/rules.shacl"
         ],
-        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
-        ],
         "ogc.checkdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
         ]
       },
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/",
@@ -451,7 +451,7 @@
         }
       },
       "@type": [
-        "bblocks:Schema",
+        "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset"
       ]
@@ -462,12 +462,12 @@
       "abstract": "Profile for the Lisbon (PT) municipality",
       "status": "stable",
       "dateTimeAddition": "2024-12-20T00:00:00Z",
-      "itemClass": "schema",
+      "itemClass": "model",
       "version": "1.0",
       "dateOfLastChange": "2025-01-21",
       "dependsOn": [
-        "ogc.checkdbp.profiles.common.green-public-spaces-present",
-        "ogc.checkdbp.profiles.common.roads-present"
+        "ogc.checkdbp.profiles.common.roads-present",
+        "ogc.checkdbp.profiles.common.green-public-spaces-present"
       ],
       "tags": [
         "chek-validation-profile"
@@ -476,11 +476,11 @@
         "ogc.checkdbp.profiles.portugal.lisbon": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/lisbon/rules.shacl"
         ],
-        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
-        ],
         "ogc.checkdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ],
+        "ogc.checkdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
         ]
       },
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/lisbon/",
@@ -503,7 +503,7 @@
         }
       },
       "@type": [
-        "bblocks:Schema",
+        "bblocks:Model",
         "skos:Concept",
         "dcat:Dataset"
       ]

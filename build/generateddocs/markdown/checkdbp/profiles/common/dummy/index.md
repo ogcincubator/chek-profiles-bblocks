@@ -1,5 +1,5 @@
 
-# Dummy profile (Schema)
+# Dummy profile (Model)
 
 `ogc.checkdbp.profiles.common.dummy` *v1.0*
 
