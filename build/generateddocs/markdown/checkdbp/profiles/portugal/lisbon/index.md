@@ -3,7 +3,7 @@
 
 `ogc.checkdbp.profiles.portugal.lisbon` *v1.0*
 
-Profile for the Lisbon municipality
+Profile for the Lisbon (PT) municipality
 
 [*Status*](http://www.opengis.net/def/status): Stable
 

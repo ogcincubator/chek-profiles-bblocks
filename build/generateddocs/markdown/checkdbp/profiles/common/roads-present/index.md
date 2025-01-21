@@ -1,9 +1,9 @@
 
-# Buildings present (Schema)
+# Roads present (Schema)
 
 `ogc.checkdbp.profiles.common.roads-present` *v1.0*
 
-Profile that requires that buildings are present in a dataset
+Profile that requires that roads are present in a dataset
 
 [*Status*](http://www.opengis.net/def/status): Stable
 

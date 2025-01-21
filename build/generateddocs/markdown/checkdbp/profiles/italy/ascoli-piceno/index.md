@@ -3,7 +3,7 @@
 
 `ogc.checkdbp.profiles.italy.ascoli-piceno` *v1.0*
 
-Profile for the Ascoli Piceno municipality
+Profile for the Ascoli Piceno (IT) municipality
 
 [*Status*](http://www.opengis.net/def/status): Stable
 

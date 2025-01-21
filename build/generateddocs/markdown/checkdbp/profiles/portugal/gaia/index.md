@@ -1,9 +1,9 @@
 
-# Lisbon profile (Schema)
+# Vila Nova de Gaia profile (Schema)
 
 `ogc.checkdbp.profiles.portugal.gaia` *v1.0*
 
-Profile for the Lisbon municipality
+Profile for the Vila Nova de Gaia (PT) municipality
 
 [*Status*](http://www.opengis.net/def/status): Stable
 

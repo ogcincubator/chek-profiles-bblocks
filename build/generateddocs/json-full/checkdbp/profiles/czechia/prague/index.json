@@ -2,13 +2,13 @@
 
 {
   "itemIdentifier": "ogc.checkdbp.profiles.czechia.prague",
-  "name": "Lisbon profile",
-  "abstract": "Profile for the Lisbon municipality",
+  "name": "Prague profile",
+  "abstract": "Profile for the Prague (CZ) municipality",
   "status": "stable",
   "dateTimeAddition": "2024-12-20T00:00:00Z",
   "itemClass": "schema",
   "version": "1.0",
-  "dateOfLastChange": "2025-01-15",
+  "dateOfLastChange": "2025-01-21",
   "dependsOn": [
     "ogc.checkdbp.profiles.common.green-public-spaces-present",
     "ogc.checkdbp.profiles.common.roads-present"

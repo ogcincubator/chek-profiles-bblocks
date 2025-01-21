@@ -2,7 +2,7 @@
   "name": "CHEK Project profiles",
   "abstract": "Profiles for the CHEK project as Building Blocks.\n",
   "description": "The description can be longer. Both **the abstract** *and the description* support Markdown,\nincluding [links](https://google.es).\n",
-  "modified": "2025-01-15T08:26:57.890175",
+  "modified": "2025-01-21T08:41:41.781942",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"4f836104f60184d3a6e2f2272208584d6cae081d",
@@ -21,13 +21,13 @@
   "bblocks": [
     {
       "itemIdentifier": "ogc.checkdbp.profiles.common.buildings-present",
-      "name": "Roads present",
-      "abstract": "Profile that requires that roads are present in a dataset",
+      "name": "Buildings present",
+      "abstract": "Profile that requires that buildings are present in a dataset",
       "status": "stable",
-      "dateTimeAddition": "2024-11-10T00:00:00Z",
+      "dateTimeAddition": "2024-12-12T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-15",
+      "dateOfLastChange": "2025-01-21",
       "tags": [
         "chek-validation-profile"
       ],
@@ -64,7 +64,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-15",
+      "dateOfLastChange": "2025-01-21",
       "tags": [
         "chek-validation-profile"
       ],
@@ -101,7 +101,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-15",
+      "dateOfLastChange": "2025-01-21",
       "tags": [
         "chek-validation-profile"
       ],
@@ -132,13 +132,13 @@
     },
     {
       "itemIdentifier": "ogc.checkdbp.profiles.common.roads-present",
-      "name": "Buildings present",
-      "abstract": "Profile that requires that buildings are present in a dataset",
+      "name": "Roads present",
+      "abstract": "Profile that requires that roads are present in a dataset",
       "status": "stable",
-      "dateTimeAddition": "2024-12-12T00:00:00Z",
+      "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-15",
+      "dateOfLastChange": "2025-01-21",
       "tags": [
         "chek-validation-profile"
       ],
@@ -169,13 +169,13 @@
     },
     {
       "itemIdentifier": "ogc.checkdbp.profiles.czechia.prague",
-      "name": "Lisbon profile",
-      "abstract": "Profile for the Lisbon municipality",
+      "name": "Prague profile",
+      "abstract": "Profile for the Prague (CZ) municipality",
       "status": "stable",
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-15",
+      "dateOfLastChange": "2025-01-21",
       "dependsOn": [
         "ogc.checkdbp.profiles.common.green-public-spaces-present",
         "ogc.checkdbp.profiles.common.roads-present"
@@ -217,12 +217,12 @@
     {
       "itemIdentifier": "ogc.checkdbp.profiles.italy.ascoli-piceno",
       "name": "Ascoli Piceno profile",
-      "abstract": "Profile for the Ascoli Piceno municipality",
+      "abstract": "Profile for the Ascoli Piceno (IT) municipality",
       "status": "stable",
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-15",
+      "dateOfLastChange": "2025-01-21",
       "dependsOn": [
         "ogc.checkdbp.profiles.common.green-public-spaces-present",
         "ogc.checkdbp.profiles.common.roads-present",
@@ -267,13 +267,13 @@
     },
     {
       "itemIdentifier": "ogc.checkdbp.profiles.portugal.gaia",
-      "name": "Lisbon profile",
-      "abstract": "Profile for the Lisbon municipality",
+      "name": "Vila Nova de Gaia profile",
+      "abstract": "Profile for the Vila Nova de Gaia (PT) municipality",
       "status": "stable",
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-15",
+      "dateOfLastChange": "2025-01-21",
       "dependsOn": [
         "ogc.checkdbp.profiles.common.green-public-spaces-present",
         "ogc.checkdbp.profiles.common.roads-present"
@@ -315,12 +315,12 @@
     {
       "itemIdentifier": "ogc.checkdbp.profiles.portugal.lisbon",
       "name": "Lisbon profile",
-      "abstract": "Profile for the Lisbon municipality",
+      "abstract": "Profile for the Lisbon (PT) municipality",
       "status": "stable",
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "schema",
       "version": "1.0",
-      "dateOfLastChange": "2025-01-15",
+      "dateOfLastChange": "2025-01-21",
       "dependsOn": [
         "ogc.checkdbp.profiles.common.green-public-spaces-present",
         "ogc.checkdbp.profiles.common.roads-present"

@@ -1,9 +1,9 @@
 
-# Lisbon profile (Schema)
+# Prague profile (Schema)
 
 `ogc.checkdbp.profiles.czechia.prague` *v1.0*
 
-Profile for the Lisbon municipality
+Profile for the Prague (CZ) municipality
 
 [*Status*](http://www.opengis.net/def/status): Stable
 

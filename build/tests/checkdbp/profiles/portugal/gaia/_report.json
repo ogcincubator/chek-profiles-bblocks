@@ -1,8 +1,8 @@
 {
-  "title": "Validation report for ogc.checkdbp.profiles.portugal.gaia - Lisbon profile",
-  "bblockName": "Lisbon profile",
+  "title": "Validation report for ogc.checkdbp.profiles.portugal.gaia - Vila Nova de Gaia profile",
+  "bblockName": "Vila Nova de Gaia profile",
   "bblockId": "ogc.checkdbp.profiles.portugal.gaia",
-  "generated": "2025-01-15T08:26:58.209478+00:00",
+  "generated": "2025-01-21T08:41:42.122576+00:00",
   "result": true,
   "items": [],
   "globalErrors": {},
