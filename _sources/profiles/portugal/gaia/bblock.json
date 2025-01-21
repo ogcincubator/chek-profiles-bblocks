@@ -3,7 +3,7 @@
   "abstract": "Profile for the Vila Nova de Gaia (PT) municipality",
   "status": "stable",
   "dateTimeAddition": "2024-12-20T00:00:00Z",
-  "itemClass": "schema",
+  "itemClass": "model",
   "version": "1.0",
   "dateOfLastChange": "2025-01-07",
   "dependsOn": [

@@ -3,7 +3,7 @@
   "abstract": "Profile that requires that buildings are present in a dataset",
   "status": "stable",
   "dateTimeAddition": "2024-12-12T00:00:00Z",
-  "itemClass": "schema",
+  "itemClass": "model",
   "version": "1.0",
   "dateOfLastChange": "2025-01-07",
   "tags": ["chek-validation-profile"]
