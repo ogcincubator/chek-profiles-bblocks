@@ -1,4 +1,4 @@
-@prefix : <urn:chek:profiles/roads-present#> .
+@prefix : <urn:chek:profiles/buildings-present#> .
 @prefix chek: <urn:chek:vocab/> .
 @prefix dash: <http://datashapes.org/dash#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
@@ -35,19 +35,19 @@ ex:
   ] ;
 .
 
-:RoadsPresent
+:BuildingsPresent
     a sh:NodeShape ;
     sh:targetNode chek:document ;
     sh:not [
         sh:sparql [
           sh:prefixes ex: ;
           sh:select """
-            SELECT $this (rdf:type as ?path) (city:Road as ?value) WHERE {
-              ?s a city:Road
+            SELECT $this (rdf:type as ?path) (city:Building as ?value) WHERE {
+              ?s a city:Building
             } LIMIT 1
         """ ;
         ] ;
       ] ;
-    sh:message "Dataset contains no Road objects" ;
+    sh:message "Dataset contains no Building objects" ;
     sh:severity sh:Violation ;
 .
