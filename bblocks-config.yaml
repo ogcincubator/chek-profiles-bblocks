@@ -7,8 +7,19 @@ abstract: |
 
 # Description for this collection (optional)
 description: |
-  The description can be longer. Both **the abstract** *and the description* support Markdown,
-  including [links](https://google.es).
+  This register contains CHEK DBP project data requirements profiles as building blocks.
+  
+  For a building block to be a valid CHEK profile, it needs to:
+  
+    1. Have a `data.ttl` file with the RDF description of the profile (using [The Profiles Vocabulary](https://www.w3.org/TR/dx-prof/))  
+    2. Contain some [SHACL shapes](https://ogcincubator.github.io/bblocks-docs/create/validation#shacl-validation)
+    3. Have the `chek-validation-profile` tag
+  
+  You can use the [dummy profile](https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.checkdbp.profiles.common.dummy)
+  as a template.
+  
+  Profile dependencies can be declared either by using `dependsOn` in `bblock.json` (with the id of the bblock), or using
+  [`prof:isProfileOf`](https://www.w3.org/TR/dx-prof/#Property:isProfileOf) in the RDF definition of the profile.
 
 # Customize the following prefix (will be prepended to the path of the building blocks):
 identifier-prefix: ogc.checkdbp.
