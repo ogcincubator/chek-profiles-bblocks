@@ -7,8 +7,8 @@
   "version": "1.0",
   "dateOfLastChange": "2025-01-07",
   "dependsOn": [
-    "ogc.checkdbp.profiles.common.roads-present",
-    "ogc.checkdbp.profiles.common.green-public-spaces-present"
+    "ogc.chekdbp.profiles.common.roads-present",
+    "ogc.chekdbp.profiles.common.green-public-spaces-present"
   ],
   "tags": ["chek-validation-profile"]
 }
