@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.chekdbp.profiles.czechia.prague - Prague profile",
+  "bblockName": "Prague profile",
+  "bblockId": "ogc.chekdbp.profiles.czechia.prague",
+  "generated": "2025-02-03T10:31:36.386511+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

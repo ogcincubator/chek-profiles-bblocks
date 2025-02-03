@@ -1,0 +1,28 @@
+
+
+{
+  "itemIdentifier": "ogc.chekdbp.profiles.common.buildings-present",
+  "name": "Buildings present",
+  "abstract": "Profile that requires that buildings are present in a dataset",
+  "status": "stable",
+  "dateTimeAddition": "2024-12-12T00:00:00Z",
+  "itemClass": "model",
+  "version": "1.0",
+  "dateOfLastChange": "2025-02-03",
+  "tags": [
+    "chek-validation-profile"
+  ],
+  "shaclRules": {
+    "ogc.chekdbp.profiles.common.buildings-present": [
+      "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
+    ]
+  },
+  "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/",
+  "rdfData": [
+    "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/data.ttl"
+  ],
+  "validationPassed": true,
+  "annotatedSchema": null,
+  "gitRepository": "https://github.com/ogcincubator/chek-profiles-bblocks",
+  "gitPath": "_sources/profiles/common/buildings-present"
+}

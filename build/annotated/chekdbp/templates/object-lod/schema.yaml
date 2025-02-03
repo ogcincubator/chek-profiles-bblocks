@@ -1,0 +1,39 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+type: object
+allOf:
+- $ref: https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/base-rule/schema.yaml
+- required:
+  - objectSelector
+  - lod
+  properties:
+    objectSelector:
+      allOf:
+      - $ref: https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-selector/schema.yaml
+      - type: object
+        properties:
+          requiredSubPath:
+            description: Array with city object path, starting from the last element
+              of "path", that is required to be present.
+            minItems: 1
+            $ref: https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-selector/schema.yaml#/$defs/CityObjectArray
+          geometrySurface:
+            description: Geometry surface on which the LoD will be checked.
+            type: string
+    lod:
+      description: Level of detail
+      type: object
+      oneOf:
+      - required:
+        - regex
+        properties:
+          regex:
+            description: Regular expression to validate the LoD.
+            type: string
+      - required:
+        - min
+        properties:
+          min:
+            description: Minimum allowed LoD. Can be simple (2) or extended (2.1).
+              If extended an LoD is used, only extended values will be allowed.
+            type: string
+            pattern: ^[0-3](\.[0-3])$

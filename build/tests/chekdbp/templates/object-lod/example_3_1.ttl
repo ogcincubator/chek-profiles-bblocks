@@ -1,0 +1,38 @@
+@prefix chek: <urn:chek:vocab/> .
+@prefix my-rule: <http://example.com/change-me/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+my-rule:my-rule a sh:NodeShape ;
+    sh:message "Invalid Level of Detail (lod) for object" ;
+    sh:name "My sample rule for buildings" ;
+    sh:severity sh:Violation ;
+    sh:sparql [ sh:prefixes my-rule:prefixes ;
+            sh:select """
+SELECT (?rootObject as $this) (?value as ?path) WHERE {
+  ?obj0 a city:Building .
+  FILTER NOT EXISTS {
+    ?obj0 city:hasGeometry/city:hasSurface ?surface .
+    ?surface a city:WallSurface .
+    ?surface city:lod ?lod .
+    FILTER REGEX(?lod, "^[3-4]\\.[2-4]$")
+  }
+}""" ] ;
+    sh:targetNode chek:document .
+
+my-rule:prefixes a owl:Ontology ;
+    owl:imports sh: ;
+    sh:declare [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ],
+        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ] .
+

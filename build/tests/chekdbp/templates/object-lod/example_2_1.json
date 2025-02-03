@@ -1,0 +1,12 @@
+{
+  "id": "my-rule",
+  "label": "My sample rule for buildings",
+  "objectSelector": {
+    "path": [
+      "Building"
+    ]
+  },
+  "lod": {
+    "min": "3"
+  }
+}

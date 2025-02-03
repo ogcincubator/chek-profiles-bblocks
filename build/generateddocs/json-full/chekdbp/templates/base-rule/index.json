@@ -1,0 +1,29 @@
+
+
+{
+  "itemIdentifier": "ogc.chekdbp.templates.base-rule",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/bblock.schema.yaml",
+  "name": "Base rule template",
+  "abstract": "Supporting building block with common rule template properties",
+  "status": "under-development",
+  "dateTimeAddition": "2025-01-24T00:00:00Z",
+  "itemClass": "schema",
+  "version": "0.1",
+  "dateOfLastChange": "2025-02-03",
+  "shaclRules": {},
+  "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/base-rule/context.jsonld",
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/base-rule/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/base-rule/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/base-rule/schema.yaml",
+  "sourceLdContext": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/base-rule/context.jsonld",
+  "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/base-rule/",
+  "rdfData": [
+    "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
+  ],
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\ntype: object\nrequired:\n- id\nproperties:\n  id:\n    description: Identifier for this rule, a URI preferably\n    type: string\n    x-jsonld-id: '@id'\n  title:\n    description: Title for this rule\n    type: string\n  description:\n    description: Textual description for this rule\n    type: string\n    x-jsonld-id: http://www.w3.org/ns/shacl#description\n  message:\n    description: Message returned by the SHACL validator\n    type: string\n    x-jsonld-id: http://www.w3.org/ns/shacl#message\nx-jsonld-extra-terms:\n  label: http://www.w3.org/ns/shacl#name\nx-jsonld-base: http://example.com/change-me/\nx-jsonld-prefixes:\n  sh: http://www.w3.org/ns/shacl#\n  my-rule: http://example.com/change-me/\n  rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#\n  rdfs: http://www.w3.org/2000/01/rdf-schema#\n  dct: http://purl.org/dc/terms/\n  xsd: http://www.w3.org/2001/XMLSchema#\n  owl: http://www.w3.org/2002/07/owl#\n  city: http://example.com/vocab/city/\n  attr: http://example.com/vocab/city/attr#\n  sd: https://w3id.org/okn/o/sd#\n  chek: urn:chek:vocab/\n",
+  "gitRepository": "https://github.com/ogcincubator/chek-profiles-bblocks",
+  "gitPath": "_sources/templates/base-rule"
+}

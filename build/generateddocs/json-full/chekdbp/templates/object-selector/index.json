@@ -1,0 +1,27 @@
+
+
+{
+  "itemIdentifier": "ogc.chekdbp.templates.object-selector",
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/bblock.schema.yaml",
+  "name": "Object selector",
+  "abstract": "Common properties for declaring city object selectors in rule template",
+  "status": "under-development",
+  "dateTimeAddition": "2025-01-24T00:00:00Z",
+  "itemClass": "schema",
+  "version": "0.1",
+  "dateOfLastChange": "2025-02-03",
+  "shaclRules": {},
+  "schema": {
+    "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-selector/schema.yaml",
+    "application/json": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-selector/schema.json"
+  },
+  "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-selector/schema.yaml",
+  "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-selector/",
+  "rdfData": [
+    "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
+  ],
+  "validationPassed": true,
+  "annotatedSchema": "$schema: https://json-schema.org/draft/2020-12/schema\n$defs:\n  CityObjectId:\n    type: string\n    enum:\n    - OtherConstruction\n    - Building\n    - BuildingPart\n    - BuildingInstallation\n    - BuildingConstructiveElement\n    - BuildingFurniture\n    - BuildingRoom\n    - BuildingUnit\n    - BuildingStorey\n    - CityObjectGroup\n    - GenericCityObject\n    - Tunnel\n    - TunnelPart\n    - TunnelInstallation\n    - TunnelConstructiveElement\n    - TunnelHollowSpace\n    - TunnelFurniture\n    - Bridge\n    - BridgePart\n    - BridgeInstallation\n    - BridgeConstructiveElement\n    - BridgeRoom\n    - BridgeFurniture\n    - Road\n    - Railway\n    - TransportSquare\n    - Waterway\n    - TINRelief\n    - WaterBody\n    - PlantCover\n    - SolitaryVegetationObject\n    - LandUse\n    - CityFurniture\n  CityObjectArray:\n    type: array\n    items:\n      $ref: '#/$defs/CityObjectId'\ntype: object\noneOf:\n- required:\n  - path\n  properties:\n    path:\n      description: Array with city object path to desired element, starting from the\n        root City Objects\n      minItems: 1\n      $ref: '#/$defs/CityObjectArray'\n- required:\n  - idPatterns\n  properties:\n    idPatterns:\n      description: Array with regular expression patterns to filter city objects by\n      minItems: 1\n      items:\n        type: string\n",
+  "gitRepository": "https://github.com/ogcincubator/chek-profiles-bblocks",
+  "gitPath": "_sources/templates/object-selector"
+}

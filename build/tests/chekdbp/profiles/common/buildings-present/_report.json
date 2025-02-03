@@ -1,0 +1,14 @@
+{
+  "title": "Validation report for ogc.chekdbp.profiles.common.buildings-present - Buildings present",
+  "bblockName": "Buildings present",
+  "bblockId": "ogc.chekdbp.profiles.common.buildings-present",
+  "generated": "2025-02-03T10:31:36.338262+00:00",
+  "result": true,
+  "items": [],
+  "globalErrors": {},
+  "counts": {
+    "total": 0,
+    "passed": 0,
+    "failed": 0
+  }
+}

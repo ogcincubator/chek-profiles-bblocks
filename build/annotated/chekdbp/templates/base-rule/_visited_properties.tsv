@@ -1,0 +1,5 @@
+path	@id
+/id	@id
+/title	
+/description	http://www.w3.org/ns/shacl#description
+/message	http://www.w3.org/ns/shacl#message

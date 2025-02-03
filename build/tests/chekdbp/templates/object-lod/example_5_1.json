@@ -1,0 +1,17 @@
+{
+  "id": "my-rule",
+  "label": "My sample rule for buildings",
+  "objectSelector": {
+    "path": [
+      "Building",
+      "BuildingPart"
+    ],
+    "requiredSubPath": [
+      "BuildingInstallation"
+    ],
+    "geometrySurface": "WallSurface"
+  },
+  "lod": {
+    "min": "2"
+  }
+}
