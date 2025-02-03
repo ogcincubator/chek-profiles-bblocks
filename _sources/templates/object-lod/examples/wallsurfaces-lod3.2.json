@@ -1,0 +1,13 @@
+{
+  "id": "my-rule",
+  "label": "My sample rule for buildings",
+  "objectSelector": {
+    "path": [
+      "Building"
+    ],
+    "geometrySurface": "WallSurface"
+  },
+  "lod": {
+    "min": "3.2"
+  }
+}

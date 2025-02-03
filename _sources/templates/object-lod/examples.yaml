@@ -1,0 +1,27 @@
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml?
+
+examples:
+  - title: Minimum LoD 2.1+ for buildings
+    snippets:
+      - language: json
+        ref: examples/buildings-lod2.1.json
+
+  - title: Minumum LoD 3 for buildings
+    snippets:
+      - language: json
+        ref: examples/buildings-lod3.json
+
+  - title: Minumum LoD 3.2 for WallSurface in Buildings
+    snippets:
+      - language: json
+        ref: examples/wallsurfaces-lod3.2.json
+
+  - title: Mininum LoD with regular expression for GroundSurface of Building / BuildingPart
+    snippets:
+      - language: json
+        ref: examples/buildingparts-lodregex.json
+
+  - title: "Require that all BuildingPart's inside Building's have at least one BuildingInstallation with a WallSurface of LoD >= 2."
+    snippets:
+      - language: json
+        ref: examples/buildingparts-withinstallations.json

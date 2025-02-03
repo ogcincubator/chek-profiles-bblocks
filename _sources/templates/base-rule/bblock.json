@@ -1,0 +1,10 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/bblock.schema.yaml",
+  "name": "Base rule template",
+  "abstract": "Supporting building block with common rule template properties",
+  "status": "under-development",
+  "dateTimeAddition": "2025-01-24T00:00:00Z",
+  "itemClass": "schema",
+  "version": "0.1",
+  "dateOfLastChange": "2025-01-24"
+}

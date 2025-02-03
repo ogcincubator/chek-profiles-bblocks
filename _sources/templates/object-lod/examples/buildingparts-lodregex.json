@@ -1,0 +1,14 @@
+{
+  "id": "my-rule",
+  "label": "My sample rule for buildings",
+  "objectSelector": {
+    "path": [
+      "Building",
+      "BuildingPart"
+    ],
+    "geometrySurface": "GroundSurface"
+  },
+  "lod": {
+    "regex": "^(2\\.[2-4]|[34](\\.*)?)$"
+  }
+}
