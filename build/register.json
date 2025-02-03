@@ -2,7 +2,7 @@
   "name": "CHEK Project profiles",
   "abstract": "Profiles for the CHEK project as Building Blocks.\n",
   "description": "This register contains CHEK DBP project data requirements profiles as building blocks.\n\nFor a building block to be a valid CHEK profile, it needs to:\n\n  1. Have a `data.ttl` file with the RDF description of the profile (using [The Profiles Vocabulary](https://www.w3.org/TR/dx-prof/))  \n  2. Contain some [SHACL shapes](https://ogcincubator.github.io/bblocks-docs/create/validation#shacl-validation)\n  3. Have the `chek-validation-profile` tag\n\nYou can use the [dummy profile](https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.common.dummy)\nas a template.\n\nProfile dependencies can be declared either by using `dependsOn` in `bblock.json` (with the id of the bblock), or using\n[`prof:isProfileOf`](https://www.w3.org/TR/dx-prof/#Property:isProfileOf) in the RDF definition of the profile.\n",
-  "modified": "2025-02-03T10:31:35.624057",
+  "modified": "2025-02-03T12:57:09.148214",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"36e6c58463d61501d50dbbc7dd5d1b1884dda73f",
@@ -445,8 +445,8 @@
       "dateOfLastChange": "2025-02-03",
       "shaclRules": {},
       "dependsOn": [
-        "ogc.chekdbp.templates.object-selector",
-        "ogc.chekdbp.templates.base-rule"
+        "ogc.chekdbp.templates.base-rule",
+        "ogc.chekdbp.templates.object-selector"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-lod/schema.yaml",
@@ -458,7 +458,7 @@
       "rdfData": [
         "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
       ],
-      "validationPassed": false,
+      "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/build/tests/chekdbp/templates/object-lod/",
       "documentation": {
         "markdown": {

@@ -2,8 +2,8 @@
   "title": "Validation report for ogc.chekdbp.templates.object-lod - Object Level of Detail (LoD)",
   "bblockName": "Object Level of Detail (LoD)",
   "bblockId": "ogc.chekdbp.templates.object-lod",
-  "generated": "2025-02-03T10:31:36.512563+00:00",
-  "result": false,
+  "generated": "2025-02-03T12:57:10.087537+00:00",
+  "result": true,
   "items": [
     {
       "source": {
@@ -80,7 +80,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -117,11 +117,9 @@
           "entries": [
             {
               "op": "validation",
-              "result": false,
-              "exception": "ValidationError",
-              "errorMessage": "'3' does not match '^[0-3](\\\\.[0-3])$'",
-              "isError": true,
-              "message": "ValidationError: '3' does not match '^[0-3](\\\\.[0-3])$'\n\nFailed validating 'pattern' in schema[1]['properties']['min']:\n    {'description': 'Minimum allowed LoD. Can be simple (2) or extended '\n                    '(2.1). If extended an LoD is used, only extended '\n                    'values will be allowed.',\n     'pattern': '^[0-3](\\\\.[0-3])$',\n     'type': 'string'}\n\nOn instance['min']:\n    '3'"
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
             }
           ]
         },
@@ -277,7 +275,7 @@
         "snippetIndex": 1,
         "language": "application/json"
       },
-      "result": false,
+      "result": true,
       "sections": [
         {
           "name": "FILES",
@@ -314,11 +312,9 @@
           "entries": [
             {
               "op": "validation",
-              "result": false,
-              "exception": "ValidationError",
-              "errorMessage": "'2' does not match '^[0-3](\\\\.[0-3])$'",
-              "isError": true,
-              "message": "ValidationError: '2' does not match '^[0-3](\\\\.[0-3])$'\n\nFailed validating 'pattern' in schema[1]['properties']['min']:\n    {'description': 'Minimum allowed LoD. Can be simple (2) or extended '\n                    '(2.1). If extended an LoD is used, only extended '\n                    'values will be allowed.',\n     'pattern': '^[0-3](\\\\.[0-3])$',\n     'type': 'string'}\n\nOn instance['min']:\n    '2'"
+              "result": true,
+              "isError": false,
+              "message": "Validation passed"
             }
           ]
         },
@@ -338,7 +334,7 @@
   "globalErrors": {},
   "counts": {
     "total": 5,
-    "passed": 3,
-    "failed": 2
+    "passed": 5,
+    "failed": 0
   }
 }
