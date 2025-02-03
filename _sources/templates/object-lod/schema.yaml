@@ -37,4 +37,4 @@ allOf:
               min:
                 description: Minimum allowed LoD. Can be simple (2) or extended (2.1). If extended an LoD is used, only extended values will be allowed.
                 type: string
-                pattern: '^[0-3](\.[0-3])$'
+                pattern: '^[0-3](\.[0-3])?$'
