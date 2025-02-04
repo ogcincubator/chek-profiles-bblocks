@@ -13,14 +13,14 @@
     rdfs:label "Dummy profile" ;
     dct:abstract "Empty profile without rules" ;
     dct:created "2024-11-10T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/common/dummy/index.json" ],
+        [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.common.dummy" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/common/dummy/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/common/dummy/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/common/dummy/index.md" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2025-02-03"^^xsd:date ;
+    dct:modified "2025-02-04"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     dcat:keyword "chek-validation-profile" ;
     bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/dummy/rules.shacl> ;
@@ -32,14 +32,14 @@
     rdfs:label "Prague profile" ;
     dct:abstract "Profile for the Prague (CZ) municipality" ;
     dct:created "2024-12-20T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.czechia.prague" ],
-        [ dct:format "application/json" ;
+    dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/czechia/prague/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/czechia/prague/index.md" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/czechia/prague/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.czechia.prague" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2025-02-03"^^xsd:date ;
+    dct:modified "2025-02-04"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     dcat:keyword "chek-validation-profile" ;
     bblocks:dependsOn <https://ogcincubator.github.io/ogc.chekdbp.profiles.common.green-public-spaces-present>,
@@ -55,14 +55,14 @@
     rdfs:label "Ascoli Piceno profile" ;
     dct:abstract "Profile for the Ascoli Piceno (IT) municipality" ;
     dct:created "2024-11-10T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/italy/ascoli-piceno/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.italy.ascoli-piceno" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/italy/ascoli-piceno/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/italy/ascoli-piceno/index.md" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2025-02-03"^^xsd:date ;
+    dct:modified "2025-02-04"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     dcat:keyword "chek-validation-profile" ;
     bblocks:dependsOn <https://ogcincubator.github.io/ogc.chekdbp.profiles.common.buildings-present>,
@@ -80,14 +80,14 @@
     rdfs:label "Vila Nova de Gaia profile" ;
     dct:abstract "Profile for the Vila Nova de Gaia (PT) municipality" ;
     dct:created "2024-12-20T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.portugal.gaia" ],
+    dct:description [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/portugal/gaia/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/portugal/gaia/index.md" ],
-        [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/portugal/gaia/index.json" ] ;
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.portugal.gaia" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2025-02-03"^^xsd:date ;
+    dct:modified "2025-02-04"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     dcat:keyword "chek-validation-profile" ;
     bblocks:dependsOn <https://ogcincubator.github.io/ogc.chekdbp.profiles.common.green-public-spaces-present>,
@@ -103,14 +103,14 @@
     rdfs:label "Lisbon profile" ;
     dct:abstract "Profile for the Lisbon (PT) municipality" ;
     dct:created "2024-12-20T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/portugal/lisbon/index.json" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.portugal.lisbon" ],
+        [ dct:format "application/json" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/portugal/lisbon/index.json" ],
         [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/portugal/lisbon/index.md" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2025-02-03"^^xsd:date ;
+    dct:modified "2025-02-04"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     dcat:keyword "chek-validation-profile" ;
     bblocks:dependsOn <https://ogcincubator.github.io/ogc.chekdbp.profiles.common.green-public-spaces-present>,
@@ -126,15 +126,16 @@
     rdfs:label "Object Level of Detail (LoD)" ;
     dct:abstract "Creates a rule to validate the LoD of a given element or set of elements" ;
     dct:created "2025-01-24T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "application/json" ;
+    dct:description [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.templates.object-lod" ],
+        [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/templates/object-lod/index.json" ],
         [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/templates/object-lod/index.md" ],
-        [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.templates.object-lod" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/templates/object-lod/index.md" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-02-03"^^xsd:date ;
+    dct:modified "2025-02-04"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
+    dcat:keyword "chek-rule-template" ;
     bblocks:dependsOn <https://ogcincubator.github.io/ogc.chekdbp.templates.base-rule>,
         <https://ogcincubator.github.io/ogc.chekdbp.templates.object-selector> ;
     bblocks:hasJsonLdContext <https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-lod/context.jsonld> ;
@@ -148,14 +149,14 @@
     rdfs:label "Buildings present" ;
     dct:abstract "Profile that requires that buildings are present in a dataset" ;
     dct:created "2024-12-12T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.common.buildings-present" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/common/buildings-present/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/common/buildings-present/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/common/buildings-present/index.json" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.common.buildings-present" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2025-02-03"^^xsd:date ;
+    dct:modified "2025-02-04"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     dcat:keyword "chek-validation-profile" ;
     bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl> ;
@@ -167,14 +168,14 @@
     rdfs:label "Base rule template" ;
     dct:abstract "Supporting building block with common rule template properties" ;
     dct:created "2025-01-24T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.templates.base-rule" ],
-        [ dct:format "text/markdown" ;
+    dct:description [ dct:format "text/markdown" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/templates/base-rule/index.md" ],
+        [ dct:format "text/html" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.templates.base-rule" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/templates/base-rule/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-02-03"^^xsd:date ;
+    dct:modified "2025-02-04"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     bblocks:hasJsonLdContext <https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/base-rule/context.jsonld> ;
     bblocks:hasSchema <https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/base-rule/schema.json>,
@@ -188,14 +189,14 @@
     rdfs:label "Object selector" ;
     dct:abstract "Common properties for declaring city object selectors in rule template" ;
     dct:created "2025-01-24T00:00:00+00:00"^^xsd:dateTime ;
-    dct:description [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/templates/object-selector/index.md" ],
-        [ dct:format "text/html" ;
+    dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.templates.object-selector" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/templates/object-selector/index.md" ],
         [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/templates/object-selector/index.json" ] ;
     dct:hasVersion "0.1" ;
-    dct:modified "2025-02-03"^^xsd:date ;
+    dct:modified "2025-02-04"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     bblocks:hasSchema <https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-selector/schema.json>,
         <https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-selector/schema.yaml> ;
@@ -209,12 +210,12 @@
     dct:created "2024-11-10T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "application/json" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/common/green-public-spaces-present/index.json" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/common/green-public-spaces-present/index.md" ],
         [ dct:format "text/html" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.common.green-public-spaces-present" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.common.green-public-spaces-present" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/common/green-public-spaces-present/index.md" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2025-02-03"^^xsd:date ;
+    dct:modified "2025-02-04"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     dcat:keyword "chek-validation-profile" ;
     bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl> ;
@@ -228,12 +229,12 @@
     dct:created "2024-11-10T00:00:00+00:00"^^xsd:dateTime ;
     dct:description [ dct:format "text/html" ;
             rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.common.roads-present" ],
-        [ dct:format "text/markdown" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/common/roads-present/index.md" ],
         [ dct:format "application/json" ;
-            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/common/roads-present/index.json" ] ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/profiles/common/roads-present/index.json" ],
+        [ dct:format "text/markdown" ;
+            rdfs:isDefinedBy "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/profiles/common/roads-present/index.md" ] ;
     dct:hasVersion "1.0" ;
-    dct:modified "2025-02-03"^^xsd:date ;
+    dct:modified "2025-02-04"^^xsd:date ;
     skos:inScheme <https://ogcincubator.github.io/chek-profiles-bblocks/> ;
     dcat:keyword "chek-validation-profile" ;
     bblocks:hasShaclRule <https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl> ;
@@ -263,15 +264,15 @@ Profile dependencies can be declared either by using `dependsOn` in `bblock.json
     bblocks:imports <https://opengeospatial.github.io/bblocks/register.json> .
 
 [] a prov:Activity ;
-    prov:endedAtTime "2025-02-03T12:57:10.182839"^^xsd:dateTime ;
-    prov:startedAtTime "2025-02-03T12:57:10.104958"^^xsd:dateTime ;
+    prov:endedAtTime "2025-02-04T10:32:25.033978"^^xsd:dateTime ;
+    prov:startedAtTime "2025-02-04T10:32:24.956641"^^xsd:dateTime ;
     prov:used [ a prov:Entity ;
-            dct:format "application/yaml" ;
-            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ],
-        [ a prov:Entity ;
             dct:format "application/json" ;
-            dct:hasVersion "git:4cd3b53b83a18e5745f79a5e098336bd43a66638" ;
-            rdfs:seeAlso <https://ogcincubator.github.io/chek-profiles-bblocks/build/register.json> ] ;
+            dct:hasVersion "git:f36127f8a4ef71723a343872c5528f6a00cda1e8" ;
+            rdfs:seeAlso <https://ogcincubator.github.io/chek-profiles-bblocks/build/register.json> ],
+        [ a prov:Entity ;
+            dct:format "application/yaml" ;
+            rdfs:seeAlso <file:///src/ogc/bblocks/register-context.yaml> ] ;
     prov:wasAssociatedWith [ a prov:Agent,
                 schema:SoftwareApplication ;
             rdfs:label "OGC-NA tools" ;
