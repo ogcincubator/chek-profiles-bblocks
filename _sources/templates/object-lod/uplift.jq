@@ -1,14 +1,14 @@
 def city_prefix: if startswith("city:") then . else "city:\(.)" end;
 # def get_target: .objectSelector | if (.idPatterns | type == "array" and length > 0) or (.path | length > 1) then "chek:document" else (.path[0] | city_prefix) end;
-def get_path: if .path | length > 0 then
-    (if .child then ["?obj\(.i - 1) city:hasChild ?obj\(.i)"] else [] end)
-    + ["?obj\(.i // 0) a \(.path[0] | city_prefix)"]
-    + ({ "i": ((.i // 0) + 1), "path": .path[1:], "geometrySurface": .geometrySurface, "child": true } | get_path)
+def get_path: (.i // 0) as $I | (if (.path | length == 1) and (.lastThis) then .lastThis else "?obj\($I)" end) as $THIS | if .path | length > 0 then
+    (if .parent then ["\(.parent) city:hasChild \($THIS)"] else [] end)
+    + ["\($THIS) a \(.path[0] | city_prefix)"]
+    + ({ "i": ($I + 1), "path": .path[1:], "geometrySurface": .geometrySurface, "parent": $THIS, "lastThis": "?this" } | get_path)
   else
-    if .geometrySurface == false then
+    if .geometrySurface == false or (.parent | not) then
       []
     else
-      ["?obj\(.i - 1) city:hasGeometry/city:hasSurface ?surface"]
+      ["\(.parent) city:hasGeometry/city:hasSurface ?surface"]
       + if .geometrySurface then
         ["?surface a \(.geometrySurface | city_prefix)"]
       else
@@ -18,18 +18,22 @@ def get_path: if .path | length > 0 then
   end;
 def get_lod_filter: if .lod.min then
     if (.lod.min | contains(".")) then
-      (.lod.min | split(".") | "^[\(.[0])-4]\\.[\(.[1])-4]$")
+      (.lod.min | split(".") | "^[\(.[0])-4]\\\\.[\(.[1])-4]$")
     else
-      "^[\(.lod.min)-4](\\.[0-4])?$"
+      "^[\(.lod.min)-4](\\\\.[0-4])?$"
     end
   else
     .lod.regex
   end | "FILTER REGEX(?lod, \"\(.)\")";
+def get_target: [
+  "SELECT ?this WHERE {",
+  "  " + ({ "path": .objectSelector.path, "geometrySurface": false, "lastThis": "?this" } | get_path | join(" .\n  ")) + " .",
+  "}"
+];
 def get_select: [
-  "\nSELECT (?rootObject as $this) (?value as ?path) WHERE {",
-    "  " + ({ "path": .objectSelector.path, "geometrySurface": (if .requiredSubPath | length then false else .objectSelector.geometrySurface end) } | get_path | join(" .\n  ")) + " .",
+  "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {",
     "  FILTER NOT EXISTS {",
-    "    " + ({ "path": .objectSelector.requiredSubPath, "geometrySurface": .objectSelector.geometrySurface, "i": (.objectSelector.path | length), "child": true } | get_path | join(" .\n    ")) + " .",
+    "    " + ({ "path": .objectSelector.requiredSubPath, "geometrySurface": .objectSelector.geometrySurface, "parent": "$this" } | get_path | join(" .\n    ")) + " .",
     "    ?surface city:lod ?lod ." ,
     "    \(get_lod_filter)",
     "  }",
@@ -43,8 +47,11 @@ def get_select: [
       "label": .label,
       "description": .description,
       "message": (.message // "Invalid Level of Detail (lod) for object"),
-      #"sh:targetNode": { "@id": (. | get_target) },
-      "sh:targetNode": { "@id": "chek:document" },
+      "sh:target": {
+        "@type": "sh:SPARQLTarget",
+        "sh:prefixes": { "@id": "my-rule:prefixes" },
+        "sh:select": (. | get_target | join("\n"))
+      },
       "sh:sparql": {
         "sh:prefixes": { "@id": "my-rule:prefixes" },
         "sh:select": (. | get_select | join("\n"))
