@@ -25,3 +25,8 @@ examples:
     snippets:
       - language: json
         ref: examples/buildingparts-withinstallations.json
+
+  - title: Minumum LoD 3 for objects whose identifiers begin with "ABC" or end with "DEF".
+    snippets:
+      - language: json
+        ref: examples/buildings-regex.json
