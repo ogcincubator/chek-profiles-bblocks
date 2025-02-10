@@ -1,5 +1,5 @@
+def escape_regex: . | gsub("\\\\"; "\\\\") | gsub("\""; "\\\"");
 def city_prefix: if startswith("city:") then . else "city:\(.)" end;
-# def get_target: .objectSelector | if (.idPatterns | type == "array" and length > 0) or (.path | length > 1) then "chek:document" else (.path[0] | city_prefix) end;
 def get_path: (.i // 0) as $I | (if (.path | length == 1) and (.lastThis) then .lastThis else "?obj\($I)" end) as $THIS | if .path | length > 0 then
     (if .parent then ["\(.parent) city:hasChild \($THIS)"] else [] end)
     + ["\($THIS) a \(.path[0] | city_prefix)"]
@@ -24,7 +24,7 @@ def get_lod_filter: if .lod.min then
     end
   else
     .lod.regex
-  end | "FILTER REGEX(?lod, \"\(.)\")";
+  end | "FILTER REGEX(?lod, \"\(. | escape_regex )\")";
 def get_target: [
   "SELECT ?this WHERE {",
   "  " + ({ "path": .objectSelector.path, "geometrySurface": false, "lastThis": "?this" } | get_path | join(" .\n  ")) + " .",
