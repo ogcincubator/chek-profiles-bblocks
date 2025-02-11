@@ -1,0 +1,19 @@
+{
+  "id": "my-rule",
+  "label": "Check Building.BuildingPart.hasWindows is 1",
+  "message": "Some Building objects do not have at least one BuildingPart with hasWindows set to 1",
+  "objectSelector": {
+    "path": [
+      "Building"
+    ],
+    "requiredSubPath": [
+      "BuildingPart"
+    ]
+  },
+  "attributes": {
+    "hasWalls": {
+      "required": true,
+      "=": 1
+    }
+  }
+}

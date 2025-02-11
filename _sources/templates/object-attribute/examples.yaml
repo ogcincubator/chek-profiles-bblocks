@@ -30,3 +30,16 @@ examples:
     snippets:
       - language: json
         ref: examples/roads-status-paved-dirt.json
+
+  - title: |
+      Require that all Building objects have at least one BuildingPart containing a WallSurface with a `hasWindows`
+      attribute with value `1`.
+    snippets:
+      - language: json
+        ref: examples/buildingpart-hasWindows-1.json
+
+  - title: |
+      Require that all Road objects have status = paved and width >= 1.
+    snippets:
+      - language: json
+        ref: examples/roads-status-width.json

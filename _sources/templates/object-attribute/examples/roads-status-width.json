@@ -1,0 +1,20 @@
+{
+  "id": "my-rule",
+  "label": "Check Road.status and Road.width",
+  "message": "Check that Road.status is present and has value 'paved', and that Road.width is at least 1",
+  "objectSelector": {
+    "path": [
+      "Road"
+    ]
+  },
+  "attributes": {
+    "status": {
+      "required": true,
+      "=": "paved"
+    },
+    "width": {
+      "required": true,
+      ">=": 1
+    }
+  }
+}

@@ -16,15 +16,6 @@ def get_path: (.i // 0) as $I | (if (.path | length == 1) and (.lastThis) then .
       []
     end
   end;
-def get_lod_filter: if .lod.min then
-    if (.lod.min | contains(".")) then
-      (.lod.min | split(".") | "^[\(.[0])-4]\\\\.[\(.[1])-4]$")
-    else
-      "^[\(.lod.min)-4](\\\\.[0-4])?$"
-    end
-  else
-    .lod.regex
-  end | "FILTER REGEX(?lod, \"\(. | escape_regex )\")";
 def get_id_patterns_matcher: map("{ FILTER REGEX(?identifier, \"\(. | escape_regex)\") }") | join("\n  UNION\n  ") |
   "$this dct:identifier ?identifier .\n  " + .;
 def escape_attribute_value:
@@ -32,30 +23,31 @@ def escape_attribute_value:
     "\"\(. | escape_regex)\""
   end
 ;
-def get_attribute_filter($var):
+def get_attribute_filter:
   to_entries | map(select(.key | test("^(=|[<>]=?|regex)$")) |
     if .key == "regex" then
-      "REGEX($var; \"\(.value | escape_regex)\")"
+      "REGEX(?value; \"\(.value | escape_regex)\")"
     else
-      "$var \(.key) \(.value | escape_attribute_value)"
+      "?value \(.key) \(.value | escape_attribute_value)"
     end
   )
 ;
-def get_attributes:
-  (if .objectSelector.geometrySurface then "?surface" elif .objectSelector.requiredSubPath then "?this" else "$this" end) as $SUBJECT |
-  .attributes | to_entries | to_entries | map(
-    .key as $IDX | .value.key as $ATTR | "?attr\($IDX)" as $ATTR_VAL | .value.value as $VAL |
-    (if $VAL.required then ["", "&&"] else ["!", "||"] end) as $FILTER_OPS | ($VAL | get_attribute_filter($ATTR_VAL) | join(" && ")) as $FILTER_CONDS |
-    if ($VAL.required or ($FILTER_CONDS | length > 0)) then
-      [
-        "OPTIONAL { \($SUBJECT) attr:\($ATTR) \($ATTR_VAL) } .",
-        get_attribute_filter("?fake"),
-        "FILTER(\($FILTER_OPS[0])" + "BOUND(\($ATTR_VAL))" + (if $FILTER_CONDS | length > 0 then " \($FILTER_OPS[1]) (\($FILTER_CONDS))" else "" end) + ")"
+def get_attribute:
+  (if .rule.objectSelector.geometrySurface then "?surface" elif .rule.objectSelector.requiredSubPath then "?this" else "$this" end) as $SUBJECT |
+  .attr |
+  (.value | get_attribute_filter | join(" && ")) as $FILTER_CONDS |
+  if ((.value.required | not) and ($FILTER_CONDS | length == 0)) then
+    []
+  else
+    "\($SUBJECT) <http://example.com/vocab/city/attr#\(.key | @uri)> ?value" as $TRIPLE |
+    [if (.value.required | not) then "OPTIONAL { \($TRIPLE) }" else $TRIPLE end]
+    + [ if ($FILTER_CONDS | length > 0) then
+          "FILTER(" + if (.value.required | not) then "!BOUND(?value)" + (if $FILTER_CONDS | length > 0 then " || (\($FILTER_CONDS))" else "" end) else $FILTER_CONDS end + ")"
+        else
+          empty
+        end
       ]
-    else
-      []
-    end
-  ) | flatten
+  end
 ;
 def get_target: [
   "\nSELECT ?this WHERE {",
@@ -66,14 +58,15 @@ def get_target: [
           end),
   "}"
 ];
-def get_select: [
-  "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {",
-    "  FILTER NOT EXISTS {",
-    "    " + ({ "path": .objectSelector.requiredSubPath, "geometrySurface": .objectSelector.geometrySurface, "parent": "$this" } | get_path | join("    ")),
-    "    " + (get_attributes | join("\n    ")),
-    "  }",
+def get_selects: [(.attributes | to_entries)[] as $ATTR | [
+  "\nSELECT $this (<http://example.com/vocab/city/attr#\($ATTR.key | @uri)> as ?path) ?value WHERE {",
+  "  FILTER NOT EXISTS {",
+  "    " + ({ "path": .objectSelector.requiredSubPath, "geometrySurface": .objectSelector.geometrySurface, "parent": "$this" } | get_path | select(.) | join("\n    ")),
+  "    " + ({ "attr": $ATTR, "rule": .} | get_attribute | select(.) | join("\n    ")),
+  "  }",
   "}"
-];
+] | join("\n")]
+;
 {
   "@graph": [
     {
@@ -81,16 +74,16 @@ def get_select: [
       "id": .id,
       "label": .label,
       "description": .description,
-      "message": (.message // "Invalid Level of Detail (lod) for object"),
+      "message": (.message // "Invalid or missing attribute value"),
       "sh:target": {
         "@type": "sh:SPARQLTarget",
         "sh:prefixes": { "@id": "my-rule:prefixes" },
         "sh:select": (. | get_target | join("\n"))
       },
-      "sh:sparql": {
+      "sh:sparql": (get_selects | map({
         "sh:prefixes": { "@id": "my-rule:prefixes" },
-        "sh:select": (. | get_select | join("\n"))
-      },
+        "sh:select": .
+      })),
       "sh:severity": { "@id": "sh:Violation" }
     },
     {

@@ -20,11 +20,16 @@ allOf:
           - type: object
             properties:
               requiredSubPath:
-                description: Array with city object path, starting from the last element of "path", that is required to be present.
+                description: |
+                  Array with city object path, starting from the last element of "path", that is required to be present.
+                  If this is provided, only one of the objects in this sub path will have to comply with the attribute
+                  requirements.
                 minItems: 1
                 $ref: 'bblocks://ogc.chekdbp.templates.object-selector#/$defs/CityObjectArray'
               geometrySurface:
-                description: Geometry surface on which the attribute will be checked.
+                description: |
+                  Geometry surface on which the attribute will be checked.
+                  Only one geometry surface is required to comply with the attribute requirements.
                 type: string
 
       attributes:
