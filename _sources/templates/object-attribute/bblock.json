@@ -1,0 +1,13 @@
+{
+  "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/bblock.schema.yaml",
+  "name": "Object Attribute",
+  "abstract": "Creates a rule to validate the existence and/or value of an attribute in an object or set of objects",
+  "status": "under-development",
+  "dateTimeAddition": "2025-01-24T00:00:00Z",
+  "itemClass": "schema",
+  "version": "0.1",
+  "dateOfLastChange": "2025-01-24",
+  "tags": [
+    "chek-rule-template"
+  ]
+}

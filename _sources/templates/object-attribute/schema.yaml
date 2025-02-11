@@ -1,0 +1,44 @@
+$schema: https://json-schema.org/draft/2020-12/schema
+
+$defs:
+  scalar:
+    not:
+      anyOf:
+        - type: object
+        - type: array
+
+type: object
+allOf:
+  - $ref: ../base-rule/schema.yaml
+
+  - required:
+      - objectSelector
+    properties:
+      objectSelector:
+        allOf:
+          - $ref: ../object-selector/schema.yaml
+          - type: object
+            properties:
+              requiredSubPath:
+                description: Array with city object path, starting from the last element of "path", that is required to be present.
+                minItems: 1
+                $ref: 'bblocks://ogc.chekdbp.templates.object-selector#/$defs/CityObjectArray'
+              geometrySurface:
+                description: Geometry surface on which the attribute will be checked.
+                type: string
+
+      attributes:
+        description: Attributes to be checked
+        additionalProperties:
+          type: object
+          minProperties: 1
+          additionalProperties: false
+          properties:
+            required:
+              type: boolean
+              default: false
+            regex:
+              type: string
+          patternProperties:
+            '^(=|>|>=|<|<=)$':
+              $ref: '#/$defs/scalar'

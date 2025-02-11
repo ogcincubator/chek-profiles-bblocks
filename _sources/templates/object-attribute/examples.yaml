@@ -1,0 +1,32 @@
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml?
+
+examples:
+  - title: Require that all Buildings have a "hasWalls" attribute
+    snippets:
+      - language: json
+        ref: examples/building-hasWalls.json
+
+  - title: Require that all Buildings have a "hasWalls" attribute with `true` value
+    snippets:
+      - language: json
+        ref: examples/building-hasWalls-true.json
+
+  - title: Check that the "hasWalls" attribute is always true for Building/BuildingPart, but do not require it.
+    snippets:
+      - language: json
+        ref: examples/buildingpart-hasWalls-true-notreq.json
+
+  - title: Require that all Buildings have a "height" attribute with a value between 1 and 10
+    snippets:
+      - language: json
+        ref: examples/building-height.json
+
+  - title: Require that all Roads have a "status" attribute with a value of "paved"
+    snippets:
+      - language: json
+        ref: examples/roads-status-paved.json
+
+  - title: Require values for the "status" attribute of Road objects, when present, is either "paved" or "dirt"
+    snippets:
+      - language: json
+        ref: examples/roads-status-paved-dirt.json

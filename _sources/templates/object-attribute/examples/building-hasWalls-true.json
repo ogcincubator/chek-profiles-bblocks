@@ -1,0 +1,16 @@
+{
+  "id": "my-rule",
+  "label": "Check Building.hasWalls is true",
+  "message": "Some Building objects have no hasWalls attribute equal to true",
+  "objectSelector": {
+    "path": [
+      "Building"
+    ]
+  },
+  "attributes": {
+    "hasWalls": {
+      "required": true,
+      "=": true
+    }
+  }
+}

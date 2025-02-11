@@ -1,0 +1,16 @@
+{
+  "id": "my-rule",
+  "label": "Check Road.status",
+  "message": "Some Road objects have no status or status is not 'paved'",
+  "objectSelector": {
+    "path": [
+      "Road"
+    ]
+  },
+  "attributes": {
+    "status": {
+      "required": true,
+      "=": "paved"
+    }
+  }
+}
