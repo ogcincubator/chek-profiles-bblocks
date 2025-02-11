@@ -18,7 +18,7 @@
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry/city:hasSurface ?surface .\n    ?surface a city:NonSemanticSurface .\n    ?surface city:lod ?lod .\n    FILTER REGEX(?lod, \"^[3-4](\\\\.[0-4])?$\")\n  }\n}"
+        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry ?geometry .\n    ?geometry city:hasSurface ?surface .\n    ?geometry city:lod ?lod .\n    FILTER REGEX(?lod, \"^[3-4](\\\\.[0-4])?$\")\n  }\n}"
       },
       "sh:severity": {
         "@id": "sh:Violation"

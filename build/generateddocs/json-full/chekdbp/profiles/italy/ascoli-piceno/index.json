@@ -11,8 +11,8 @@
   "dateOfLastChange": "2025-02-11",
   "dependsOn": [
     "ogc.chekdbp.profiles.common.buildings-present",
-    "ogc.chekdbp.profiles.common.roads-present",
-    "ogc.chekdbp.profiles.common.green-public-spaces-present"
+    "ogc.chekdbp.profiles.common.green-public-spaces-present",
+    "ogc.chekdbp.profiles.common.roads-present"
   ],
   "tags": [
     "chek-validation-profile"
@@ -24,11 +24,11 @@
     "ogc.chekdbp.profiles.common.buildings-present": [
       "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
     ],
-    "ogc.chekdbp.profiles.common.roads-present": [
-      "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
-    ],
     "ogc.chekdbp.profiles.common.green-public-spaces-present": [
       "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
+    ],
+    "ogc.chekdbp.profiles.common.roads-present": [
+      "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
     ]
   },
   "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/",

@@ -82,13 +82,13 @@ and/or `geometrySurface` presence validations will be done.
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n}"
+        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n  ?this city:hasGeometry ?geometry .\n  ?geometry city:hasSurface ?surface .\n}"
       },
       "sh:sparql": {
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry/city:hasSurface ?surface .\n    ?surface a city:NonSemanticSurface .\n    ?surface city:lod ?lod .\n    FILTER REGEX(?lod, \"^[2-4]\\\\.[1-4]$\")\n  }\n}"
+        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry ?geometry .\n    ?geometry city:hasSurface ?surface .\n    ?geometry city:lod ?lod .\n    FILTER REGEX(?lod, \"^[2-4]\\\\.[1-4]$\")\n  }\n}"
       },
       "sh:severity": {
         "@id": "sh:Violation"
@@ -164,9 +164,9 @@ my-rule:my-rule a sh:NodeShape ;
             sh:select """
 SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
   FILTER NOT EXISTS {
-    $this city:hasGeometry/city:hasSurface ?surface .
-    ?surface a city:NonSemanticSurface .
-    ?surface city:lod ?lod .
+    $this city:hasGeometry ?geometry .
+    ?geometry city:hasSurface ?surface .
+    ?geometry city:lod ?lod .
     FILTER REGEX(?lod, "^[2-4]\\\\.[1-4]$")
   }
 }""" ] ;
@@ -175,22 +175,24 @@ SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
             sh:select """
 SELECT ?this WHERE {
   ?this a city:Building .
+  ?this city:hasGeometry ?geometry .
+  ?geometry city:hasSurface ?surface .
 }""" ] .
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
+    sh:declare [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
         [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
             sh:prefix "attr" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
-        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ] .
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ] .
 
 
 ```
@@ -230,13 +232,13 @@ my-rule:prefixes a owl:Ontology ;
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n}"
+        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n  ?this city:hasGeometry ?geometry .\n  ?geometry city:hasSurface ?surface .\n}"
       },
       "sh:sparql": {
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry/city:hasSurface ?surface .\n    ?surface a city:NonSemanticSurface .\n    ?surface city:lod ?lod .\n    FILTER REGEX(?lod, \"^[3-4](\\\\.[0-4])?$\")\n  }\n}"
+        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry ?geometry .\n    ?geometry city:hasSurface ?surface .\n    ?geometry city:lod ?lod .\n    FILTER REGEX(?lod, \"^[3-4](\\\\.[0-4])?$\")\n  }\n}"
       },
       "sh:severity": {
         "@id": "sh:Violation"
@@ -312,9 +314,9 @@ my-rule:my-rule a sh:NodeShape ;
             sh:select """
 SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
   FILTER NOT EXISTS {
-    $this city:hasGeometry/city:hasSurface ?surface .
-    ?surface a city:NonSemanticSurface .
-    ?surface city:lod ?lod .
+    $this city:hasGeometry ?geometry .
+    ?geometry city:hasSurface ?surface .
+    ?geometry city:lod ?lod .
     FILTER REGEX(?lod, "^[3-4](\\\\.[0-4])?$")
   }
 }""" ] ;
@@ -323,22 +325,24 @@ SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
             sh:select """
 SELECT ?this WHERE {
   ?this a city:Building .
+  ?this city:hasGeometry ?geometry .
+  ?geometry city:hasSurface ?surface .
 }""" ] .
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
-        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
             sh:prefix "attr" ],
-        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ],
         [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
             sh:prefix "rdf" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ],
         [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ] .
+            sh:prefix "city" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ] .
 
 
 ```
@@ -379,13 +383,13 @@ my-rule:prefixes a owl:Ontology ;
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n}"
+        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n  ?this city:hasGeometry ?geometry .\n  ?geometry city:hasSurface ?surface .\n}"
       },
       "sh:sparql": {
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry/city:hasSurface ?surface .\n    ?surface a city:WallSurface .\n    ?surface city:lod ?lod .\n    FILTER REGEX(?lod, \"^[3-4]\\\\.[2-4]$\")\n  }\n}"
+        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry ?geometry .\n    ?geometry city:hasSurface ?surface .\n    ?surface a city:WallSurface .\n    ?geometry city:lod ?lod .\n    FILTER REGEX(?lod, \"^[3-4]\\\\.[2-4]$\")\n  }\n}"
       },
       "sh:severity": {
         "@id": "sh:Violation"
@@ -461,9 +465,10 @@ my-rule:my-rule a sh:NodeShape ;
             sh:select """
 SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
   FILTER NOT EXISTS {
-    $this city:hasGeometry/city:hasSurface ?surface .
+    $this city:hasGeometry ?geometry .
+    ?geometry city:hasSurface ?surface .
     ?surface a city:WallSurface .
-    ?surface city:lod ?lod .
+    ?geometry city:lod ?lod .
     FILTER REGEX(?lod, "^[3-4]\\\\.[2-4]$")
   }
 }""" ] ;
@@ -472,22 +477,24 @@ SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
             sh:select """
 SELECT ?this WHERE {
   ?this a city:Building .
+  ?this city:hasGeometry ?geometry .
+  ?geometry city:hasSurface ?surface .
 }""" ] .
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
-        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
             sh:prefix "city" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
-        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ],
         [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
             sh:prefix "sd" ],
-        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ] .
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ] .
 
 
 ```
@@ -529,13 +536,13 @@ my-rule:prefixes a owl:Ontology ;
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT ?this WHERE {\n  ?obj0 a city:Building .\n  ?obj0 city:hasChild ?this .\n  ?this a city:BuildingPart .\n}"
+        "sh:select": "\nSELECT ?this WHERE {\n  ?obj0 a city:Building .\n  ?obj0 city:hasChild ?this .\n  ?this a city:BuildingPart .\n  ?this city:hasGeometry ?geometry .\n  ?geometry city:hasSurface ?surface .\n}"
       },
       "sh:sparql": {
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry/city:hasSurface ?surface .\n    ?surface a city:GroundSurface .\n    ?surface city:lod ?lod .\n    FILTER REGEX(?lod, \"^(2\\.[2-4]|[34](\\.*)?)$\")\n  }\n}"
+        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry ?geometry .\n    ?geometry city:hasSurface ?surface .\n    ?surface a city:GroundSurface .\n    ?geometry city:lod ?lod .\n    FILTER REGEX(?lod, \"^(2\\.[2-4]|[34](\\.*)?)$\")\n  }\n}"
       },
       "sh:severity": {
         "@id": "sh:Violation"
@@ -611,9 +618,10 @@ my-rule:my-rule a sh:NodeShape ;
             sh:select """
 SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
   FILTER NOT EXISTS {
-    $this city:hasGeometry/city:hasSurface ?surface .
+    $this city:hasGeometry ?geometry .
+    ?geometry city:hasSurface ?surface .
     ?surface a city:GroundSurface .
-    ?surface city:lod ?lod .
+    ?geometry city:lod ?lod .
     FILTER REGEX(?lod, "^(2\\.[2-4]|[34](\\.*)?)$")
   }
 }""" ] ;
@@ -624,20 +632,22 @@ SELECT ?this WHERE {
   ?obj0 a city:Building .
   ?obj0 city:hasChild ?this .
   ?this a city:BuildingPart .
+  ?this city:hasGeometry ?geometry .
+  ?geometry city:hasSurface ?surface .
 }""" ] .
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
             sh:prefix "rdf" ],
+        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
         [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
             sh:prefix "attr" ] .
 
@@ -684,13 +694,13 @@ my-rule:prefixes a owl:Ontology ;
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT ?this WHERE {\n  ?obj0 a city:Building .\n  ?obj0 city:hasChild ?this .\n  ?this a city:BuildingPart .\n}"
+        "sh:select": "\nSELECT ?this WHERE {\n  ?obj0 a city:Building .\n  ?obj0 city:hasChild ?this .\n  ?this a city:BuildingPart .\n  ?this city:hasGeometry ?geometry .\n  ?geometry city:hasSurface ?surface .\n}"
       },
       "sh:sparql": {
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasChild ?obj0 .\n    ?obj0 a city:BuildingInstallation .\n    ?obj0 city:hasGeometry/city:hasSurface ?surface .\n    ?surface a city:WallSurface .\n    ?surface city:lod ?lod .\n    FILTER REGEX(?lod, \"^[2-4](\\\\.[0-4])?$\")\n  }\n}"
+        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasChild ?obj0 .\n    ?obj0 a city:BuildingInstallation .\n    ?obj0 city:hasGeometry ?geometry .\n    ?geometry city:hasSurface ?surface .\n    ?surface a city:WallSurface .\n    ?geometry city:lod ?lod .\n    FILTER REGEX(?lod, \"^[2-4](\\\\.[0-4])?$\")\n  }\n}"
       },
       "sh:severity": {
         "@id": "sh:Violation"
@@ -768,9 +778,10 @@ SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
   FILTER NOT EXISTS {
     $this city:hasChild ?obj0 .
     ?obj0 a city:BuildingInstallation .
-    ?obj0 city:hasGeometry/city:hasSurface ?surface .
+    ?obj0 city:hasGeometry ?geometry .
+    ?geometry city:hasSurface ?surface .
     ?surface a city:WallSurface .
-    ?surface city:lod ?lod .
+    ?geometry city:lod ?lod .
     FILTER REGEX(?lod, "^[2-4](\\\\.[0-4])?$")
   }
 }""" ] ;
@@ -781,22 +792,24 @@ SELECT ?this WHERE {
   ?obj0 a city:Building .
   ?obj0 city:hasChild ?this .
   ?this a city:BuildingPart .
+  ?this city:hasGeometry ?geometry .
+  ?geometry city:hasSurface ?surface .
 }""" ] .
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
+    sh:declare [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ],
         [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
             sh:prefix "city" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
-        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ],
         [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
             sh:prefix "rdfs" ],
-        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ] .
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ] .
 
 
 ```
@@ -843,7 +856,7 @@ my-rule:prefixes a owl:Ontology ;
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry/city:hasSurface ?surface .\n    ?surface a city:NonSemanticSurface .\n    ?surface city:lod ?lod .\n    FILTER REGEX(?lod, \"^[3-4](\\\\.[0-4])?$\")\n  }\n}"
+        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry ?geometry .\n    ?geometry city:hasSurface ?surface .\n    ?geometry city:lod ?lod .\n    FILTER REGEX(?lod, \"^[3-4](\\\\.[0-4])?$\")\n  }\n}"
       },
       "sh:severity": {
         "@id": "sh:Violation"
@@ -919,9 +932,9 @@ my-rule:my-rule a sh:NodeShape ;
             sh:select """
 SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
   FILTER NOT EXISTS {
-    $this city:hasGeometry/city:hasSurface ?surface .
-    ?surface a city:NonSemanticSurface .
-    ?surface city:lod ?lod .
+    $this city:hasGeometry ?geometry .
+    ?geometry city:hasSurface ?surface .
+    ?geometry city:lod ?lod .
     FILTER REGEX(?lod, "^[3-4](\\\\.[0-4])?$")
   }
 }""" ] ;
@@ -937,18 +950,18 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
-        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
             sh:prefix "city" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
         [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
             sh:prefix "rdfs" ],
-        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ] .
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ] .
 
 
 ```
@@ -986,13 +999,13 @@ my-rule:prefixes a owl:Ontology ;
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n}"
+        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n  ?this city:hasGeometry ?geometry .\n  ?geometry city:hasSurface ?surface .\n}"
       },
       "sh:sparql": {
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry/city:hasSurface ?surface .\n    ?surface a city:WallSurface .\n  }\n}"
+        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry ?geometry .\n    ?geometry city:hasSurface ?surface .\n    ?surface a city:WallSurface .\n  }\n}"
       },
       "sh:severity": {
         "@id": "sh:Violation"
@@ -1068,7 +1081,8 @@ my-rule:my-rule a sh:NodeShape ;
             sh:select """
 SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
   FILTER NOT EXISTS {
-    $this city:hasGeometry/city:hasSurface ?surface .
+    $this city:hasGeometry ?geometry .
+    ?geometry city:hasSurface ?surface .
     ?surface a city:WallSurface .
   }
 }""" ] ;
@@ -1077,18 +1091,20 @@ SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
             sh:select """
 SELECT ?this WHERE {
   ?this a city:Building .
+  ?this city:hasGeometry ?geometry .
+  ?geometry city:hasSurface ?surface .
 }""" ] .
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
-        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
             sh:prefix "city" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
         [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
             sh:prefix "attr" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
         [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
             sh:prefix "sd" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;

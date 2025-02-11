@@ -12,13 +12,13 @@
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT ?this WHERE {\n  ?obj0 a city:Building .\n  ?obj0 city:hasChild ?this .\n  ?this a city:BuildingPart .\n}"
+        "sh:select": "\nSELECT ?this WHERE {\n  ?obj0 a city:Building .\n  ?obj0 city:hasChild ?this .\n  ?this a city:BuildingPart .\n  ?this city:hasGeometry ?geometry .\n  ?geometry city:hasSurface ?surface .\n}"
       },
       "sh:sparql": {
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasChild ?obj0 .\n    ?obj0 a city:BuildingInstallation .\n    ?obj0 city:hasGeometry/city:hasSurface ?surface .\n    ?surface a city:WallSurface .\n    ?surface city:lod ?lod .\n    FILTER REGEX(?lod, \"^[2-4](\\\\.[0-4])?$\")\n  }\n}"
+        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasChild ?obj0 .\n    ?obj0 a city:BuildingInstallation .\n    ?obj0 city:hasGeometry ?geometry .\n    ?geometry city:hasSurface ?surface .\n    ?surface a city:WallSurface .\n    ?geometry city:lod ?lod .\n    FILTER REGEX(?lod, \"^[2-4](\\\\.[0-4])?$\")\n  }\n}"
       },
       "sh:severity": {
         "@id": "sh:Violation"
