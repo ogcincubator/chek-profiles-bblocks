@@ -4,7 +4,6 @@ allOf:
 - $ref: https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/base-rule/schema.yaml
 - required:
   - objectSelector
-  - lod
   properties:
     objectSelector:
       allOf:

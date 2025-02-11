@@ -1,0 +1,17 @@
+{
+  "id": "my-rule",
+  "label": "Check Building.height is present and between 1 and 10",
+  "message": "Some Building objects have no height or height is invalid",
+  "objectSelector": {
+    "path": [
+      "Building"
+    ]
+  },
+  "attributes": {
+    "height": {
+      "required": true,
+      ">=": 1,
+      "<=": 10
+    }
+  }
+}

@@ -1,0 +1,40 @@
+@prefix my-rule: <http://example.com/change-me/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+my-rule:my-rule a sh:NodeShape ;
+    sh:message "The status of the Road object is not one of 'paved' or 'dirt'" ;
+    sh:name "Check Road.status" ;
+    sh:severity sh:Violation ;
+    sh:sparql [ sh:prefixes my-rule:prefixes ;
+            sh:select """
+SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
+  FILTER NOT EXISTS {
+    
+    OPTIONAL { $this attr:status ?attr0 } .
+    FILTER(!BOUND(?attr0) || (REGEX($var; "^(paved|dirt)$")))
+  }
+}""" ] ;
+    sh:target [ a sh:SPARQLTarget ;
+            sh:prefixes my-rule:prefixes ;
+            sh:select """
+SELECT ?this WHERE {
+  ?this a city:Road .
+}""" ] .
+
+my-rule:prefixes a owl:Ontology ;
+    owl:imports sh: ;
+    sh:declare [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ],
+        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ] .
+

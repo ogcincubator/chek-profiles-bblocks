@@ -1,0 +1,14 @@
+{
+  "id": "my-rule",
+  "label": "Sample regex rule",
+  "message": "Object has LoD less than 3",
+  "objectSelector": {
+    "idPatterns": [
+      "^ABC.*",
+      ".*DEF$"
+    ]
+  },
+  "lod": {
+    "min": "3"
+  }
+}

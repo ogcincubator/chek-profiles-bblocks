@@ -1,0 +1,79 @@
+{
+  "@context": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-attribute/context.jsonld",
+  "@graph": [
+    {
+      "@type": "sh:NodeShape",
+      "id": "my-rule",
+      "label": "Check Road.status",
+      "description": null,
+      "message": "The status of the Road object is not one of 'paved' or 'dirt'",
+      "sh:target": {
+        "@type": "sh:SPARQLTarget",
+        "sh:prefixes": {
+          "@id": "my-rule:prefixes"
+        },
+        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Road .\n}"
+      },
+      "sh:sparql": {
+        "sh:prefixes": {
+          "@id": "my-rule:prefixes"
+        },
+        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    \n    OPTIONAL { $this attr:status ?attr0 } .\n    FILTER(!BOUND(?attr0) || (REGEX($var; \"^(paved|dirt)$\")))\n  }\n}"
+      },
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "prefixes",
+      "@type": "owl:Ontology",
+      "owl:imports": {
+        "@id": "sh:"
+      },
+      "sh:declare": [
+        {
+          "sh:prefix": "city",
+          "sh:namespace": {
+            "@value": "http://example.com/vocab/city/",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "rdf",
+          "sh:namespace": {
+            "@value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "rdfs",
+          "sh:namespace": {
+            "@value": "http://www.w3.org/2000/01/rdf-schema#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "sd",
+          "sh:namespace": {
+            "@value": "https://w3id.org/okn/o/sd#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "attr",
+          "sh:namespace": {
+            "@value": "http://example.com/vocab/city/attr#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "dct",
+          "sh:namespace": {
+            "@value": "http://purl.org/dc/terms/",
+            "@type": "xsd:anyURI"
+          }
+        }
+      ]
+    }
+  ]
+}

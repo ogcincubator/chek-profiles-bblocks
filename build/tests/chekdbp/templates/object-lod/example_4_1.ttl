@@ -1,40 +1,43 @@
-@prefix chek: <urn:chek:vocab/> .
 @prefix my-rule: <http://example.com/change-me/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 my-rule:my-rule a sh:NodeShape ;
-    sh:message "Invalid Level of Detail (lod) for object" ;
+    sh:message "BuildingPart has LoD less than 2.2" ;
     sh:name "My sample rule for buildings" ;
     sh:severity sh:Violation ;
     sh:sparql [ sh:prefixes my-rule:prefixes ;
             sh:select """
-SELECT (?rootObject as $this) (?value as ?path) WHERE {
-  ?obj0 a city:Building .
-  ?obj0 city:hasChild ?obj1 .
-  ?obj1 a city:BuildingPart .
+SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
   FILTER NOT EXISTS {
-    ?obj1 city:hasGeometry/city:hasSurface ?surface .
+    $this city:hasGeometry/city:hasSurface ?surface .
     ?surface a city:GroundSurface .
     ?surface city:lod ?lod .
     FILTER REGEX(?lod, "^(2\\.[2-4]|[34](\\.*)?)$")
   }
 }""" ] ;
-    sh:targetNode chek:document .
+    sh:target [ a sh:SPARQLTarget ;
+            sh:prefixes my-rule:prefixes ;
+            sh:select """
+SELECT ?this WHERE {
+  ?obj0 a city:Building .
+  ?obj0 city:hasChild ?this .
+  ?this a city:BuildingPart .
+}""" ] .
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
     sh:declare [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
         [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
             sh:prefix "attr" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
         [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
             sh:prefix "rdf" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
         [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ] .
+            sh:prefix "city" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ] .
 

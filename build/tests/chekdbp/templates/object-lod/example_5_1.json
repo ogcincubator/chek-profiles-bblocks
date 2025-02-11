@@ -1,6 +1,7 @@
 {
   "id": "my-rule",
   "label": "My sample rule for buildings",
+  "message": "BuildingPart lacks BuildingInstallation, or BuildingInstallation inside BuildingPart is missing WallSurface with LoD >= 2",
   "objectSelector": {
     "path": [
       "Building",

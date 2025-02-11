@@ -1,5 +1,5 @@
 Validation report for ogc.chekdbp.templates.object-lod - Object Level of Detail (LoD)
-Generated 2025-02-04T10:32:24.927495+00:00
+Generated 2025-02-11T13:03:08.979004+00:00
 === Files ===
 Using example_4_1.json from examples
 JSON-LD context is present - uplifting

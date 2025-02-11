@@ -106,12 +106,12 @@
   "name": "Building Blocks - CHEK Project profiles",
   "abstract": "Profiles for the CHEK project as Building Blocks.\n",
   "description": "This register contains CHEK DBP project data requirements profiles as building blocks.\n\nFor a building block to be a valid CHEK profile, it needs to:\n\n  1. Have a `data.ttl` file with the RDF description of the profile (using [The Profiles Vocabulary](https://www.w3.org/TR/dx-prof/))  \n  2. Contain some [SHACL shapes](https://ogcincubator.github.io/bblocks-docs/create/validation#shacl-validation)\n  3. Have the `chek-validation-profile` tag\n\nYou can use the [dummy profile](https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.common.dummy)\nas a template.\n\nProfile dependencies can be declared either by using `dependsOn` in `bblock.json` (with the id of the bblock), or using\n[`prof:isProfileOf`](https://www.w3.org/TR/dx-prof/#Property:isProfileOf) in the RDF definition of the profile.\n",
-  "modified": "2025-02-04T10:32:23.949395",
+  "modified": "2025-02-11T13:03:07.511340",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"36e6c58463d61501d50dbbc7dd5d1b1884dda73f",
-      "shortCommitId": "\"36e6c5",
-      "date": "2025-02-02T10:33:32+00:00\""
+      "commitId": "\"b71d082f86b0dedf5f2132beaae093bfe39b9712",
+      "shortCommitId": "\"b71d08",
+      "date": "2025-02-06T13:54:48+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/chek-profiles-bblocks",
@@ -136,7 +136,7 @@
       "dateTimeAddition": "2024-12-12T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-04",
+      "dateOfLastChange": "2025-02-11",
       "tags": [
         "chek-validation-profile"
       ],
@@ -178,7 +178,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-04",
+      "dateOfLastChange": "2025-02-11",
       "tags": [
         "chek-validation-profile"
       ],
@@ -220,7 +220,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-04",
+      "dateOfLastChange": "2025-02-11",
       "tags": [
         "chek-validation-profile"
       ],
@@ -262,7 +262,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-04",
+      "dateOfLastChange": "2025-02-11",
       "tags": [
         "chek-validation-profile"
       ],
@@ -305,7 +305,7 @@
       "dateTimeAddition": "2025-01-24T00:00:00Z",
       "itemClass": "schema",
       "version": "0.1",
-      "dateOfLastChange": "2025-02-04",
+      "dateOfLastChange": "2025-02-11",
       "shaclRules": {},
       "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/base-rule/context.jsonld",
       "schema": {
@@ -348,7 +348,7 @@
       "dateTimeAddition": "2025-01-24T00:00:00Z",
       "itemClass": "schema",
       "version": "0.1",
-      "dateOfLastChange": "2025-02-04",
+      "dateOfLastChange": "2025-02-11",
       "shaclRules": {},
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-selector/schema.yaml",
@@ -388,10 +388,10 @@
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-04",
+      "dateOfLastChange": "2025-02-11",
       "dependsOn": [
-        "ogc.chekdbp.profiles.common.green-public-spaces-present",
-        "ogc.chekdbp.profiles.common.roads-present"
+        "ogc.chekdbp.profiles.common.roads-present",
+        "ogc.chekdbp.profiles.common.green-public-spaces-present"
       ],
       "tags": [
         "chek-validation-profile"
@@ -400,11 +400,11 @@
         "ogc.chekdbp.profiles.czechia.prague": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/czechia/prague/rules.shacl"
         ],
-        "ogc.chekdbp.profiles.common.green-public-spaces-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
-        ],
         "ogc.chekdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ],
+        "ogc.chekdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
         ]
       },
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/czechia/prague/",
@@ -440,10 +440,10 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-04",
+      "dateOfLastChange": "2025-02-11",
       "dependsOn": [
-        "ogc.chekdbp.profiles.common.green-public-spaces-present",
         "ogc.chekdbp.profiles.common.roads-present",
+        "ogc.chekdbp.profiles.common.green-public-spaces-present",
         "ogc.chekdbp.profiles.common.buildings-present"
       ],
       "tags": [
@@ -453,11 +453,11 @@
         "ogc.chekdbp.profiles.italy.ascoli-piceno": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/rules.shacl"
         ],
-        "ogc.chekdbp.profiles.common.green-public-spaces-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
-        ],
         "ogc.chekdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ],
+        "ogc.chekdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
         ],
         "ogc.chekdbp.profiles.common.buildings-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
@@ -496,10 +496,10 @@
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-04",
+      "dateOfLastChange": "2025-02-11",
       "dependsOn": [
-        "ogc.chekdbp.profiles.common.green-public-spaces-present",
-        "ogc.chekdbp.profiles.common.roads-present"
+        "ogc.chekdbp.profiles.common.roads-present",
+        "ogc.chekdbp.profiles.common.green-public-spaces-present"
       ],
       "tags": [
         "chek-validation-profile"
@@ -508,11 +508,11 @@
         "ogc.chekdbp.profiles.portugal.gaia": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/rules.shacl"
         ],
-        "ogc.chekdbp.profiles.common.green-public-spaces-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
-        ],
         "ogc.chekdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ],
+        "ogc.chekdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
         ]
       },
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/",
@@ -548,10 +548,10 @@
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-04",
+      "dateOfLastChange": "2025-02-11",
       "dependsOn": [
-        "ogc.chekdbp.profiles.common.green-public-spaces-present",
-        "ogc.chekdbp.profiles.common.roads-present"
+        "ogc.chekdbp.profiles.common.roads-present",
+        "ogc.chekdbp.profiles.common.green-public-spaces-present"
       ],
       "tags": [
         "chek-validation-profile"
@@ -560,11 +560,11 @@
         "ogc.chekdbp.profiles.portugal.lisbon": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/lisbon/rules.shacl"
         ],
-        "ogc.chekdbp.profiles.common.green-public-spaces-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
-        ],
         "ogc.chekdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
+        ],
+        "ogc.chekdbp.profiles.common.green-public-spaces-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
         ]
       },
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/lisbon/",
@@ -593,6 +593,56 @@
       ]
     },
     {
+      "itemIdentifier": "ogc.chekdbp.templates.object-attribute",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/bblock.schema.yaml",
+      "name": "Object Attribute",
+      "abstract": "Creates a rule to validate the existence and/or value of an attribute in an object or set of objects",
+      "status": "under-development",
+      "dateTimeAddition": "2025-01-24T00:00:00Z",
+      "itemClass": "schema",
+      "version": "0.1",
+      "dateOfLastChange": "2025-02-11",
+      "tags": [
+        "chek-rule-template"
+      ],
+      "shaclRules": {},
+      "dependsOn": [
+        "ogc.chekdbp.templates.object-selector",
+        "ogc.chekdbp.templates.base-rule"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-attribute/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-attribute/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-attribute/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-attribute/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-attribute/",
+      "rdfData": [
+        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
+      ],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/build/tests/chekdbp/templates/object-attribute/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/templates/object-attribute/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/templates/object-attribute/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.templates.object-attribute"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
       "itemIdentifier": "ogc.chekdbp.templates.object-lod",
       "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/bblock.schema.yaml",
       "name": "Object Level of Detail (LoD)",
@@ -601,14 +651,14 @@
       "dateTimeAddition": "2025-01-24T00:00:00Z",
       "itemClass": "schema",
       "version": "0.1",
-      "dateOfLastChange": "2025-02-04",
+      "dateOfLastChange": "2025-02-11",
       "tags": [
         "chek-rule-template"
       ],
       "shaclRules": {},
       "dependsOn": [
-        "ogc.chekdbp.templates.base-rule",
-        "ogc.chekdbp.templates.object-selector"
+        "ogc.chekdbp.templates.object-selector",
+        "ogc.chekdbp.templates.base-rule"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-lod/schema.yaml",
@@ -634,6 +684,56 @@
         "bblocks-viewer": {
           "mediatype": "text/html",
           "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.templates.object-lod"
+        }
+      },
+      "@type": [
+        "bblocks:Schema",
+        "skos:Concept",
+        "dcat:Dataset"
+      ]
+    },
+    {
+      "itemIdentifier": "ogc.chekdbp.templates.object-presence",
+      "$schema": "https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/bblock.schema.yaml",
+      "name": "Object Presence",
+      "abstract": "Creates a rule to validate the existence of a set of City Objects",
+      "status": "under-development",
+      "dateTimeAddition": "2025-01-24T00:00:00Z",
+      "itemClass": "schema",
+      "version": "0.1",
+      "dateOfLastChange": "2025-02-11",
+      "tags": [
+        "chek-rule-template"
+      ],
+      "shaclRules": {},
+      "dependsOn": [
+        "ogc.chekdbp.templates.object-selector",
+        "ogc.chekdbp.templates.base-rule"
+      ],
+      "schema": {
+        "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-presence/schema.yaml",
+        "application/json": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-presence/schema.json"
+      },
+      "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-presence/schema.yaml",
+      "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-presence/context.jsonld",
+      "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-presence/",
+      "rdfData": [
+        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
+      ],
+      "validationPassed": true,
+      "testOutputs": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/build/tests/chekdbp/templates/object-presence/",
+      "documentation": {
+        "markdown": {
+          "mediatype": "text/markdown",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/markdown/chekdbp/templates/object-presence/index.md"
+        },
+        "json-full": {
+          "mediatype": "application/json",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/generateddocs/json-full/chekdbp/templates/object-presence/index.json"
+        },
+        "bblocks-viewer": {
+          "mediatype": "text/html",
+          "url": "https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.templates.object-presence"
         }
       },
       "@type": [

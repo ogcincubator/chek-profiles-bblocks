@@ -1,0 +1,19 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/base-rule/schema.json"
+    },
+    {
+      "required": [
+        "objectSelector"
+      ],
+      "properties": {
+        "objectSelector": {
+          "$ref": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-selector/schema.json"
+        }
+      }
+    }
+  ]
+}

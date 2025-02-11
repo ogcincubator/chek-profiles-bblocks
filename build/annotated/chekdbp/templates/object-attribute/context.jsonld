@@ -1,0 +1,21 @@
+{
+  "@context": {
+    "@base": "http://example.com/change-me/",
+    "id": "@id",
+    "description": "sh:description",
+    "message": "sh:message",
+    "label": "sh:name",
+    "sh": "http://www.w3.org/ns/shacl#",
+    "my-rule": "http://example.com/change-me/",
+    "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs": "http://www.w3.org/2000/01/rdf-schema#",
+    "dct": "http://purl.org/dc/terms/",
+    "xsd": "http://www.w3.org/2001/XMLSchema#",
+    "owl": "http://www.w3.org/2002/07/owl#",
+    "city": "http://example.com/vocab/city/",
+    "attr": "city:attr#",
+    "sd": "https://w3id.org/okn/o/sd#",
+    "chek": "urn:chek:vocab/",
+    "@version": 1.1
+  }
+}

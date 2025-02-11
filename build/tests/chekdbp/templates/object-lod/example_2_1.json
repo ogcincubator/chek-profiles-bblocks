@@ -1,6 +1,7 @@
 {
   "id": "my-rule",
   "label": "My sample rule for buildings",
+  "message": "Building has LoD less than 3",
   "objectSelector": {
     "path": [
       "Building"

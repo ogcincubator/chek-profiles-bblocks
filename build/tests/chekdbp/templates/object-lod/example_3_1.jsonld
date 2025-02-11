@@ -6,15 +6,19 @@
       "id": "my-rule",
       "label": "My sample rule for buildings",
       "description": null,
-      "message": "Invalid Level of Detail (lod) for object",
-      "sh:targetNode": {
-        "@id": "chek:document"
+      "message": "Building is missing WallSurface with LoD at least 3.2",
+      "sh:target": {
+        "@type": "sh:SPARQLTarget",
+        "sh:prefixes": {
+          "@id": "my-rule:prefixes"
+        },
+        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n}"
       },
       "sh:sparql": {
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT (?rootObject as $this) (?value as ?path) WHERE {\n  ?obj0 a city:Building .\n  FILTER NOT EXISTS {\n    ?obj0 city:hasGeometry/city:hasSurface ?surface .\n    ?surface a city:WallSurface .\n    ?surface city:lod ?lod .\n    FILTER REGEX(?lod, \"^[3-4]\\.[2-4]$\")\n  }\n}"
+        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasGeometry/city:hasSurface ?surface .\n    ?surface a city:WallSurface .\n    ?surface city:lod ?lod .\n    FILTER REGEX(?lod, \"^[3-4]\\\\.[2-4]$\")\n  }\n}"
       },
       "sh:severity": {
         "@id": "sh:Violation"

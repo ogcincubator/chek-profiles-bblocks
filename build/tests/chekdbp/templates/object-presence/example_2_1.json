@@ -1,0 +1,12 @@
+{
+  "id": "roads-present",
+  "label": "Checks that at least one Building > BuildingPart > BuildingInstallation is present",
+  "message": "No Building > BuildingPart > BuildingInstallation found",
+  "objectSelector": {
+    "path": [
+      "Building",
+      "BuildingPart",
+      "BuildingInstallation"
+    ]
+  }
+}
