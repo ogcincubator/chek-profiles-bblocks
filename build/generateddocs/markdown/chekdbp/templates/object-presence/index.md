@@ -137,18 +137,18 @@ SELECT $this (city:hasObject as ?path) (city:Road as ?value) WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "urn:chek:vocab/"^^xsd:anyURI ;
-            sh:prefix "chek" ],
-        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
             sh:prefix "rdfs" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
-        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
+        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
+        [ sh:namespace "urn:chek:vocab/"^^xsd:anyURI ;
+            sh:prefix "chek" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
         [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
             sh:prefix "sd" ] .
 
@@ -286,20 +286,20 @@ SELECT $this (city:hasObject as ?path) (city:BuildingInstallation as ?value) WHE
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
+    sh:declare [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
         [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
             sh:prefix "rdf" ],
-        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ],
-        [ sh:namespace "urn:chek:vocab/"^^xsd:anyURI ;
-            sh:prefix "chek" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
         [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
             sh:prefix "rdfs" ],
+        [ sh:namespace "urn:chek:vocab/"^^xsd:anyURI ;
+            sh:prefix "chek" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ],
-        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ] .
+            sh:prefix "dct" ] .
 
 
 ```

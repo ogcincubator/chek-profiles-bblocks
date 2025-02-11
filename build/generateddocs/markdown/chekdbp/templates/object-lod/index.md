@@ -179,18 +179,18 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ],
+    sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
         [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
             sh:prefix "attr" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
         [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
             sh:prefix "rdfs" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ],
         [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ] .
+            sh:prefix "city" ] .
 
 
 ```
@@ -327,18 +327,18 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ],
+    sh:declare [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
         [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
             sh:prefix "rdfs" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
         [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ] .
+            sh:prefix "city" ] .
 
 
 ```
@@ -478,16 +478,16 @@ my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
     sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
             sh:prefix "rdf" ],
-        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ],
         [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
             sh:prefix "city" ],
-        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
         [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
             sh:prefix "sd" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ] .
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ] .
 
 
 ```
@@ -628,18 +628,18 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ],
-        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
+    sh:declare [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
         [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
             sh:prefix "rdfs" ],
-        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ],
         [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ] .
+            sh:prefix "sd" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ] .
 
 
 ```
@@ -785,18 +785,18 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ],
-        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ],
+    sh:declare [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
         [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
             sh:prefix "city" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
         [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
             sh:prefix "rdfs" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ] .
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ] .
 
 
 ```
@@ -937,18 +937,18 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ],
+    sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
         [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
             sh:prefix "city" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
         [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
             sh:prefix "rdfs" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ] .
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ] .
 
 
 ```
@@ -1081,18 +1081,18 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
             sh:prefix "rdfs" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
-        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ],
         [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
             sh:prefix "city" ],
         [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ] .
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ] .
 
 
 ```

@@ -4,22 +4,22 @@
     {
       "@type": "sh:NodeShape",
       "id": "my-rule",
-      "label": "Check Building.hasWalls is true",
+      "label": "Check Building.BuildingPart.hasWindows is 1",
       "description": null,
-      "message": "Some Building objects have no hasWalls attribute equal to true",
+      "message": "Some Building objects do not have at least one BuildingPart with hasWindows set to 1",
       "sh:target": {
         "@type": "sh:SPARQLTarget",
         "sh:prefixes": {
           "@id": "my-rule:prefixes"
         },
-        "sh:select": "\nSELECT ?this WHERE {\n  ?obj0 a city:Building .\n  ?obj0 city:hasChild ?this\n  ?this a city:BuildingPart .\n}"
+        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n}"
       },
       "sh:sparql": [
         {
           "sh:prefixes": {
             "@id": "my-rule:prefixes"
           },
-          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#hasWalls> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    \n    OPTIONAL { $this <http://example.com/vocab/city/attr#hasWalls> ?value }\n    FILTER(!BOUND(?value) || (?value = true))\n  }\n}"
+          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#hasWalls> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasChild ?obj0\n    ?obj0 a city:BuildingPart .\n    ?this <http://example.com/vocab/city/attr#hasWalls> ?value\n    FILTER(?value = 1)\n  }\n}"
         }
       ],
       "sh:severity": {

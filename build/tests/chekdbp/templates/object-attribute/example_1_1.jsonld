@@ -14,12 +14,14 @@
         },
         "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n}"
       },
-      "sh:sparql": {
-        "sh:prefixes": {
-          "@id": "my-rule:prefixes"
-        },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    \n    OPTIONAL { $this attr:hasWalls ?attr0 } .\n    FILTER(BOUND(?attr0))\n  }\n}"
-      },
+      "sh:sparql": [
+        {
+          "sh:prefixes": {
+            "@id": "my-rule:prefixes"
+          },
+          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#hasWalls> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    \n    $this <http://example.com/vocab/city/attr#hasWalls> ?value\n  }\n}"
+        }
+      ],
       "sh:severity": {
         "@id": "sh:Violation"
       }

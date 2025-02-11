@@ -47,12 +47,14 @@ Creates a rule to validate the existence and/or value of an attribute in an obje
         },
         "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n}"
       },
-      "sh:sparql": {
-        "sh:prefixes": {
-          "@id": "my-rule:prefixes"
-        },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    \n    OPTIONAL { $this attr:hasWalls ?attr0 } .\n    FILTER(BOUND(?attr0))\n  }\n}"
-      },
+      "sh:sparql": [
+        {
+          "sh:prefixes": {
+            "@id": "my-rule:prefixes"
+          },
+          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#hasWalls> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    \n    $this <http://example.com/vocab/city/attr#hasWalls> ?value\n  }\n}"
+        }
+      ],
       "sh:severity": {
         "@id": "sh:Violation"
       }
@@ -125,11 +127,10 @@ my-rule:my-rule a sh:NodeShape ;
     sh:severity sh:Violation ;
     sh:sparql [ sh:prefixes my-rule:prefixes ;
             sh:select """
-SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
+SELECT $this (<http://example.com/vocab/city/attr#hasWalls> as ?path) ?value WHERE {
   FILTER NOT EXISTS {
     
-    OPTIONAL { $this attr:hasWalls ?attr0 } .
-    FILTER(BOUND(?attr0))
+    $this <http://example.com/vocab/city/attr#hasWalls> ?value
   }
 }""" ] ;
     sh:target [ a sh:SPARQLTarget ;
@@ -141,18 +142,18 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
+        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
             sh:prefix "attr" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
         [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
-        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ] .
+            sh:prefix "rdfs" ] .
 
 
 ```
@@ -197,12 +198,14 @@ my-rule:prefixes a owl:Ontology ;
         },
         "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n}"
       },
-      "sh:sparql": {
-        "sh:prefixes": {
-          "@id": "my-rule:prefixes"
-        },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    \n    OPTIONAL { $this attr:hasWalls ?attr0 } .\n    FILTER(BOUND(?attr0) && ($var = true))\n  }\n}"
-      },
+      "sh:sparql": [
+        {
+          "sh:prefixes": {
+            "@id": "my-rule:prefixes"
+          },
+          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#hasWalls> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    \n    $this <http://example.com/vocab/city/attr#hasWalls> ?value\n    FILTER(?value = true)\n  }\n}"
+        }
+      ],
       "sh:severity": {
         "@id": "sh:Violation"
       }
@@ -275,11 +278,11 @@ my-rule:my-rule a sh:NodeShape ;
     sh:severity sh:Violation ;
     sh:sparql [ sh:prefixes my-rule:prefixes ;
             sh:select """
-SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
+SELECT $this (<http://example.com/vocab/city/attr#hasWalls> as ?path) ?value WHERE {
   FILTER NOT EXISTS {
     
-    OPTIONAL { $this attr:hasWalls ?attr0 } .
-    FILTER(BOUND(?attr0) && ($var = true))
+    $this <http://example.com/vocab/city/attr#hasWalls> ?value
+    FILTER(?value = true)
   }
 }""" ] ;
     sh:target [ a sh:SPARQLTarget ;
@@ -291,18 +294,18 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
-        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
             sh:prefix "rdf" ],
         [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
             sh:prefix "sd" ],
+        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
         [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ] .
+            sh:prefix "attr" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ] .
 
 
 ```
@@ -348,12 +351,14 @@ my-rule:prefixes a owl:Ontology ;
         },
         "sh:select": "\nSELECT ?this WHERE {\n  ?obj0 a city:Building .\n  ?obj0 city:hasChild ?this\n  ?this a city:BuildingPart .\n}"
       },
-      "sh:sparql": {
-        "sh:prefixes": {
-          "@id": "my-rule:prefixes"
-        },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    \n    OPTIONAL { $this attr:hasWalls ?attr0 } .\n    FILTER(!BOUND(?attr0) || ($var = true))\n  }\n}"
-      },
+      "sh:sparql": [
+        {
+          "sh:prefixes": {
+            "@id": "my-rule:prefixes"
+          },
+          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#hasWalls> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    \n    OPTIONAL { $this <http://example.com/vocab/city/attr#hasWalls> ?value }\n    FILTER(!BOUND(?value) || (?value = true))\n  }\n}"
+        }
+      ],
       "sh:severity": {
         "@id": "sh:Violation"
       }
@@ -426,11 +431,11 @@ my-rule:my-rule a sh:NodeShape ;
     sh:severity sh:Violation ;
     sh:sparql [ sh:prefixes my-rule:prefixes ;
             sh:select """
-SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
+SELECT $this (<http://example.com/vocab/city/attr#hasWalls> as ?path) ?value WHERE {
   FILTER NOT EXISTS {
     
-    OPTIONAL { $this attr:hasWalls ?attr0 } .
-    FILTER(!BOUND(?attr0) || ($var = true))
+    OPTIONAL { $this <http://example.com/vocab/city/attr#hasWalls> ?value }
+    FILTER(!BOUND(?value) || (?value = true))
   }
 }""" ] ;
     sh:target [ a sh:SPARQLTarget ;
@@ -446,16 +451,16 @@ my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
     sh:declare [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
             sh:prefix "sd" ],
-        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
         [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
             sh:prefix "rdf" ],
-        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-            sh:prefix "attr" ],
+        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ] .
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ] .
 
 
 ```
@@ -501,12 +506,14 @@ my-rule:prefixes a owl:Ontology ;
         },
         "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n}"
       },
-      "sh:sparql": {
-        "sh:prefixes": {
-          "@id": "my-rule:prefixes"
-        },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    \n    OPTIONAL { $this attr:height ?attr0 } .\n    FILTER(BOUND(?attr0) && ($var >= 1 && $var <= 10))\n  }\n}"
-      },
+      "sh:sparql": [
+        {
+          "sh:prefixes": {
+            "@id": "my-rule:prefixes"
+          },
+          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#height> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    \n    $this <http://example.com/vocab/city/attr#height> ?value\n    FILTER(?value >= 1 && ?value <= 10)\n  }\n}"
+        }
+      ],
       "sh:severity": {
         "@id": "sh:Violation"
       }
@@ -579,11 +586,11 @@ my-rule:my-rule a sh:NodeShape ;
     sh:severity sh:Violation ;
     sh:sparql [ sh:prefixes my-rule:prefixes ;
             sh:select """
-SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
+SELECT $this (<http://example.com/vocab/city/attr#height> as ?path) ?value WHERE {
   FILTER NOT EXISTS {
     
-    OPTIONAL { $this attr:height ?attr0 } .
-    FILTER(BOUND(?attr0) && ($var >= 1 && $var <= 10))
+    $this <http://example.com/vocab/city/attr#height> ?value
+    FILTER(?value >= 1 && ?value <= 10)
   }
 }""" ] ;
     sh:target [ a sh:SPARQLTarget ;
@@ -595,18 +602,18 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-            sh:prefix "city" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
             sh:prefix "sd" ],
-        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-            sh:prefix "dct" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
         [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
             sh:prefix "attr" ],
         [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
             sh:prefix "rdf" ],
-        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ] .
+        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ] .
 
 
 ```
@@ -651,12 +658,14 @@ my-rule:prefixes a owl:Ontology ;
         },
         "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Road .\n}"
       },
-      "sh:sparql": {
-        "sh:prefixes": {
-          "@id": "my-rule:prefixes"
-        },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    \n    OPTIONAL { $this attr:status ?attr0 } .\n    FILTER(BOUND(?attr0) && ($var = \"paved\"))\n  }\n}"
-      },
+      "sh:sparql": [
+        {
+          "sh:prefixes": {
+            "@id": "my-rule:prefixes"
+          },
+          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#status> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    \n    $this <http://example.com/vocab/city/attr#status> ?value\n    FILTER(?value = \"paved\")\n  }\n}"
+        }
+      ],
       "sh:severity": {
         "@id": "sh:Violation"
       }
@@ -729,11 +738,11 @@ my-rule:my-rule a sh:NodeShape ;
     sh:severity sh:Violation ;
     sh:sparql [ sh:prefixes my-rule:prefixes ;
             sh:select """
-SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
+SELECT $this (<http://example.com/vocab/city/attr#status> as ?path) ?value WHERE {
   FILTER NOT EXISTS {
     
-    OPTIONAL { $this attr:status ?attr0 } .
-    FILTER(BOUND(?attr0) && ($var = "paved"))
+    $this <http://example.com/vocab/city/attr#status> ?value
+    FILTER(?value = "paved")
   }
 }""" ] ;
     sh:target [ a sh:SPARQLTarget ;
@@ -745,14 +754,14 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
+    sh:declare [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
         [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
             sh:prefix "sd" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
         [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
             sh:prefix "city" ],
         [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
@@ -801,12 +810,14 @@ my-rule:prefixes a owl:Ontology ;
         },
         "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Road .\n}"
       },
-      "sh:sparql": {
-        "sh:prefixes": {
-          "@id": "my-rule:prefixes"
-        },
-        "sh:select": "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {\n  FILTER NOT EXISTS {\n    \n    OPTIONAL { $this attr:status ?attr0 } .\n    FILTER(!BOUND(?attr0) || (REGEX($var; \"^(paved|dirt)$\")))\n  }\n}"
-      },
+      "sh:sparql": [
+        {
+          "sh:prefixes": {
+            "@id": "my-rule:prefixes"
+          },
+          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#status> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    \n    OPTIONAL { $this <http://example.com/vocab/city/attr#status> ?value }\n    FILTER(!BOUND(?value) || (REGEX(?value; \"^(paved|dirt)$\")))\n  }\n}"
+        }
+      ],
       "sh:severity": {
         "@id": "sh:Violation"
       }
@@ -879,11 +890,11 @@ my-rule:my-rule a sh:NodeShape ;
     sh:severity sh:Violation ;
     sh:sparql [ sh:prefixes my-rule:prefixes ;
             sh:select """
-SELECT $this (city:lod as ?path) (?lod as ?value) WHERE {
+SELECT $this (<http://example.com/vocab/city/attr#status> as ?path) ?value WHERE {
   FILTER NOT EXISTS {
     
-    OPTIONAL { $this attr:status ?attr0 } .
-    FILTER(!BOUND(?attr0) || (REGEX($var; "^(paved|dirt)$")))
+    OPTIONAL { $this <http://example.com/vocab/city/attr#status> ?value }
+    FILTER(!BOUND(?value) || (REGEX(?value; "^(paved|dirt)$")))
   }
 }""" ] ;
     sh:target [ a sh:SPARQLTarget ;
@@ -895,18 +906,348 @@ SELECT ?this WHERE {
 
 my-rule:prefixes a owl:Ontology ;
     owl:imports sh: ;
-    sh:declare [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
-            sh:prefix "rdfs" ],
-        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-            sh:prefix "rdf" ],
-        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-            sh:prefix "sd" ],
-        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+    sh:declare [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
             sh:prefix "attr" ],
         [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
             sh:prefix "dct" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
+        [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ] .
+
+
+```
+
+
+### Require that all Building objects have at least one BuildingPart containing a WallSurface with a `hasWindows`
+attribute with value `1`.
+
+#### json
+```json
+{
+  "id": "my-rule",
+  "label": "Check Building.BuildingPart.hasWindows is 1",
+  "message": "Some Building objects do not have at least one BuildingPart with hasWindows set to 1",
+  "objectSelector": {
+    "path": [
+      "Building"
+    ],
+    "requiredSubPath": [
+      "BuildingPart"
+    ]
+  },
+  "attributes": {
+    "hasWalls": {
+      "required": true,
+      "=": 1
+    }
+  }
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-attribute/context.jsonld",
+  "@graph": [
+    {
+      "@type": "sh:NodeShape",
+      "id": "my-rule",
+      "label": "Check Building.BuildingPart.hasWindows is 1",
+      "description": null,
+      "message": "Some Building objects do not have at least one BuildingPart with hasWindows set to 1",
+      "sh:target": {
+        "@type": "sh:SPARQLTarget",
+        "sh:prefixes": {
+          "@id": "my-rule:prefixes"
+        },
+        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Building .\n}"
+      },
+      "sh:sparql": [
+        {
+          "sh:prefixes": {
+            "@id": "my-rule:prefixes"
+          },
+          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#hasWalls> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    $this city:hasChild ?obj0\n    ?obj0 a city:BuildingPart .\n    ?this <http://example.com/vocab/city/attr#hasWalls> ?value\n    FILTER(?value = 1)\n  }\n}"
+        }
+      ],
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "prefixes",
+      "@type": "owl:Ontology",
+      "owl:imports": {
+        "@id": "sh:"
+      },
+      "sh:declare": [
+        {
+          "sh:prefix": "city",
+          "sh:namespace": {
+            "@value": "http://example.com/vocab/city/",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "rdf",
+          "sh:namespace": {
+            "@value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "rdfs",
+          "sh:namespace": {
+            "@value": "http://www.w3.org/2000/01/rdf-schema#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "sd",
+          "sh:namespace": {
+            "@value": "https://w3id.org/okn/o/sd#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "attr",
+          "sh:namespace": {
+            "@value": "http://example.com/vocab/city/attr#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "dct",
+          "sh:namespace": {
+            "@value": "http://purl.org/dc/terms/",
+            "@type": "xsd:anyURI"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix my-rule: <http://example.com/change-me/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+my-rule:my-rule a sh:NodeShape ;
+    sh:message "Some Building objects do not have at least one BuildingPart with hasWindows set to 1" ;
+    sh:name "Check Building.BuildingPart.hasWindows is 1" ;
+    sh:severity sh:Violation ;
+    sh:sparql [ sh:prefixes my-rule:prefixes ;
+            sh:select """
+SELECT $this (<http://example.com/vocab/city/attr#hasWalls> as ?path) ?value WHERE {
+  FILTER NOT EXISTS {
+    $this city:hasChild ?obj0
+    ?obj0 a city:BuildingPart .
+    ?this <http://example.com/vocab/city/attr#hasWalls> ?value
+    FILTER(?value = 1)
+  }
+}""" ] ;
+    sh:target [ a sh:SPARQLTarget ;
+            sh:prefixes my-rule:prefixes ;
+            sh:select """
+SELECT ?this WHERE {
+  ?this a city:Building .
+}""" ] .
+
+my-rule:prefixes a owl:Ontology ;
+    owl:imports sh: ;
+    sh:declare [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
         [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
             sh:prefix "city" ] .
+
+
+```
+
+
+### Require that all Road objects have status = paved and width >= 1.
+
+#### json
+```json
+{
+  "id": "my-rule",
+  "label": "Check Road.status and Road.width",
+  "message": "Check that Road.status is present and has value 'paved', and that Road.width is at least 1",
+  "objectSelector": {
+    "path": [
+      "Road"
+    ]
+  },
+  "attributes": {
+    "status": {
+      "required": true,
+      "=": "paved"
+    },
+    "width": {
+      "required": true,
+      ">=": 1
+    }
+  }
+}
+```
+
+#### jsonld
+```jsonld
+{
+  "@context": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-attribute/context.jsonld",
+  "@graph": [
+    {
+      "@type": "sh:NodeShape",
+      "id": "my-rule",
+      "label": "Check Road.status and Road.width",
+      "description": null,
+      "message": "Check that Road.status is present and has value 'paved', and that Road.width is at least 1",
+      "sh:target": {
+        "@type": "sh:SPARQLTarget",
+        "sh:prefixes": {
+          "@id": "my-rule:prefixes"
+        },
+        "sh:select": "\nSELECT ?this WHERE {\n  ?this a city:Road .\n}"
+      },
+      "sh:sparql": [
+        {
+          "sh:prefixes": {
+            "@id": "my-rule:prefixes"
+          },
+          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#status> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    \n    $this <http://example.com/vocab/city/attr#status> ?value\n    FILTER(?value = \"paved\")\n  }\n}"
+        },
+        {
+          "sh:prefixes": {
+            "@id": "my-rule:prefixes"
+          },
+          "sh:select": "\nSELECT $this (<http://example.com/vocab/city/attr#width> as ?path) ?value WHERE {\n  FILTER NOT EXISTS {\n    \n    $this <http://example.com/vocab/city/attr#width> ?value\n    FILTER(?value >= 1)\n  }\n}"
+        }
+      ],
+      "sh:severity": {
+        "@id": "sh:Violation"
+      }
+    },
+    {
+      "@id": "prefixes",
+      "@type": "owl:Ontology",
+      "owl:imports": {
+        "@id": "sh:"
+      },
+      "sh:declare": [
+        {
+          "sh:prefix": "city",
+          "sh:namespace": {
+            "@value": "http://example.com/vocab/city/",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "rdf",
+          "sh:namespace": {
+            "@value": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "rdfs",
+          "sh:namespace": {
+            "@value": "http://www.w3.org/2000/01/rdf-schema#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "sd",
+          "sh:namespace": {
+            "@value": "https://w3id.org/okn/o/sd#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "attr",
+          "sh:namespace": {
+            "@value": "http://example.com/vocab/city/attr#",
+            "@type": "xsd:anyURI"
+          }
+        },
+        {
+          "sh:prefix": "dct",
+          "sh:namespace": {
+            "@value": "http://purl.org/dc/terms/",
+            "@type": "xsd:anyURI"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+
+#### ttl
+```ttl
+@prefix my-rule: <http://example.com/change-me/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+my-rule:my-rule a sh:NodeShape ;
+    sh:message "Check that Road.status is present and has value 'paved', and that Road.width is at least 1" ;
+    sh:name "Check Road.status and Road.width" ;
+    sh:severity sh:Violation ;
+    sh:sparql [ sh:prefixes my-rule:prefixes ;
+            sh:select """
+SELECT $this (<http://example.com/vocab/city/attr#status> as ?path) ?value WHERE {
+  FILTER NOT EXISTS {
+    
+    $this <http://example.com/vocab/city/attr#status> ?value
+    FILTER(?value = "paved")
+  }
+}""" ],
+        [ sh:prefixes my-rule:prefixes ;
+            sh:select """
+SELECT $this (<http://example.com/vocab/city/attr#width> as ?path) ?value WHERE {
+  FILTER NOT EXISTS {
+    
+    $this <http://example.com/vocab/city/attr#width> ?value
+    FILTER(?value >= 1)
+  }
+}""" ] ;
+    sh:target [ a sh:SPARQLTarget ;
+            sh:prefixes my-rule:prefixes ;
+            sh:select """
+SELECT ?this WHERE {
+  ?this a city:Road .
+}""" ] .
+
+my-rule:prefixes a owl:Ontology ;
+    owl:imports sh: ;
+    sh:declare [ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+            sh:prefix "city" ],
+        [ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+            sh:prefix "attr" ],
+        [ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+            sh:prefix "rdfs" ],
+        [ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+            sh:prefix "sd" ],
+        [ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+            sh:prefix "dct" ],
+        [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+            sh:prefix "rdf" ] .
 
 
 ```
@@ -933,12 +1274,23 @@ allOf:
       - type: object
         properties:
           requiredSubPath:
-            description: Array with city object path, starting from the last element
+            description: 'Array with city object path, starting from the last element
               of "path", that is required to be present.
+
+              If this is provided, only one of the objects in this sub path will have
+              to comply with the attribute
+
+              requirements.
+
+              '
             minItems: 1
             $ref: https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-selector/schema.yaml#/$defs/CityObjectArray
           geometrySurface:
-            description: Geometry surface on which the attribute will be checked.
+            description: 'Geometry surface on which the attribute will be checked.
+
+              Only one geometry surface is required to comply with the attribute requirements.
+
+              '
             type: string
     attributes:
       description: Attributes to be checked
