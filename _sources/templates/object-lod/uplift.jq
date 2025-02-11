@@ -4,16 +4,14 @@ def get_path: (.i // 0) as $I | (if (.path | length == 1) and (.lastThis) then .
     (if .parent then ["\(.parent) city:hasChild \($THIS)"] else [] end)
     + ["\($THIS) a \(.path[0] | city_prefix)"]
     + ({ "i": ($I + 1), "path": .path[1:], "geometrySurface": .geometrySurface, "parent": $THIS, "lastThis": "?this" } | get_path)
+  elif (.parent | not) then
+    []
   else
-    if .geometrySurface == false or (.parent | not) then
-      []
+    ["\(.parent) city:hasGeometry ?geometry", "?geometry city:hasSurface ?surface"]
+    + if .geometrySurface then
+      ["?surface a \(.geometrySurface | city_prefix)"]
     else
-      ["\(.parent) city:hasGeometry/city:hasSurface ?surface"]
-      + if .geometrySurface then
-        ["?surface a \(.geometrySurface | city_prefix)"]
-      else
-        ["?surface a city:NonSemanticSurface"]
-      end
+      []
     end
   end;
 def get_lod_filter: if .lod.min then
@@ -41,7 +39,7 @@ def get_select: [
     "  FILTER NOT EXISTS {",
     "    " + ({ "path": .objectSelector.requiredSubPath, "geometrySurface": .objectSelector.geometrySurface, "parent": "$this" } | get_path | join(" .\n    ")) + " ."
   ] + if .lod then [
-    "    ?surface city:lod ?lod ." ,
+    "    ?geometry city:lod ?lod ." ,
     "    \(get_lod_filter)"
   ] else [] end
   + [
