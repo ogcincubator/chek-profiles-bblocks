@@ -7,11 +7,11 @@ def get_path: (.i // 0) as $I | (if (.path | length == 1) and (.lastThis) then .
   else
     []
   end;
-def getIdPatternsMatcher: map("{ FILTER REGEX(?identifier, \"\(. | escape_regex)\") }") | join("\n  UNION\n  ") |
+def get_id_patterns_matcher: map("{ FILTER REGEX(?identifier, \"\(. | escape_regex)\") }") | join("\n  UNION\n  ") |
   "$this dct:identifier ?identifier .\n  " + .;
 def get_object_selector:
   if .objectSelector.idPatterns then
-    .objectSelector.idPatterns | getIdPatternsMatcher
+    .objectSelector.idPatterns | get_id_patterns_matcher
   else
     { "path": .objectSelector.path, "geometrySurface": false, "lastThis": "?last" } | get_path | join(" .\n  ") + " ."
   end;

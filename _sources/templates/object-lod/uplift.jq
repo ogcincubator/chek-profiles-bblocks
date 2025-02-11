@@ -25,12 +25,12 @@ def get_lod_filter: if .lod.min then
   else
     .lod.regex
   end | "FILTER REGEX(?lod, \"\(. | escape_regex )\")";
-def getIdPatternsMatcher: map("{ FILTER REGEX(?identifier, \"\(. | escape_regex)\") }") | join("\n  UNION\n  ") |
+def get_id_patterns_matcher: map("{ FILTER REGEX(?identifier, \"\(. | escape_regex)\") }") | join("\n  UNION\n  ") |
   "$this dct:identifier ?identifier .\n  " + .;
 def get_target: [
   "\nSELECT ?this WHERE {",
   "  " + (if .objectSelector.idPatterns then
-            .objectSelector.idPatterns | getIdPatternsMatcher
+            .objectSelector.idPatterns | get_id_patterns_matcher
           else
             { "path": .objectSelector.path, "geometrySurface": false, "lastThis": "?this" } | get_path | join(" .\n  ") + " ."
           end),
