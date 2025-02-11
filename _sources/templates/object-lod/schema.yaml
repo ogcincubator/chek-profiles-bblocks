@@ -6,7 +6,6 @@ allOf:
 
   - required:
       - objectSelector
-      - lod
     properties:
       objectSelector:
         allOf:

@@ -1,0 +1,11 @@
+{
+  "id": "my-rule",
+  "label": "Only geometry requirement",
+  "message": "Building has no WallSurface",
+  "objectSelector": {
+    "path": [
+      "Building"
+    ],
+    "geometrySurface": "WallSurface"
+  }
+}

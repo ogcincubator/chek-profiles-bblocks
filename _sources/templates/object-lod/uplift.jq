@@ -1,4 +1,4 @@
-def escape_regex: . | gsub("\\\\"; "\\\\") | gsub("\""; "\\\"");
+def escape_regex: . | gsub("\""; "\\\"");
 def city_prefix: if startswith("city:") then . else "city:\(.)" end;
 def get_path: (.i // 0) as $I | (if (.path | length == 1) and (.lastThis) then .lastThis else "?obj\($I)" end) as $THIS | if .path | length > 0 then
     (if .parent then ["\(.parent) city:hasChild \($THIS)"] else [] end)
@@ -39,9 +39,12 @@ def get_target: [
 def get_select: [
   "\nSELECT $this (city:lod as ?path) (?lod as ?value) WHERE {",
     "  FILTER NOT EXISTS {",
-    "    " + ({ "path": .objectSelector.requiredSubPath, "geometrySurface": .objectSelector.geometrySurface, "parent": "$this" } | get_path | join(" .\n    ")) + " .",
+    "    " + ({ "path": .objectSelector.requiredSubPath, "geometrySurface": .objectSelector.geometrySurface, "parent": "$this" } | get_path | join(" .\n    ")) + " ."
+  ] + if .lod then [
     "    ?surface city:lod ?lod ." ,
-    "    \(get_lod_filter)",
+    "    \(get_lod_filter)"
+  ] else [] end
+  + [
     "  }",
   "}"
 ];

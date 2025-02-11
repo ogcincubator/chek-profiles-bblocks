@@ -30,3 +30,8 @@ examples:
     snippets:
       - language: json
         ref: examples/buildings-regex.json
+
+  - title: Require that every Building has a WallSurface, but no specific LoD
+    snippets:
+      - language: json
+        ref: examples/buildings-wallsurface-nolod.json
