@@ -1,0 +1,13 @@
+$schema: https://raw.githubusercontent.com/opengeospatial/bblocks-postprocess/refs/heads/master/ogc/bblocks/schemas/examples.schema.yaml?
+
+examples:
+  - title: Require that at least one Road is present
+    snippets:
+      - language: json
+        ref: examples/roads.json
+
+  - title: Require that at least one BuildingInstallation inside a BuildingPart that is, in turn, inside a Building is present
+    snippets:
+      - language: json
+        ref: examples/building-installation.json
+

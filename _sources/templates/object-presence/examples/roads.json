@@ -1,0 +1,10 @@
+{
+  "id": "roads-present",
+  "label": "Checks that roads are present",
+  "message": "No roads found in the dataset",
+  "objectSelector": {
+    "path": [
+      "Road"
+    ]
+  }
+}
