@@ -18,9 +18,7 @@
     ]
   },
   "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/dummy/",
-  "rdfData": [
-    "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
-  ],
+  "rdfData": [],
   "validationPassed": true,
   "annotatedSchema": null,
   "gitRepository": "https://github.com/ogcincubator/chek-profiles-bblocks",

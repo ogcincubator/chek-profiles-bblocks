@@ -2,12 +2,12 @@
   "name": "CHEK Project profiles",
   "abstract": "Profiles for the CHEK project as Building Blocks.\n",
   "description": "This register contains CHEK DBP project data requirements profiles as building blocks.\n\nFor a building block to be a valid CHEK profile, it needs to:\n\n  1. Have a `data.ttl` file with the RDF description of the profile (using [The Profiles Vocabulary](https://www.w3.org/TR/dx-prof/))  \n  2. Contain some [SHACL shapes](https://ogcincubator.github.io/bblocks-docs/create/validation#shacl-validation)\n  3. Have the `chek-validation-profile` tag\n\nYou can use the [dummy profile](https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.common.dummy)\nas a template.\n\nProfile dependencies can be declared either by using `dependsOn` in `bblock.json` (with the id of the bblock), or using\n[`prof:isProfileOf`](https://www.w3.org/TR/dx-prof/#Property:isProfileOf) in the RDF definition of the profile.\n",
-  "modified": "2025-02-12T07:44:11.099067",
+  "modified": "2025-02-12T08:34:11.606531",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"b71d082f86b0dedf5f2132beaae093bfe39b9712",
-      "shortCommitId": "\"b71d08",
-      "date": "2025-02-06T13:54:48+00:00\""
+      "commitId": "\"4628215f9c0319ef7d8ac960fb2adce65165b859",
+      "shortCommitId": "\"462821",
+      "date": "2025-02-12T08:32:19+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/chek-profiles-bblocks",
@@ -74,9 +74,7 @@
         ]
       },
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/dummy/",
-      "rdfData": [
-        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
-      ],
+      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
@@ -186,9 +184,7 @@
       "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/base-rule/schema.yaml",
       "sourceLdContext": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/base-rule/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/base-rule/",
-      "rdfData": [
-        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
-      ],
+      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
@@ -222,9 +218,7 @@
       },
       "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-selector/schema.yaml",
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-selector/",
-      "rdfData": [
-        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
-      ],
+      "rdfData": [],
       "validationPassed": true,
       "documentation": {
         "markdown": {
@@ -298,9 +292,9 @@
       "version": "1.0",
       "dateOfLastChange": "2025-02-12",
       "dependsOn": [
+        "ogc.chekdbp.profiles.common.buildings-present",
         "ogc.chekdbp.profiles.common.roads-present",
-        "ogc.chekdbp.profiles.common.green-public-spaces-present",
-        "ogc.chekdbp.profiles.common.buildings-present"
+        "ogc.chekdbp.profiles.common.green-public-spaces-present"
       ],
       "tags": [
         "chek-validation-profile"
@@ -309,14 +303,14 @@
         "ogc.chekdbp.profiles.italy.ascoli-piceno": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/rules.shacl"
         ],
+        "ogc.chekdbp.profiles.common.buildings-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
+        ],
         "ogc.chekdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
         ],
         "ogc.chekdbp.profiles.common.green-public-spaces-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
-        ],
-        "ogc.chekdbp.profiles.common.buildings-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
         ]
       },
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/",
@@ -458,9 +452,7 @@
       "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-attribute/schema.yaml",
       "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-attribute/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-attribute/",
-      "rdfData": [
-        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
-      ],
+      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/build/tests/chekdbp/templates/object-attribute/",
       "documentation": {
@@ -503,9 +495,7 @@
       "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-lod/schema.yaml",
       "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-lod/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-lod/",
-      "rdfData": [
-        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
-      ],
+      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/build/tests/chekdbp/templates/object-lod/",
       "documentation": {
@@ -548,9 +538,7 @@
       "sourceSchema": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-presence/schema.yaml",
       "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-presence/context.jsonld",
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/templates/object-presence/",
-      "rdfData": [
-        "https://ogcincubator.github.io/chek-profiles-bblocks/data.ttl"
-      ],
+      "rdfData": [],
       "validationPassed": true,
       "testOutputs": "https://github.com/ogcincubator/chek-profiles-bblocks/blob/master/build/tests/chekdbp/templates/object-presence/",
       "documentation": {
