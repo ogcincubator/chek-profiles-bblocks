@@ -8,7 +8,7 @@
   "dateTimeAddition": "2024-12-20T00:00:00Z",
   "itemClass": "model",
   "version": "1.0",
-  "dateOfLastChange": "2025-02-12",
+  "dateOfLastChange": "2025-06-02",
   "dependsOn": [
     "ogc.chekdbp.profiles.common.roads-present",
     "ogc.chekdbp.profiles.common.green-public-spaces-present"

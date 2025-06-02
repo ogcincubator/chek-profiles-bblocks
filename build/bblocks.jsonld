@@ -15,8 +15,14 @@
       "itemIdentifier": "@id",
       "baseURL": "@id",
       "name": "rdfs:label",
-      "abstract": "dct:abstract",
-      "description": "dct:description",
+      "abstract": {
+        "@id": "dct:abstract",
+        "@type": "https://www.w3.org/ns/iana/media-types/text/markdown"
+      },
+      "description": {
+        "@id": "dct:description",
+        "@type": "https://www.w3.org/ns/iana/media-types/text/markdown"
+      },
       "status": {
         "@id": "bblocks:status",
         "@type": "@id",
@@ -106,12 +112,12 @@
   "name": "Building Blocks - CHEK Project profiles",
   "abstract": "Profiles for the CHEK project as Building Blocks.\n",
   "description": "This register contains CHEK DBP project data requirements profiles as building blocks.\n\nFor a building block to be a valid CHEK profile, it needs to:\n\n  1. Have a `data.ttl` file with the RDF description of the profile (using [The Profiles Vocabulary](https://www.w3.org/TR/dx-prof/))  \n  2. Contain some [SHACL shapes](https://ogcincubator.github.io/bblocks-docs/create/validation#shacl-validation)\n  3. Have the `chek-validation-profile` tag\n\nYou can use the [dummy profile](https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.common.dummy)\nas a template.\n\nProfile dependencies can be declared either by using `dependsOn` in `bblock.json` (with the id of the bblock), or using\n[`prof:isProfileOf`](https://www.w3.org/TR/dx-prof/#Property:isProfileOf) in the RDF definition of the profile.\n",
-  "modified": "2025-02-12T08:34:11.606531",
+  "modified": "2025-06-02T10:19:34.281369",
   "tooling": {
     "bblocks-postprocess": {
-      "commitId": "\"4628215f9c0319ef7d8ac960fb2adce65165b859",
-      "shortCommitId": "\"462821",
-      "date": "2025-02-12T08:32:19+00:00\""
+      "commitId": "\"68270eb1826f3347fc9e19ae5448183bf75cb9d4",
+      "shortCommitId": "\"68270e",
+      "date": "2025-05-27T07:46:02+00:00\""
     }
   },
   "gitRepository": "https://github.com/ogcincubator/chek-profiles-bblocks",
@@ -136,7 +142,7 @@
       "dateTimeAddition": "2024-12-12T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "tags": [
         "chek-validation-profile"
       ],
@@ -178,7 +184,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "tags": [
         "chek-validation-profile"
       ],
@@ -218,7 +224,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "tags": [
         "chek-validation-profile"
       ],
@@ -260,7 +266,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "tags": [
         "chek-validation-profile"
       ],
@@ -303,7 +309,7 @@
       "dateTimeAddition": "2025-01-24T00:00:00Z",
       "itemClass": "schema",
       "version": "0.1",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "shaclRules": {},
       "ldContext": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/base-rule/context.jsonld",
       "schema": {
@@ -344,7 +350,7 @@
       "dateTimeAddition": "2025-01-24T00:00:00Z",
       "itemClass": "schema",
       "version": "0.1",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "shaclRules": {},
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-selector/schema.yaml",
@@ -382,7 +388,7 @@
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "dependsOn": [
         "ogc.chekdbp.profiles.common.roads-present",
         "ogc.chekdbp.profiles.common.green-public-spaces-present"
@@ -434,7 +440,7 @@
       "dateTimeAddition": "2024-11-10T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "dependsOn": [
         "ogc.chekdbp.profiles.common.buildings-present",
         "ogc.chekdbp.profiles.common.roads-present",
@@ -490,7 +496,7 @@
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "dependsOn": [
         "ogc.chekdbp.profiles.common.roads-present",
         "ogc.chekdbp.profiles.common.green-public-spaces-present"
@@ -542,7 +548,7 @@
       "dateTimeAddition": "2024-12-20T00:00:00Z",
       "itemClass": "model",
       "version": "1.0",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "dependsOn": [
         "ogc.chekdbp.profiles.common.roads-present",
         "ogc.chekdbp.profiles.common.green-public-spaces-present"
@@ -595,14 +601,14 @@
       "dateTimeAddition": "2025-01-24T00:00:00Z",
       "itemClass": "schema",
       "version": "0.1",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "tags": [
         "chek-rule-template"
       ],
       "shaclRules": {},
       "dependsOn": [
-        "ogc.chekdbp.templates.base-rule",
-        "ogc.chekdbp.templates.object-selector"
+        "ogc.chekdbp.templates.object-selector",
+        "ogc.chekdbp.templates.base-rule"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-attribute/schema.yaml",
@@ -643,14 +649,14 @@
       "dateTimeAddition": "2025-01-24T00:00:00Z",
       "itemClass": "schema",
       "version": "0.1",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "tags": [
         "chek-rule-template"
       ],
       "shaclRules": {},
       "dependsOn": [
-        "ogc.chekdbp.templates.base-rule",
-        "ogc.chekdbp.templates.object-selector"
+        "ogc.chekdbp.templates.object-selector",
+        "ogc.chekdbp.templates.base-rule"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-lod/schema.yaml",
@@ -691,14 +697,14 @@
       "dateTimeAddition": "2025-01-24T00:00:00Z",
       "itemClass": "schema",
       "version": "0.1",
-      "dateOfLastChange": "2025-02-12",
+      "dateOfLastChange": "2025-06-02",
       "tags": [
         "chek-rule-template"
       ],
       "shaclRules": {},
       "dependsOn": [
-        "ogc.chekdbp.templates.base-rule",
-        "ogc.chekdbp.templates.object-selector"
+        "ogc.chekdbp.templates.object-selector",
+        "ogc.chekdbp.templates.base-rule"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-presence/schema.yaml",
