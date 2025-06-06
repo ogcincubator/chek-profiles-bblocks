@@ -8,11 +8,32 @@
 @prefix attr: <http://example.com/vocab/city/attr#> .
 
 ###################################################################
-# 1. Building Attribute Rules
+# Existence
+###################################################################
+my-rule:DocumentMustHaveBuildingShape
+  a sh:NodeShape ;
+  sh:targetClass chek:document ;
+  sh:sparql [
+    a sh:SPARQLConstraint ;
+    sh:message "A CityJSON document must contain at least one city:Building object." ;
+    sh:select """
+    SELECT * WHERE {
+      $this a chek:document .
+      FILTER NOT EXISTS {
+        $this ?p ?b .
+        ?b a city:Building .
+      }
+    }
+    """
+  ] ;
+  sh:severity sh:Violation .
+
+###################################################################
+# Building Attribute Rules
 ###################################################################
 my-rule:BuildingAttributeRules
   a sh:NodeShape ;
-  sh:targetClass city:Building ;
+  sh:targetClass city:Building, city:BuildingPart ;
   sh:sparql [
     sh:prefixes ex: ;
     sh:select """
@@ -59,11 +80,11 @@ my-rule:BuildingAttributeRules
   sh:severity sh:Violation .
 
 ###################################################################
-# 2. Surface Rules (WallSurface / RoofSurface)
+# Surface Rules (WallSurface / RoofSurface)
 ###################################################################
 my-rule:SurfaceRules
   a sh:NodeShape ;
-  sh:targetClass city:Building ;
+  sh:targetClass city:Building, city:BuildingPart ;
   sh:sparql [
     sh:prefixes ex: ;
     sh:select """
@@ -105,11 +126,11 @@ my-rule:SurfaceRules
   sh:severity sh:Violation .
 
 ###################################################################
-# 3. mainEntrance
+# mainEntrance
 ###################################################################
 my-rule:MainEntranceFromBuildingShape
   a sh:NodeShape ;
-  sh:targetClass city:Building ;
+  sh:targetClass city:Building, city:BuildingPart ;
   sh:sparql [
     a sh:SPARQLConstraint ;
     sh:message "Building must contain either at least a storey or at least one Door with mainEntrance = 1" ;
@@ -123,7 +144,11 @@ my-rule:MainEntranceFromBuildingShape
             ?geom city:hasSurface ?surface .
             ?surface a city:Door ;
                     attr:mainEntrance ?val .
-            FILTER (str(?val) = "1")
+                  FILTER (
+                    ?val = 1 || 
+                    str(?val) = "1" || 
+                    ?val = true
+                  )
           }
           UNION
           {
@@ -150,7 +175,11 @@ my-rule:MainEntranceFromBuildingStoreyShape
           ?geom2 city:hasSurface ?surface2 .
           ?surface2 a city:Door ;
                       attr:mainEntrance ?val2 .
-          FILTER(str(?val2) = "1")
+                  FILTER (
+                    ?val2 = 1 || 
+                    str(?val2) = "1" || 
+                    ?val2 = true
+                  )
         }
     }
     """
@@ -158,11 +187,11 @@ my-rule:MainEntranceFromBuildingStoreyShape
   sh:severity sh:Violation .
 
 ###################################################################
-# 3. hasWindows
+# hasWindows
 ###################################################################
 my-rule:HasWindowsFromBuildingShape
   a sh:NodeShape ;
-  sh:targetClass city:Building ;
+  sh:targetClass city:Building, city:BuildingPart ;
   sh:sparql [
     a sh:SPARQLConstraint ;
     sh:message "Building must contain either at least a storey or at least one WallSurface with hasWindows = 1" ;
@@ -176,7 +205,11 @@ my-rule:HasWindowsFromBuildingShape
           ?geom city:hasSurface ?surface .
           ?surface a city:WallSurface ;
                   attr:hasWindows ?val .
-          FILTER (str(?val) = "1")
+                  FILTER (
+                    ?val = 1 || 
+                    str(?val) = "1" || 
+                    ?val = true
+                  )
         }
         UNION
         {
@@ -203,7 +236,11 @@ my-rule:HasWindowsFromBuildingStoreyShape
           ?geom2 city:hasSurface ?surface2 .
           ?surface2 a city:WallSurface ;
                       attr:hasWindows ?val2 .
-          FILTER(str(?val2) = "1")
+                  FILTER (
+                    ?val2 = 1 || 
+                    str(?val2) = "1" || 
+                    ?val2 = true
+                  )
         }
     }
     """
@@ -211,7 +248,7 @@ my-rule:HasWindowsFromBuildingStoreyShape
   sh:severity sh:Violation .
   
 ###################################################################
-# 3. Obstacles
+# Obstacles
 ###################################################################
 my-rule:ObstacleRequirements
   a sh:NodeShape ;
@@ -280,4 +317,5 @@ sh:declare [ sh:namespace "urn:chek:vocab/"^^xsd:anyURI ;
     sh:prefix "attr" ],
 [ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
     sh:prefix "rdf" ] .
+
 
