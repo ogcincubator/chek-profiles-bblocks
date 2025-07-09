@@ -9,7 +9,7 @@
   "dateTimeAddition": "2025-01-24T00:00:00Z",
   "itemClass": "schema",
   "version": "0.1",
-  "dateOfLastChange": "2025-07-01",
+  "dateOfLastChange": "2025-07-09",
   "shaclRules": {},
   "schema": {
     "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-selector/schema.yaml",
