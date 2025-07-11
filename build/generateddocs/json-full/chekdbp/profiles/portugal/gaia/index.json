@@ -8,10 +8,10 @@
   "dateTimeAddition": "2024-12-20T00:00:00Z",
   "itemClass": "model",
   "version": "1.0",
-  "dateOfLastChange": "2025-07-09",
+  "dateOfLastChange": "2025-07-11",
   "dependsOn": [
-    "ogc.chekdbp.profiles.common.roads-present",
-    "ogc.chekdbp.profiles.common.green-public-spaces-present"
+    "ogc.chekdbp.profiles.common.green-public-spaces-present",
+    "ogc.chekdbp.profiles.common.roads-present"
   ],
   "tags": [
     "chek-validation-profile"
@@ -20,11 +20,11 @@
     "ogc.chekdbp.profiles.portugal.gaia": [
       "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/rules.shacl"
     ],
-    "ogc.chekdbp.profiles.common.roads-present": [
-      "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
-    ],
     "ogc.chekdbp.profiles.common.green-public-spaces-present": [
       "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
+    ],
+    "ogc.chekdbp.profiles.common.roads-present": [
+      "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
     ]
   },
   "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/",
@@ -32,7 +32,7 @@
     "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/portugal/gaia/data.ttl"
   ],
   "validationPassed": true,
-  "description": "This profile checks that:\n\n* A building of interest exists.\n* All buildings fulfill the following criteria:\n  * Roofs are present with LoD 2 and up.\n  * Walls are preent with LoD 3.1 and up.\n  * There is an attribute `hasWindows` set to `true`.\n\nAdditionally, rules from the `roads-present` and `green-public-spaces-present` profiles. ",
+  "description": "This profile checks that:\n\n* A building of interest exists.\n* All buildings fulfill the following criteria:\n  * Roofs are present with LoD 2 and up.\n  * Walls are preent with LoD 3.1 and up.\n  * There is an attribute `hasWindows` set to `true`.\n  \nAdditionally, rules from the `roads-present` and `green-public-spaces-present` profiles.\n\nThe following UML diagram illustrates all the validation classes and attributes:\n\n![Gaia UML diagram](assets/gaia-uml.png)\n",
   "annotatedSchema": null,
   "gitRepository": "https://github.com/ogcincubator/chek-profiles-bblocks",
   "gitPath": "_sources/profiles/portugal/gaia"
