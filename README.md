@@ -8,7 +8,7 @@ This repository contains the definitions and rulesets of the validation profiles
 The following authors have contributed to these building blocks:
 
 * [Alejandro Villar](https://github.com/avillar)
-* [Alper Akin](https://github.com/alpertungakin)
+* [Alper Tunga Akin](https://github.com/alpertungakin)
 
 ## Acknowledgements
 
