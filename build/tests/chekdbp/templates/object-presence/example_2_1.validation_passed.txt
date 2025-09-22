@@ -1,5 +1,5 @@
 Validation report for ogc.chekdbp.templates.object-presence - Object Presence
-Generated 2025-06-06T16:43:36.781643+00:00
+Generated 2025-08-04T20:23:01.923618+00:00
 === Files ===
 Using example_2_1.json from examples
 JSON-LD context is present - uplifting

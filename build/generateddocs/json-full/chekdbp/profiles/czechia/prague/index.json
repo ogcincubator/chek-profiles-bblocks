@@ -8,7 +8,7 @@
   "dateTimeAddition": "2024-12-20T00:00:00Z",
   "itemClass": "model",
   "version": "1.0",
-  "dateOfLastChange": "2025-06-06",
+  "dateOfLastChange": "2025-08-04",
   "dependsOn": [
     "ogc.chekdbp.profiles.common.green-public-spaces-present",
     "ogc.chekdbp.profiles.common.roads-present"
@@ -32,7 +32,7 @@
     "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/czechia/prague/data.ttl"
   ],
   "validationPassed": true,
-  "description": "This profile checks that:\n\n* A building of interest exists.\n* All buildings fulfill the following criteria:\n  * Roofs are present with LoD 2 and up.\n  * Walls are preent with LoD 3.1 and up.\n  * There is an attribute `hasWindows` set to `true`.\n\nAdditionally, rules from the `roads-present` and `green-public-spaces-present` profiles. ",
+  "description": "This profile checks that:\n\n* A building of interest exists.\n* All buildings fulfill the following criteria:\n  * Roofs are present with LoD 2 and up.\n  * Walls are preent with LoD 3.1 and up.\n  * There is an attribute `hasWindows` set to `true`.\n\nAdditionally, rules from the `roads-present` and `green-public-spaces-present` profiles. \n\nThe following UML diagram illustrates all the validation classes and attributes:\n\n![Prague UML diagram](assets/prague-uml.png)\n",
   "annotatedSchema": null,
   "gitRepository": "https://github.com/ogcincubator/chek-profiles-bblocks",
   "gitPath": "_sources/profiles/czechia/prague"
