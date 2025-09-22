@@ -7,3 +7,7 @@ This profile checks that:
   * There is an attribute `hasWindows` set to `true`.
 
 Additionally, rules from the `roads-present` and `green-public-spaces-present` profiles. 
+
+The following UML diagram illustrates all the validation classes and attributes:
+
+![Prague UML diagram](assets/prague-uml.png)
