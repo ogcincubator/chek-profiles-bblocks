@@ -8,11 +8,11 @@
   "dateTimeAddition": "2024-12-12T00:00:00Z",
   "itemClass": "model",
   "version": "1.0",
-  "dateOfLastChange": "2025-08-04",
+  "dateOfLastChange": "2025-09-22",
   "tags": [
     "chek-validation-profile"
   ],
-  "shaclRules": {
+  "shaclShapes": {
     "ogc.chekdbp.profiles.common.buildings-present": [
       "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
     ]
