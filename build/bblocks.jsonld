@@ -112,7 +112,7 @@
   "name": "Building Blocks - CHEK Project profiles",
   "abstract": "Profiles for the CHEK project as Building Blocks.\n",
   "description": "This register contains CHEK DBP project data requirements profiles as building blocks.\n\nFor a building block to be a valid CHEK profile, it needs to:\n\n  1. Have a `data.ttl` file with the RDF description of the profile (using [The Profiles Vocabulary](https://www.w3.org/TR/dx-prof/))  \n  2. Contain some [SHACL shapes](https://ogcincubator.github.io/bblocks-docs/create/validation#shacl-validation)\n  3. Have the `chek-validation-profile` tag\n\nYou can use the [dummy profile](https://ogcincubator.github.io/chek-profiles-bblocks/bblock/ogc.chekdbp.profiles.common.dummy)\nas a template.\n\nProfile dependencies can be declared either by using `dependsOn` in `bblock.json` (with the id of the bblock), or using\n[`prof:isProfileOf`](https://www.w3.org/TR/dx-prof/#Property:isProfileOf) in the RDF definition of the profile.\n",
-  "modified": "2025-09-22T11:07:29.812864",
+  "modified": "2025-09-22T12:45:07.768989",
   "tooling": {
     "bblocks-postprocess": {
       "commitId": "\"cbdf0741daa8bb5e8edcce157ff8f4bb6d0d71fa",
@@ -443,9 +443,9 @@
       "version": "1.0",
       "dateOfLastChange": "2025-09-22",
       "dependsOn": [
+        "ogc.chekdbp.profiles.common.buildings-present",
         "ogc.chekdbp.profiles.common.roads-present",
-        "ogc.chekdbp.profiles.common.green-public-spaces-present",
-        "ogc.chekdbp.profiles.common.buildings-present"
+        "ogc.chekdbp.profiles.common.green-public-spaces-present"
       ],
       "tags": [
         "chek-validation-profile"
@@ -454,14 +454,14 @@
         "ogc.chekdbp.profiles.italy.ascoli-piceno": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/rules.shacl"
         ],
+        "ogc.chekdbp.profiles.common.buildings-present": [
+          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
+        ],
         "ogc.chekdbp.profiles.common.roads-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/roads-present/rules.shacl"
         ],
         "ogc.chekdbp.profiles.common.green-public-spaces-present": [
           "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/green-public-spaces-present/rules.shacl"
-        ],
-        "ogc.chekdbp.profiles.common.buildings-present": [
-          "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/common/buildings-present/rules.shacl"
         ]
       },
       "sourceFiles": "https://ogcincubator.github.io/chek-profiles-bblocks/_sources/profiles/italy/ascoli-piceno/",
@@ -608,8 +608,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.chekdbp.templates.object-selector",
-        "ogc.chekdbp.templates.base-rule"
+        "ogc.chekdbp.templates.base-rule",
+        "ogc.chekdbp.templates.object-selector"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-attribute/schema.yaml",
@@ -656,8 +656,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.chekdbp.templates.object-selector",
-        "ogc.chekdbp.templates.base-rule"
+        "ogc.chekdbp.templates.base-rule",
+        "ogc.chekdbp.templates.object-selector"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-lod/schema.yaml",
@@ -704,8 +704,8 @@
       ],
       "shaclShapes": {},
       "dependsOn": [
-        "ogc.chekdbp.templates.object-selector",
-        "ogc.chekdbp.templates.base-rule"
+        "ogc.chekdbp.templates.base-rule",
+        "ogc.chekdbp.templates.object-selector"
       ],
       "schema": {
         "application/yaml": "https://ogcincubator.github.io/chek-profiles-bblocks/build/annotated/chekdbp/templates/object-presence/schema.yaml",
