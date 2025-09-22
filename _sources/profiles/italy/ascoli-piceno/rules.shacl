@@ -1,44 +1,32 @@
-@prefix : <urn:chek:profiles/ascoli-piceno#> .
-@prefix chek: <urn:chek:vocab/> .
-
-@prefix dash: <http://datashapes.org/dash#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix schema: <http://schema.org/> .
+@prefix my-rule: <http://example.com/change-me/ascoli-piceno#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix ex: <http://example.org/> .
+@prefix chek: <urn:chek:vocab/> .
 @prefix city: <http://example.com/vocab/city/> .
-@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix attr: <http://example.com/vocab/city/attr#> .
 
-ex:
-  a owl:Ontology ;
-  owl:imports sh: ;
-  sh:declare [
-    sh:prefix "city" ;
-    sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
-  ], [
-    sh:prefix "rdf" ;
-    sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
-  ], [
-    sh:prefix "dcat" ;
-    sh:namespace "http://www.w3.org/ns/dcat#"^^xsd:anyURI ;
-  ], [
-    sh:prefix "dct" ;
-    sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
-  ], [
-    sh:prefix "sd" ;
-    sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
-  ], [
-    sh:prefix "attr" ;
-    sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
-  ] ;
-.
+ex: a owl:Ontology ;
+owl:imports sh: ;
+sh:declare [ sh:namespace "urn:chek:vocab/"^^xsd:anyURI ;
+    sh:prefix "chek" ],
+[ sh:namespace "http://purl.org/dc/terms/"^^xsd:anyURI ;
+    sh:prefix "dct" ],
+[ sh:namespace "http://example.com/vocab/city/"^^xsd:anyURI ;
+    sh:prefix "city" ],
+[ sh:namespace "https://w3id.org/okn/o/sd#"^^xsd:anyURI ;
+    sh:prefix "sd" ],
+[ sh:namespace "http://www.w3.org/2000/01/rdf-schema#"^^xsd:anyURI ;
+    sh:prefix "rdfs" ],
+[ sh:namespace "http://example.com/vocab/city/attr#"^^xsd:anyURI ;
+    sh:prefix "attr" ],
+[ sh:namespace "http://www.w3.org/1999/02/22-rdf-syntax-ns#"^^xsd:anyURI ;
+    sh:prefix "rdf" ] .
 
-:BuildingOfInterestPresent
+my-rule:BuildingOfInterestPresent
   a sh:NodeShape ;
-  sh:targetNode chek:document ;
+  sh:targetClass chek:document ;
   sh:sparql [
     sh:prefixes ex: ;
     sh:select """
@@ -57,9 +45,9 @@ ex:
   sh:severity sh:Violation ;
 .
 
-:BuildingOfInterestRequirements
+my-rule:BuildingOfInterestRequirements
   a sh:NodeShape ;
-  sh:targetNode chek:document ;
+  sh:targetClass chek:document ;
   sh:sparql [
     sh:prefixes ex: ;
     sh:select """
@@ -105,9 +93,9 @@ ex:
   sh:severity sh:Violation ;
 .
 
-:BuildingsPresent
+my-rule:BuildingsPresent
     a sh:NodeShape ;
-    sh:targetNode chek:document ;
+    sh:targetClass chek:document ;
     sh:description "Checks that at least one building that is not the building of interest exists" ;
     sh:not [
         sh:sparql [
@@ -128,9 +116,9 @@ ex:
     sh:severity sh:Violation ;
 .
 
-:ExistingBuildingRequirements
+my-rule:ExistingBuildingRequirements
   a sh:NodeShape ;
-  sh:targetNode city:Building ;
+  sh:targetClass city:Building ;
   sh:sparql [
     sh:prefixes ex: ;
     sh:select """
