@@ -19,6 +19,11 @@ This profile checks that:
 
 Additionally, rules from the `roads-present` and `green-public-spaces-present` profiles. 
 
+The following UML diagram illustrates all the validation classes and attributes:
+
+![Ascoli Piceno UML diagram](assets/ascoli-piceno-uml.png)
+
+
 # For developers
 
 The source code for this Building Block can be found in the following repository:

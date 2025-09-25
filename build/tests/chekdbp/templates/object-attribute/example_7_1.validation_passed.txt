@@ -1,5 +1,5 @@
 Validation report for ogc.chekdbp.templates.object-attribute - Object Attribute
-Generated 2025-09-22T12:45:09.418877+00:00
+Generated 2025-09-25T13:02:25.432715+00:00
 === Files ===
 Using example_7_1.json from examples
 JSON-LD context is present - uplifting
