@@ -1,0 +1,29 @@
+{
+  "stac_version": "1.1.0",
+  "type": "Catalog",
+  "id": "chek-datasets",
+  "title": "CHEK sample datasets",
+  "description": "This catalog contains several sample datasets used in the CHEK DBP project.",
+  "links": [
+    {
+      "rel": "self",
+      "href": "https://github.com/ogcincubator/chek-profiles-bblocks/raw/refs/heads/master/data-samples/catalog.json"
+    },
+    {
+      "rel": "homepage",
+      "href": "https://chekdbp.eu/"
+    },
+    {
+      "rel": "child",
+      "href": "./lisbon/collection.json",
+      "type": "application/json",
+      "title": "Sample Lisbon city data"
+    },
+    {
+      "rel": "child",
+      "href": "./ascoli-piceno/collection.json",
+      "type": "application/json",
+      "title": "Sample Ascoli Piceno city data"
+    }
+  ]
+}

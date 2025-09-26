@@ -1,0 +1,50 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "id": "lisbon",
+  "title": "Lisbon",
+  "description": "Sample Lisbon city data",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "lisbon",
+    "portugal",
+    "chek",
+    "citygml"
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -9.1466137,
+          38.723042,
+          -9.1452617,
+          38.7243249
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "summaries": {
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "CHEK sample datasets"
+    },
+    {
+      "rel": "item",
+      "href": "./Lisboa_v3.gml.json",
+      "type": "application/geo+json",
+      "title": "Sample Lisbon CityGML data"
+    }
+  ]
+}

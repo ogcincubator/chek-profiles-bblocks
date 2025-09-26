@@ -1,0 +1,73 @@
+{
+  "stac_version": "1.1.0",
+  "stac_extensions": [],
+  "type": "Feature",
+  "id": "Lisboa_v3.gml",
+  "bbox": [
+    -9.1466137,
+    38.723042,
+    -9.1452617,
+    38.7243249
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          -9.1466137,
+          38.723042
+        ],
+        [
+          -9.1452617,
+          38.723042
+        ],
+        [
+          -9.1452617,
+          38.7243249
+        ],
+        [
+          -9.1466137,
+          38.7243249
+        ],
+        [
+          -9.1466137,
+          38.723042
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2024-01-01T00:00:00Z"
+  },
+  "collection": "lisbon",
+  "links": [
+    {
+      "rel": "collection",
+      "href": "./collection.json",
+      "type": "application/json",
+      "title": "Lisbon Data Collection"
+    },
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "CHEK sample datasets"
+    },
+    {
+      "rel": "parent",
+      "href": "./collection.json",
+      "type": "application/json",
+      "title": "Lisbon Data Collection"
+    }
+  ],
+  "assets": {
+    "citygml": {
+      "href": "./Lisboa_v3.gml",
+      "type": "application/gml+xml; version=3.2",
+      "title": "CityGML data",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "type": "Collection",
+  "stac_version": "1.1.0",
+  "id": "ascoli-piceno",
+  "title": "Ascoli Piceno",
+  "description": "Sample Ascoli Piceno city data",
+  "license": "CC-BY-4.0",
+  "keywords": [
+    "ascoli-piceno",
+    "italy",
+    "chek",
+    "citygml"
+  ],
+  "extent": {
+    "spatial": {
+      "bbox": [
+        [
+          -9.1466137,
+          38.723042,
+          -9.1452617,
+          38.7243249
+        ]
+      ]
+    },
+    "temporal": {
+      "interval": [
+        [
+          "2024-01-01T00:00:00Z",
+          null
+        ]
+      ]
+    }
+  },
+  "summaries": {
+  },
+  "links": [
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "CHEK sample datasets"
+    },
+    {
+      "rel": "item",
+      "href": "./landUse-lod2__v3.item.json",
+      "type": "application/geo+json",
+      "title": "Ascoli Piceno Land Use LOD2 v3"
+    },
+    {
+      "rel": "item",
+      "href": "./buildings-lod012__v3.item.json",
+      "type": "application/geo+json",
+      "title": "Ascoli Piceno Land Use LOD0,1 v3"
+    },
+    {
+      "rel": "item",
+      "href": "./roads-lod2__v3.item.json",
+      "type": "application/geo+json",
+      "title": "Ascoli Piceno Roads LOD2 v3"
+    },
+    {
+      "rel": "item",
+      "href": "./buildings-lod012.item.json",
+      "type": "application/geo+json",
+      "title": "Ascoli Piceno Buildings LOD0,1,2"
+    },
+    {
+      "rel": "item",
+      "href": "./landUse-lod2__v4.item.json",
+      "type": "application/geo+json",
+      "title": "Ascoli Piceno Land Use LOD2 v4"
+    },
+    {
+      "rel": "item",
+      "href": "./landUse-lod2__v3f.item.json",
+      "type": "application/geo+json",
+      "title": "Ascoli Piceno Land Use LOD2 v3.1"
+    },
+    {
+      "rel": "item",
+      "href": "./buildings-lod012__v2.item.json",
+      "type": "application/geo+json",
+      "title": "Ascoli Piceno Buildings LOD0,1,2 v2"
+    }
+  ]
+}

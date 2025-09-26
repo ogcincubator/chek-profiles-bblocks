@@ -1,0 +1,81 @@
+{
+  "stac_version": "1.1.0",
+  "stac_extensions": [],
+  "type": "Feature",
+  "id": "buildings-lod012__v3",
+  "bbox": [
+    13.5830333,
+    42.8511146,
+    13.5928616,
+    42.8570829
+  ],
+  "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+      [
+        [
+          13.5830333,
+          42.8511146
+        ],
+        [
+          13.5928616,
+          42.8511146
+        ],
+        [
+          13.5928616,
+          42.8570829
+        ],
+        [
+          13.5830333,
+          42.8570829
+        ],
+        [
+          13.5830333,
+          42.8511146
+        ]
+      ]
+    ]
+  },
+  "properties": {
+    "datetime": "2024-01-01T00:00:00Z"
+  },
+  "collection": "ascoli-piceno",
+  "links": [
+    {
+      "rel": "collection",
+      "href": "./collection.json",
+      "type": "application/json",
+      "title": "Ascoli Piceno Collection"
+    },
+    {
+      "rel": "root",
+      "href": "../catalog.json",
+      "type": "application/json",
+      "title": "CHEK sample datasets"
+    },
+    {
+      "rel": "parent",
+      "href": "./collection.json",
+      "type": "application/json",
+      "title": "Ascoli Piceno Collection"
+    }
+  ],
+  "assets": {
+    "citygml": {
+      "href": "./buildings-lod012__v3.gml",
+      "type": "application/gml+xml; version=3.2",
+      "title": "CityGML data",
+      "roles": [
+        "data"
+      ]
+    },
+    "cityjson": {
+      "href": "./buildings-lod012__v3.json",
+      "type": "application/city+json",
+      "title": "CityJSON data",
+      "roles": [
+        "data"
+      ]
+    }
+  }
+}
