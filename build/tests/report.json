@@ -1,0 +1,1300 @@
+{
+  "summary": {
+    "total": 13,
+    "passed": 13,
+    "failed": 0,
+    "result": true
+  },
+  "bblocks": {
+    "ogc.chekdbp.profiles.common.buildings-present": {
+      "title": "Validation report for ogc.chekdbp.profiles.common.buildings-present - Buildings present",
+      "bblockName": "Buildings present",
+      "bblockId": "ogc.chekdbp.profiles.common.buildings-present",
+      "generated": "2025-11-13T10:05:24.762804+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.profiles.common.dummy": {
+      "title": "Validation report for ogc.chekdbp.profiles.common.dummy - Dummy profile",
+      "bblockName": "Dummy profile",
+      "bblockId": "ogc.chekdbp.profiles.common.dummy",
+      "generated": "2025-11-13T10:05:24.767287+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.profiles.common.green-public-spaces-present": {
+      "title": "Validation report for ogc.chekdbp.profiles.common.green-public-spaces-present - Green public spaces present",
+      "bblockName": "Green public spaces present",
+      "bblockId": "ogc.chekdbp.profiles.common.green-public-spaces-present",
+      "generated": "2025-11-13T10:05:24.773009+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.profiles.common.roads-present": {
+      "title": "Validation report for ogc.chekdbp.profiles.common.roads-present - Roads present",
+      "bblockName": "Roads present",
+      "bblockId": "ogc.chekdbp.profiles.common.roads-present",
+      "generated": "2025-11-13T10:05:24.778579+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.templates.base-rule": {
+      "title": "Validation report for ogc.chekdbp.templates.base-rule - Base rule template",
+      "bblockName": "Base rule template",
+      "bblockId": "ogc.chekdbp.templates.base-rule",
+      "generated": "2025-11-13T10:05:24.785647+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.templates.object-selector": {
+      "title": "Validation report for ogc.chekdbp.templates.object-selector - Object selector",
+      "bblockName": "Object selector",
+      "bblockId": "ogc.chekdbp.templates.object-selector",
+      "generated": "2025-11-13T10:05:24.793756+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.profiles.czechia.prague": {
+      "title": "Validation report for ogc.chekdbp.profiles.czechia.prague - Prague profile",
+      "bblockName": "Prague profile",
+      "bblockId": "ogc.chekdbp.profiles.czechia.prague",
+      "generated": "2025-11-13T10:05:24.805320+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.profiles.italy.ascoli-piceno": {
+      "title": "Validation report for ogc.chekdbp.profiles.italy.ascoli-piceno - Ascoli Piceno profile",
+      "bblockName": "Ascoli Piceno profile",
+      "bblockId": "ogc.chekdbp.profiles.italy.ascoli-piceno",
+      "generated": "2025-11-13T10:05:24.819533+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.profiles.portugal.gaia": {
+      "title": "Validation report for ogc.chekdbp.profiles.portugal.gaia - Vila Nova de Gaia profile",
+      "bblockName": "Vila Nova de Gaia profile",
+      "bblockId": "ogc.chekdbp.profiles.portugal.gaia",
+      "generated": "2025-11-13T10:05:24.851088+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.profiles.portugal.lisbon": {
+      "title": "Validation report for ogc.chekdbp.profiles.portugal.lisbon - Lisbon profile",
+      "bblockName": "Lisbon profile",
+      "bblockId": "ogc.chekdbp.profiles.portugal.lisbon",
+      "generated": "2025-11-13T10:05:24.862926+00:00",
+      "result": true,
+      "items": [],
+      "globalErrors": {},
+      "counts": {
+        "total": 0,
+        "passed": 0,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.templates.object-attribute": {
+      "title": "Validation report for ogc.chekdbp.templates.object-attribute - Object Attribute",
+      "bblockName": "Object Attribute",
+      "bblockId": "ogc.chekdbp.templates.object-attribute",
+      "generated": "2025-11-13T10:05:24.988258+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-attribute/example_1_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-attribute/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-attribute/example_2_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-attribute/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-attribute/example_3_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-attribute/example_3_1.json",
+            "exampleIndex": 3,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_3_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_3_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_3_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_3_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_3_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-attribute/example_4_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-attribute/example_4_1.json",
+            "exampleIndex": 4,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_4_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_4_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_4_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_4_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_4_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-attribute/example_5_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-attribute/example_5_1.json",
+            "exampleIndex": 5,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_5_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_5_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_5_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_5_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_5_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-attribute/example_6_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-attribute/example_6_1.json",
+            "exampleIndex": 6,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_6_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_6_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_6_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_6_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_6_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-attribute/example_7_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-attribute/example_7_1.json",
+            "exampleIndex": 7,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_7_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_7_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_7_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_7_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_7_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-attribute/example_8_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-attribute/example_8_1.json",
+            "exampleIndex": 8,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_8_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_8_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_8_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_8_1.ttl",
+                  "size": 34,
+                  "isError": false,
+                  "message": "Output Turtle example_8_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 8,
+        "passed": 8,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.templates.object-lod": {
+      "title": "Validation report for ogc.chekdbp.templates.object-lod - Object Level of Detail (LoD)",
+      "bblockName": "Object Level of Detail (LoD)",
+      "bblockId": "ogc.chekdbp.templates.object-lod",
+      "generated": "2025-11-13T10:05:25.088570+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-lod/example_1_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-lod/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-lod/example_2_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-lod/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-lod/example_3_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-lod/example_3_1.json",
+            "exampleIndex": 3,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_3_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_3_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_3_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_3_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_3_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-lod/example_4_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-lod/example_4_1.json",
+            "exampleIndex": 4,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_4_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_4_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_4_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_4_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_4_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-lod/example_5_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-lod/example_5_1.json",
+            "exampleIndex": 5,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_5_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_5_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_5_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_5_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_5_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-lod/example_6_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-lod/example_6_1.json",
+            "exampleIndex": 6,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_6_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_6_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_6_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_6_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_6_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-lod/example_7_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-lod/example_7_1.json",
+            "exampleIndex": 7,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_7_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_7_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_7_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_7_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_7_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 7,
+        "passed": 7,
+        "failed": 0
+      }
+    },
+    "ogc.chekdbp.templates.object-presence": {
+      "title": "Validation report for ogc.chekdbp.templates.object-presence - Object Presence",
+      "bblockName": "Object Presence",
+      "bblockId": "ogc.chekdbp.templates.object-presence",
+      "generated": "2025-11-13T10:05:25.123394+00:00",
+      "result": true,
+      "items": [
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-presence/example_1_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-presence/example_1_1.json",
+            "exampleIndex": 1,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_1_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_1_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_1_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_1_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_1_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "source": {
+            "type": "EXAMPLE",
+            "requireFail": false,
+            "filename": "build/tests/chekdbp/templates/object-presence/example_2_1.json",
+            "url": "https://ogcincubator.github.io/chek-profiles-bblocks/build/tests/chekdbp/templates/object-presence/example_2_1.json",
+            "exampleIndex": 2,
+            "snippetIndex": 1,
+            "language": "application/json"
+          },
+          "result": true,
+          "sections": [
+            {
+              "name": "FILES",
+              "title": "Files",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Using example_2_1.json from examples"
+                },
+                {
+                  "op": "jsonld-uplift",
+                  "isError": false,
+                  "message": "JSON-LD context is present - uplifting"
+                },
+                {
+                  "op": "jsonld-create",
+                  "filename": "example_2_1.jsonld",
+                  "isError": false,
+                  "message": "Output JSON-LD example_2_1.jsonld created"
+                },
+                {
+                  "op": "ttl-create",
+                  "empty": false,
+                  "filename": "example_2_1.ttl",
+                  "size": 31,
+                  "isError": false,
+                  "message": "Output Turtle example_2_1.ttl created"
+                }
+              ]
+            },
+            {
+              "name": "JSON_SCHEMA",
+              "title": "JSON Schema",
+              "entries": [
+                {
+                  "op": "validation",
+                  "result": true,
+                  "isError": false,
+                  "message": "Validation passed"
+                }
+              ]
+            },
+            {
+              "name": "SEMANTIC_UPLIFT",
+              "title": "Semantic Uplift",
+              "entries": [
+                {
+                  "isError": false,
+                  "message": "Running pre-uplift jq transform step from uplift.jq"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "globalErrors": {},
+      "counts": {
+        "total": 2,
+        "passed": 2,
+        "failed": 0
+      }
+    }
+  }
+}

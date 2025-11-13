@@ -70,10 +70,10 @@ Links to the schema:
 {
   "@context": {
     "@base": "http://example.com/change-me/",
+    "label": "sh:name",
     "id": "@id",
     "description": "sh:description",
     "message": "sh:message",
-    "label": "sh:name",
     "sh": "http://www.w3.org/ns/shacl#",
     "my-rule": "http://example.com/change-me/",
     "rdf": "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
