@@ -62,7 +62,7 @@
   ],
   "assets": {
     "citygml": {
-      "href": "./buildings-lod012__v3.gml",
+      "href": "./landUse-lod2__v3.gml",
       "type": "application/gml+xml; version=3.2",
       "title": "CityGML data",
       "roles": [
@@ -70,7 +70,7 @@
       ]
     },
     "cityjson": {
-      "href": "./buildings-lod012__v3.json",
+      "href": "./landUse-lod2__v3.json",
       "type": "application/city+json",
       "title": "CityJSON data",
       "roles": [

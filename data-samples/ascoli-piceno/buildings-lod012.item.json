@@ -62,7 +62,7 @@
   ],
   "assets": {
     "cityjson": {
-      "href": "./buildings-lod0123.json",
+      "href": "./buildings-lod012.json",
       "type": "application/city+json",
       "title": "CityJSON data",
       "roles": [
